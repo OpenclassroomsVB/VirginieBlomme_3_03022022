@@ -164,9 +164,10 @@ header {
   border-radius: 15px;
   -webkit-box-shadow: 5px 5px 5px #f2f2f2;
           box-shadow: 5px 5px 5px #f2f2f2;
-  background-color: #f9f9f9;
+  background-color: #f2e6fe;
   margin-left: 1.5em;
   margin-top: 1.5em;
+  margin-bottom: 4em;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   -webkit-box-pack: center;
@@ -185,7 +186,7 @@ header {
 }
 
 .num3 i {
-  color: grey;
+  color: #9356DC;
   padding-top: 1em;
   margin-right: 1.4em;
 }
@@ -193,5 +194,177 @@ header {
 .num3 :last-child {
   margin-right: 4.4em;
   font-weight: bold;
+}
+
+.restaurants {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f9f9f9;
+}
+
+.restaurants a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.restaurants h2 {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding-left: 0.65em;
+  padding-top: 1.6em;
+  padding-bottom: 0.3em;
+}
+
+.restaurants h3 {
+  font-weight: bold;
+  padding-left: 0.65em;
+  margin-bottom: 0em;
+}
+
+.restaurants p {
+  padding-left: 0.75em;
+  margin-top: 0.3em;
+}
+
+.restaurants .photo {
+  position: relative;
+  overflow: hidden;
+  width: 21.5em;
+  padding-top: 50%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.restaurants .photo .sticker {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  padding: 0.5em 1em;
+  background-color: #99E2D0;
+  color: #0f9a77;
+  font-weight: bold;
+}
+
+.restaurants .photo img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+.restaurants .infos {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.restaurants .coeur {
+  position: absolute;
+  left: 18.5em;
+  top: 2em;
+}
+
+.restaurants .coeur .plein {
+  display: none;
+}
+
+.restaurants .coeur:active .vide {
+  display: none;
+}
+
+.restaurants .coeur:active .plein {
+  display: inherit;
+}
+
+.restaurants .coeur i {
+  font-size: 1.5em;
+}
+
+.palette-gout, .note-enchantee, .francaise, .delice-sens {
+  margin-bottom: 1em;
+  -webkit-box-shadow: 0px 7px 10px #e6e4e4;
+          box-shadow: 0px 7px 10px #e6e4e4;
+  border-radius: 20px;
+}
+
+.note-enchantee .photo img {
+  height: 225%;
+}
+
+.delice-sens {
+  margin-bottom: 4em;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #414141;
+  color: white;
+  padding-left: 1.7em;
+}
+
+footer h3 {
+  font-family: "shrikhand";
+  font-weight: normal;
+}
+
+footer a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 0.3em;
+}
+
+footer a i {
+  font-size: 0.8em;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  padding-top: 0.3em;
+}
+
+footer a p {
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+footer .propo-restau i {
+  padding-right: 1.5em;
+}
+
+footer .partenaire i {
+  padding-right: 1em;
 }
 /*# sourceMappingURL=styles.css.map */
