@@ -1,0 +1,584 @@
+/* Document de style CSS */
+@-webkit-keyframes apparaitre {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes apparaitre {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes reduc-div {
+  0% {
+    width: 21.5em;
+  }
+  100% {
+    width: 17.5em;
+  }
+}
+
+@keyframes reduc-div {
+  0% {
+    width: 21.5em;
+  }
+  100% {
+    width: 17.5em;
+  }
+}
+
+@-webkit-keyframes coche {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes coche {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@-webkit-keyframes coche-rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes coche-rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+/* ---------- Principaux styles de la page ---------- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto";
+  color: black;
+}
+
+body h1 {
+  font-family: "Shrikhand";
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header i {
+  font-size: 1.5em;
+  padding-top: 1em;
+  padding-left: 1.3em;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+header h1 {
+  margin-top: -1.1em;
+}
+
+.photo {
+  position: relative;
+  overflow: hidden;
+  padding-top: 65%;
+}
+
+.photo img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+.menu {
+  position: relative;
+  z-index: 1;
+  background-color: #f9f9f9;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  margin-top: -4em;
+  margin-bottom: 0;
+  padding-bottom: 1em;
+}
+
+.menu .restaurant {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.menu .restaurant h2 {
+  font-family: "Shrikhand";
+  font-size: 1.8em;
+  margin-left: -0.7em;
+}
+
+.menu .restaurant .coeur {
+  padding-top: 2em;
+  margin-left: 2em;
+}
+
+.menu .restaurant .coeur .plein {
+  display: none;
+}
+
+.menu .restaurant .coeur:active .vide {
+  display: none;
+}
+
+.menu .restaurant .coeur:active .plein {
+  display: inherit;
+}
+
+.menu .restaurant .coeur i {
+  font-size: 1.5em;
+}
+
+.menu h3 {
+  text-transform: uppercase;
+  font-weight: normal;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-left: 1em;
+  font-size: 1em;
+  color: #4B4B4B;
+}
+
+.menu h3 span {
+  border-bottom: 2px solid #99E2D0;
+  padding-bottom: 0.2em;
+}
+
+.menu .coche {
+  display: none;
+  margin-left: -4em;
+  background-color: #99E2D0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-bottom: 1em;
+  width: 4em;
+  height: 4.5em;
+}
+
+.menu .coche i {
+  margin: auto;
+  color: white;
+  font-size: 2em;
+}
+
+.menu .entrees {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu .entrees:hover .coche {
+  display: inherit;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-animation: coche 500ms both;
+          animation: coche 500ms both;
+}
+
+.menu .entrees:hover .coche i {
+  -webkit-animation: coche-rotation 500ms both;
+          animation: coche-rotation 500ms both;
+}
+
+.menu .entrees:hover .entrees__compo-prix {
+  -webkit-animation: reduc-div 500ms both;
+          animation: reduc-div 500ms both;
+}
+
+.menu .entrees-palette-gout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu .entrees-palette-gout .infos1 {
+  -webkit-animation: apparaitre 500ms 500ms both;
+          animation: apparaitre 500ms 500ms both;
+}
+
+.menu .entrees-palette-gout .infos2 {
+  -webkit-animation: apparaitre 500ms 700ms both;
+          animation: apparaitre 500ms 700ms both;
+}
+
+.menu .entrees-palette-gout .infos3 {
+  -webkit-animation: apparaitre 500ms 900ms both;
+          animation: apparaitre 500ms 900ms both;
+}
+
+.menu .entrees-palette-gout .infos1, .menu .entrees-palette-gout .infos2, .menu .entrees-palette-gout .infos3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 21.5em;
+  margin-bottom: 1em;
+  background-color: white;
+  border-radius: 20px;
+  -webkit-box-shadow: 5px 5px 5px #f2f2f2;
+          box-shadow: 5px 5px 5px #f2f2f2;
+}
+
+.menu .entrees-palette-gout .infos1 h4, .menu .entrees-palette-gout .infos2 h4, .menu .entrees-palette-gout .infos3 h4 {
+  margin: 0;
+  padding: 0.7em;
+}
+
+.menu .entrees-palette-gout .infos1 .entrees__compo-prix, .menu .entrees-palette-gout .infos2 .entrees__compo-prix, .menu .entrees-palette-gout .infos3 .entrees__compo-prix {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu .entrees-palette-gout .infos1 .entrees__compo-prix p:first-child, .menu .entrees-palette-gout .infos2 .entrees__compo-prix p:first-child, .menu .entrees-palette-gout .infos3 .entrees__compo-prix p:first-child {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #4B4B4B;
+}
+
+.menu .entrees-palette-gout .infos1 .entrees__compo-prix p, .menu .entrees-palette-gout .infos2 .entrees__compo-prix p, .menu .entrees-palette-gout .infos3 .entrees__compo-prix p {
+  margin: 0;
+  padding-left: 0.7em;
+  padding-right: 1em;
+  padding-bottom: 0.7em;
+}
+
+.menu .entrees-palette-gout .infos1 .entrees__compo-prix p:last-child, .menu .entrees-palette-gout .infos2 .entrees__compo-prix p:last-child, .menu .entrees-palette-gout .infos3 .entrees__compo-prix p:last-child {
+  font-weight: bold;
+}
+
+.menu .plats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu .plats:hover .coche {
+  display: inherit;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-animation: coche 500ms both;
+          animation: coche 500ms both;
+}
+
+.menu .plats:hover .coche i {
+  -webkit-animation: coche-rotation 500ms both;
+          animation: coche-rotation 500ms both;
+}
+
+.menu .plats:hover .plats__compo-prix {
+  -webkit-animation: reduc-div 500ms both;
+          animation: reduc-div 500ms both;
+}
+
+.menu .plats-palette-gout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu .plats-palette-gout .infos1 {
+  -webkit-animation: apparaitre 500ms 1100ms both;
+          animation: apparaitre 500ms 1100ms both;
+}
+
+.menu .plats-palette-gout .infos2 {
+  -webkit-animation: apparaitre 500ms 1300ms both;
+          animation: apparaitre 500ms 1300ms both;
+}
+
+.menu .plats-palette-gout .infos3 {
+  -webkit-animation: apparaitre 500ms 1500ms both;
+          animation: apparaitre 500ms 1500ms both;
+}
+
+.menu .plats-palette-gout .infos1, .menu .plats-palette-gout .infos2, .menu .plats-palette-gout .infos3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 21.5em;
+  margin-bottom: 1em;
+  background-color: white;
+  border-radius: 20px;
+  -webkit-box-shadow: 5px 5px 5px #f2f2f2;
+          box-shadow: 5px 5px 5px #f2f2f2;
+}
+
+.menu .plats-palette-gout .infos1 h4, .menu .plats-palette-gout .infos2 h4, .menu .plats-palette-gout .infos3 h4 {
+  margin: 0;
+  padding: 0.7em;
+}
+
+.menu .plats-palette-gout .infos1 .plats__compo-prix, .menu .plats-palette-gout .infos2 .plats__compo-prix, .menu .plats-palette-gout .infos3 .plats__compo-prix {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu .plats-palette-gout .infos1 .plats__compo-prix p:first-child, .menu .plats-palette-gout .infos2 .plats__compo-prix p:first-child, .menu .plats-palette-gout .infos3 .plats__compo-prix p:first-child {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #4B4B4B;
+}
+
+.menu .plats-palette-gout .infos1 .plats__compo-prix p, .menu .plats-palette-gout .infos2 .plats__compo-prix p, .menu .plats-palette-gout .infos3 .plats__compo-prix p {
+  margin: 0;
+  padding-left: 0.7em;
+  padding-right: 1em;
+  padding-bottom: 0.7em;
+}
+
+.menu .plats-palette-gout .infos1 .plats__compo-prix p:last-child, .menu .plats-palette-gout .infos2 .plats__compo-prix p:last-child, .menu .plats-palette-gout .infos3 .plats__compo-prix p:last-child {
+  font-weight: bold;
+}
+
+.menu .desserts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu .desserts:hover .coche {
+  display: inherit;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-animation: coche 500ms both;
+          animation: coche 500ms both;
+}
+
+.menu .desserts:hover .coche i {
+  -webkit-animation: coche-rotation 500ms both;
+          animation: coche-rotation 500ms both;
+}
+
+.menu .desserts:hover .desserts__compo-prix {
+  -webkit-animation: reduc-div 500ms both;
+          animation: reduc-div 500ms both;
+}
+
+.menu .desserts-palette-gout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu .desserts-palette-gout .infos1 {
+  -webkit-animation: apparaitre 500ms 1700ms both;
+          animation: apparaitre 500ms 1700ms both;
+}
+
+.menu .desserts-palette-gout .infos2 {
+  -webkit-animation: apparaitre 500ms 1900ms both;
+          animation: apparaitre 500ms 1900ms both;
+}
+
+.menu .desserts-palette-gout .infos3 {
+  -webkit-animation: apparaitre 500ms 2100ms both;
+          animation: apparaitre 500ms 2100ms both;
+}
+
+.menu .desserts-palette-gout .infos1, .menu .desserts-palette-gout .infos2, .menu .desserts-palette-gout .infos3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 21.5em;
+  margin-bottom: 1em;
+  background-color: white;
+  border-radius: 20px;
+  -webkit-box-shadow: 5px 5px 5px #f2f2f2;
+          box-shadow: 5px 5px 5px #f2f2f2;
+}
+
+.menu .desserts-palette-gout .infos1 h4, .menu .desserts-palette-gout .infos2 h4, .menu .desserts-palette-gout .infos3 h4 {
+  margin: 0;
+  padding: 0.7em;
+}
+
+.menu .desserts-palette-gout .infos1 .desserts__compo-prix, .menu .desserts-palette-gout .infos2 .desserts__compo-prix, .menu .desserts-palette-gout .infos3 .desserts__compo-prix {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu .desserts-palette-gout .infos1 .desserts__compo-prix p:first-child, .menu .desserts-palette-gout .infos2 .desserts__compo-prix p:first-child, .menu .desserts-palette-gout .infos3 .desserts__compo-prix p:first-child {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #4B4B4B;
+}
+
+.menu .desserts-palette-gout .infos1 .desserts__compo-prix p, .menu .desserts-palette-gout .infos2 .desserts__compo-prix p, .menu .desserts-palette-gout .infos3 .desserts__compo-prix p {
+  margin: 0;
+  padding-left: 0.7em;
+  padding-right: 1em;
+  padding-bottom: 0.7em;
+}
+
+.menu .desserts-palette-gout .infos1 .desserts__compo-prix p:last-child, .menu .desserts-palette-gout .infos2 .desserts__compo-prix p:last-child, .menu .desserts-palette-gout .infos3 .desserts__compo-prix p:last-child {
+  font-weight: bold;
+}
+
+.btn {
+  border-radius: 25px;
+  color: white;
+  background: -webkit-gradient(linear, right bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  padding: 1em;
+  padding-left: 3em;
+  padding-right: 3em;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  margin-top: 1.5em;
+  margin-bottom: 2em;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #414141;
+  color: white;
+  padding-left: 1.7em;
+}
+
+footer h3 {
+  font-family: "shrikhand";
+  font-weight: normal;
+}
+
+footer a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 0.3em;
+}
+
+footer a i {
+  font-size: 0.8em;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  padding-top: 0.3em;
+}
+
+footer a p {
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+footer .propo-restau i {
+  padding-right: 1.5em;
+}
+
+footer .partenaire i {
+  padding-right: 1em;
+}
+/*# sourceMappingURL=styles1.css.map */
