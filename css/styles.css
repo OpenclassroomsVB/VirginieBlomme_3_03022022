@@ -1,4 +1,25 @@
 /* Document de style CSS */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 /* ---------- Principaux styles de la page ---------- */
 body {
   margin: 0;
@@ -12,6 +33,83 @@ body h1 {
   -webkit-box-shadow: 0px 7px 10px #e6e4e4;
           box-shadow: 0px 7px 10px #e6e4e4;
   margin-bottom: 0.17em;
+}
+
+.loading-spinner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background-color: #bbcbc7;
+}
+
+.loading-spinner .loader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 7.5em;
+  height: 7.5em;
+  margin: auto;
+  position: relative;
+  border-radius: 50%;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+}
+
+.loading-spinner .loader::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -10px;
+  border-radius: inherit;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(-2.98%, #FF79DA), color-stop(68.14%, #9356DC));
+  background: linear-gradient(#FF79DA -2.98%, #9356DC 68.14%);
+}
+
+.loading-spinner .inside {
+  position: relative;
+  border-radius: 50%;
+  background-color: #fff;
+  width: 6.3em;
+  height: 6.3em;
+}
+
+.loading-spinner .inside::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -10px;
+  border-radius: inherit;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(-2.98%, #fff), color-stop(68.14%, #99E2D0));
+  background: linear-gradient(#fff -2.98%, #99E2D0 68.14%);
+}
+
+.loading-spinner i {
+  font-size: 3em;
+  color: silver;
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
 }
 
 header {
@@ -267,38 +365,35 @@ header {
 }
 
 .restaurants .infos {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   background-color: white;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  /*label[for="coeur-palette-gout"]{
+            .vide{
+                display: inherit;
+            }
+            .plein{
+                display: none;
+            }
+            &:checked{
+                .vide{
+                    display: none;
+                }
+                .plein{
+                    display: inherit;
+                }
+            }
+        }*/
 }
 
-.restaurants .coeur {
-  position: absolute;
-  left: 18.5em;
-  top: 2em;
-}
-
-.restaurants .coeur .plein {
-  display: none;
-}
-
-.restaurants .coeur:active .vide {
-  display: none;
-}
-
-.restaurants .coeur:active .plein {
+.restaurants .infos input[type="checkbox"] {
   display: inherit;
 }
 
-.restaurants .coeur i {
+.restaurants .infos i {
   font-size: 1.5em;
 }
 
