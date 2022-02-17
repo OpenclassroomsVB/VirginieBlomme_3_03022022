@@ -1,5 +1,8 @@
+@charset "UTF-8";
 /* Document de style CSS */
+/*-----Variables-----*/
 @-webkit-keyframes apparaitre {
+  /*-----Keyframes-----*/
   0% {
     opacity: 0;
   }
@@ -8,6 +11,7 @@
   }
 }
 @keyframes apparaitre {
+  /*-----Keyframes-----*/
   0% {
     opacity: 0;
   }
@@ -109,6 +113,7 @@ body h1 {
 }
 
 header {
+  /*-----Header-----*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -123,6 +128,7 @@ header i {
 }
 
 .photo {
+  /*-----Section principale de la page (Main)-----*/
   position: relative;
   overflow: hidden;
   padding-top: 65%;
@@ -139,6 +145,7 @@ header i {
 }
 
 .menu {
+  /*-----partie principale (section) : menu-----*/
   position: relative;
   z-index: 1;
   background-color: #f9f9f9;
@@ -178,7 +185,42 @@ header i {
   font-size: 1.5em;
 }
 
+.menu .restaurant .checkbox-coeur .remplissage1 {
+  /*----Div de remplissage (sans l'état ":checked")-----*/
+  -webkit-transition: all 1000ms linear 0ms;
+  transition: all 1000ms linear 0ms;
+  position: absolute;
+  background-color: #FF79DA;
+  height: 0em;
+  width: 0em;
+  z-index: -1;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: 0.5em;
+  right: 0.5em;
+  border-top-left-radius: 55%;
+  border-top-right-radius: 30%;
+}
+
+.menu .restaurant .checkbox-coeur .remplissage2 {
+  /*----Div de remplissage (sans l'état ":checked")-----*/
+  -webkit-transition: all 1000ms linear 0ms;
+  transition: all 1000ms linear 0ms;
+  position: absolute;
+  background-color: #FF79DA;
+  height: 0em;
+  width: 0em;
+  z-index: -1;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  bottom: 0.5em;
+  left: 0.5em;
+  border-top-right-radius: 40%;
+  border-top-left-radius: 40%;
+}
+
 .menu .restaurant .checkbox-coeur [id="coeur-checkbox"] {
+  /*-----Animation icone coeur-----*/
   display: none;
 }
 
@@ -198,38 +240,6 @@ header i {
   left: 0.4em;
 }
 
-.menu .restaurant .checkbox-coeur .remplissage1 {
-  -webkit-transition: all 1000ms linear 0ms;
-  transition: all 1000ms linear 0ms;
-  position: absolute;
-  background-color: #FF79DA;
-  height: 0em;
-  width: 0em;
-  z-index: -1;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  bottom: 0.5em;
-  right: 0.5em;
-  border-top-left-radius: 55%;
-  border-top-right-radius: 30%;
-}
-
-.menu .restaurant .checkbox-coeur .remplissage2 {
-  -webkit-transition: all 1000ms linear 0ms;
-  transition: all 1000ms linear 0ms;
-  position: absolute;
-  background-color: #FF79DA;
-  height: 0em;
-  width: 0em;
-  z-index: -1;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  bottom: 0.5em;
-  left: 0.5em;
-  border-top-right-radius: 40%;
-  border-top-left-radius: 40%;
-}
-
 .menu h3 {
   text-transform: uppercase;
   font-weight: normal;
@@ -246,6 +256,7 @@ header i {
 }
 
 .menu .coche {
+  /*-----Coche (pour animation)-----*/
   display: none;
   margin-left: -4em;
   background-color: #99E2D0;
@@ -278,6 +289,7 @@ header i {
 .menu .entrees [id="coche-infos2-entrees"],
 .menu .entrees [id="coche-infos3-entrees"] {
   display: none;
+  /*-----Mixins-----*/
 }
 
 .menu .entrees [id="coche-infos1-entrees"]:checked + label .coche,
@@ -297,9 +309,9 @@ header i {
           animation: coche-rotation 500ms forwards;
 }
 
-.menu .entrees [id="coche-infos1-entrees"]:checked + label .entrees__compo-prix,
-.menu .entrees [id="coche-infos2-entrees"]:checked + label .entrees__compo-prix,
-.menu .entrees [id="coche-infos3-entrees"]:checked + label .entrees__compo-prix {
+.menu .entrees [id="coche-infos1-entrees"]:checked + label .compo-prix,
+.menu .entrees [id="coche-infos2-entrees"]:checked + label .compo-prix,
+.menu .entrees [id="coche-infos3-entrees"]:checked + label .compo-prix {
   -webkit-animation: reduc-div 500ms forwards;
           animation: reduc-div 500ms forwards;
 }
@@ -318,6 +330,7 @@ header i {
 }
 
 .menu .entrees-infos-coche .infos1 {
+  /*-----Apparition des différantes entrées décalée dans le temps-----*/
   -webkit-animation: apparaitre 500ms 500ms both;
           animation: apparaitre 500ms 500ms both;
 }
@@ -353,7 +366,7 @@ header i {
   padding: 0.7em;
 }
 
-.menu .entrees-infos-coche .infos1 .entrees__compo-prix, .menu .entrees-infos-coche .infos2 .entrees__compo-prix, .menu .entrees-infos-coche .infos3 .entrees__compo-prix {
+.menu .entrees-infos-coche .infos1 .compo-prix, .menu .entrees-infos-coche .infos2 .compo-prix, .menu .entrees-infos-coche .infos3 .compo-prix {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -362,7 +375,7 @@ header i {
           justify-content: space-between;
 }
 
-.menu .entrees-infos-coche .infos1 .entrees__compo-prix p:first-child, .menu .entrees-infos-coche .infos2 .entrees__compo-prix p:first-child, .menu .entrees-infos-coche .infos3 .entrees__compo-prix p:first-child {
+.menu .entrees-infos-coche .infos1 .compo-prix p:first-child, .menu .entrees-infos-coche .infos2 .compo-prix p:first-child, .menu .entrees-infos-coche .infos3 .compo-prix p:first-child {
   font-size: 0.87em;
   white-space: nowrap;
   overflow: hidden;
@@ -370,14 +383,14 @@ header i {
   color: #4B4B4B;
 }
 
-.menu .entrees-infos-coche .infos1 .entrees__compo-prix p, .menu .entrees-infos-coche .infos2 .entrees__compo-prix p, .menu .entrees-infos-coche .infos3 .entrees__compo-prix p {
+.menu .entrees-infos-coche .infos1 .compo-prix p, .menu .entrees-infos-coche .infos2 .compo-prix p, .menu .entrees-infos-coche .infos3 .compo-prix p {
   margin: 0;
   padding-left: 0.7em;
   padding-right: 1em;
   padding-bottom: 0.7em;
 }
 
-.menu .entrees-infos-coche .infos1 .entrees__compo-prix p:last-child, .menu .entrees-infos-coche .infos2 .entrees__compo-prix p:last-child, .menu .entrees-infos-coche .infos3 .entrees__compo-prix p:last-child {
+.menu .entrees-infos-coche .infos1 .compo-prix p:last-child, .menu .entrees-infos-coche .infos2 .compo-prix p:last-child, .menu .entrees-infos-coche .infos3 .compo-prix p:last-child {
   font-weight: bold;
 }
 
@@ -397,6 +410,7 @@ header i {
 .menu .plats [id="coche-infos2-plats"],
 .menu .plats [id="coche-infos3-plats"] {
   display: none;
+  /*-----Mixins-----*/
 }
 
 .menu .plats [id="coche-infos1-plats"]:checked + label .coche,
@@ -416,9 +430,9 @@ header i {
           animation: coche-rotation 500ms forwards;
 }
 
-.menu .plats [id="coche-infos1-plats"]:checked + label .plats__compo-prix,
-.menu .plats [id="coche-infos2-plats"]:checked + label .plats__compo-prix,
-.menu .plats [id="coche-infos3-plats"]:checked + label .plats__compo-prix {
+.menu .plats [id="coche-infos1-plats"]:checked + label .compo-prix,
+.menu .plats [id="coche-infos2-plats"]:checked + label .compo-prix,
+.menu .plats [id="coche-infos3-plats"]:checked + label .compo-prix {
   -webkit-animation: reduc-div 500ms forwards;
           animation: reduc-div 500ms forwards;
 }
@@ -437,6 +451,7 @@ header i {
 }
 
 .menu .plats-infos-coche .infos1 {
+  /*-----Apparition des différants plats décalée dans le temps-----*/
   -webkit-animation: apparaitre 500ms 1100ms both;
           animation: apparaitre 500ms 1100ms both;
 }
@@ -472,7 +487,7 @@ header i {
   padding: 0.7em;
 }
 
-.menu .plats-infos-coche .infos1 .plats__compo-prix, .menu .plats-infos-coche .infos2 .plats__compo-prix, .menu .plats-infos-coche .infos3 .plats__compo-prix {
+.menu .plats-infos-coche .infos1 .compo-prix, .menu .plats-infos-coche .infos2 .compo-prix, .menu .plats-infos-coche .infos3 .compo-prix {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -481,7 +496,7 @@ header i {
           justify-content: space-between;
 }
 
-.menu .plats-infos-coche .infos1 .plats__compo-prix p:first-child, .menu .plats-infos-coche .infos2 .plats__compo-prix p:first-child, .menu .plats-infos-coche .infos3 .plats__compo-prix p:first-child {
+.menu .plats-infos-coche .infos1 .compo-prix p:first-child, .menu .plats-infos-coche .infos2 .compo-prix p:first-child, .menu .plats-infos-coche .infos3 .compo-prix p:first-child {
   font-size: 0.87em;
   white-space: nowrap;
   overflow: hidden;
@@ -489,14 +504,14 @@ header i {
   color: #4B4B4B;
 }
 
-.menu .plats-infos-coche .infos1 .plats__compo-prix p, .menu .plats-infos-coche .infos2 .plats__compo-prix p, .menu .plats-infos-coche .infos3 .plats__compo-prix p {
+.menu .plats-infos-coche .infos1 .compo-prix p, .menu .plats-infos-coche .infos2 .compo-prix p, .menu .plats-infos-coche .infos3 .compo-prix p {
   margin: 0;
   padding-left: 0.7em;
   padding-right: 1em;
   padding-bottom: 0.7em;
 }
 
-.menu .plats-infos-coche .infos1 .plats__compo-prix p:last-child, .menu .plats-infos-coche .infos2 .plats__compo-prix p:last-child, .menu .plats-infos-coche .infos3 .plats__compo-prix p:last-child {
+.menu .plats-infos-coche .infos1 .compo-prix p:last-child, .menu .plats-infos-coche .infos2 .compo-prix p:last-child, .menu .plats-infos-coche .infos3 .compo-prix p:last-child {
   font-weight: bold;
 }
 
@@ -516,6 +531,7 @@ header i {
 .menu .desserts [id="coche-infos2-desserts"],
 .menu .desserts [id="coche-infos3-desserts"] {
   display: none;
+  /*-----Mixins-----*/
 }
 
 .menu .desserts [id="coche-infos1-desserts"]:checked + label .coche,
@@ -535,9 +551,9 @@ header i {
           animation: coche-rotation 500ms forwards;
 }
 
-.menu .desserts [id="coche-infos1-desserts"]:checked + label .desserts__compo-prix,
-.menu .desserts [id="coche-infos2-desserts"]:checked + label .desserts__compo-prix,
-.menu .desserts [id="coche-infos3-desserts"]:checked + label .desserts__compo-prix {
+.menu .desserts [id="coche-infos1-desserts"]:checked + label .compo-prix,
+.menu .desserts [id="coche-infos2-desserts"]:checked + label .compo-prix,
+.menu .desserts [id="coche-infos3-desserts"]:checked + label .compo-prix {
   -webkit-animation: reduc-div 500ms forwards;
           animation: reduc-div 500ms forwards;
 }
@@ -556,6 +572,7 @@ header i {
 }
 
 .menu .desserts-infos-coche .infos1 {
+  /*-----Apparition des différants desserts décalée dans le temps-----*/
   -webkit-animation: apparaitre 500ms 1700ms both;
           animation: apparaitre 500ms 1700ms both;
 }
@@ -591,7 +608,7 @@ header i {
   padding: 0.7em;
 }
 
-.menu .desserts-infos-coche .infos1 .desserts__compo-prix, .menu .desserts-infos-coche .infos2 .desserts__compo-prix, .menu .desserts-infos-coche .infos3 .desserts__compo-prix {
+.menu .desserts-infos-coche .infos1 .compo-prix, .menu .desserts-infos-coche .infos2 .compo-prix, .menu .desserts-infos-coche .infos3 .compo-prix {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -600,7 +617,7 @@ header i {
           justify-content: space-between;
 }
 
-.menu .desserts-infos-coche .infos1 .desserts__compo-prix p:first-child, .menu .desserts-infos-coche .infos2 .desserts__compo-prix p:first-child, .menu .desserts-infos-coche .infos3 .desserts__compo-prix p:first-child {
+.menu .desserts-infos-coche .infos1 .compo-prix p:first-child, .menu .desserts-infos-coche .infos2 .compo-prix p:first-child, .menu .desserts-infos-coche .infos3 .compo-prix p:first-child {
   font-size: 0.87em;
   white-space: nowrap;
   overflow: hidden;
@@ -608,14 +625,14 @@ header i {
   color: #4B4B4B;
 }
 
-.menu .desserts-infos-coche .infos1 .desserts__compo-prix p, .menu .desserts-infos-coche .infos2 .desserts__compo-prix p, .menu .desserts-infos-coche .infos3 .desserts__compo-prix p {
+.menu .desserts-infos-coche .infos1 .compo-prix p, .menu .desserts-infos-coche .infos2 .compo-prix p, .menu .desserts-infos-coche .infos3 .compo-prix p {
   margin: 0;
   padding-left: 0.7em;
   padding-right: 1em;
   padding-bottom: 0.7em;
 }
 
-.menu .desserts-infos-coche .infos1 .desserts__compo-prix p:last-child, .menu .desserts-infos-coche .infos2 .desserts__compo-prix p:last-child, .menu .desserts-infos-coche .infos3 .desserts__compo-prix p:last-child {
+.menu .desserts-infos-coche .infos1 .compo-prix p:last-child, .menu .desserts-infos-coche .infos2 .compo-prix p:last-child, .menu .desserts-infos-coche .infos3 .compo-prix p:last-child {
   font-weight: bold;
 }
 
@@ -625,6 +642,7 @@ a {
 }
 
 a .btn {
+  /*-----Bouton-----*/
   border-radius: 25px;
   background: -webkit-gradient(linear, right bottom, left top, from(#9356DC), to(#FF79DA));
   background: linear-gradient(to top left, #9356DC, #FF79DA);
@@ -643,12 +661,14 @@ a .btn {
 }
 
 a .btn:hover {
+  /*-----Effets au survol de la sourie-----*/
   opacity: 0.8;
   -webkit-box-shadow: 0px 7px 5px 2px #bdbdc8;
           box-shadow: 0px 7px 5px 2px #bdbdc8;
 }
 
 footer {
+  /*-----Footer-----*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
