@@ -87,7 +87,8 @@ body h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: -1.2em;
+  margin-top: -1.5em;
+  margin-bottom: 1em;
   width: 100%;
   height: 100vh;
   background-color: #bbcbc7;
@@ -209,19 +210,24 @@ header {
   color: #4b4b4b;
 }
 
-.explor-restau .btn {
+.explor-restau a {
+  text-decoration: none;
   color: white;
+  border-radius: 25px;
+  margin-top: 2em;
+  margin-bottom: 3em;
+}
+
+.explor-restau a .btn {
   background: -webkit-gradient(linear, right bottom, left top, from(#9356DC), to(#FF79DA));
   background: linear-gradient(to top left, #9356DC, #FF79DA);
   border-radius: 25px;
   -webkit-box-shadow: 0px 5px 5px #bdbdc8;
           box-shadow: 0px 5px 5px #bdbdc8;
   padding: 1em;
-  margin-top: 2em;
-  margin-bottom: 3em;
 }
 
-.explor-restau .btn:hover {
+.explor-restau a:hover {
   opacity: 0.8;
   -webkit-box-shadow: 0px 7px 5px 2px #bdbdc8;
           box-shadow: 0px 7px 5px 2px #bdbdc8;
@@ -477,7 +483,7 @@ header {
   height: 0.8em;
   width: 0.5em;
   z-index: -1;
-  bottom: 0.11em;
+  bottom: 0.15em;
   right: 0.39em;
 }
 
@@ -505,7 +511,7 @@ header {
   bottom: 0.5em;
   right: 0.5em;
   border-top-left-radius: 55%;
-  border-top-right-radius: 55%;
+  border-top-right-radius: 30%;
 }
 
 .checkbox-coeur .remplissage2 {

@@ -135,7 +135,7 @@ header i {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 100%;
-  height: 100%;
+  height: 185%;
 }
 
 .menu {
@@ -276,13 +276,15 @@ header i {
 
 .menu .entrees [id="coche-infos1-entrees"],
 .menu .entrees [id="coche-infos2-entrees"],
-.menu .entrees [id="coche-infos3-entrees"] {
+.menu .entrees [id="coche-infos3-entrees"],
+.menu .entrees [id="coche-infos4-entrees"] {
   display: none;
 }
 
 .menu .entrees [id="coche-infos1-entrees"]:checked + label .coche,
 .menu .entrees [id="coche-infos2-entrees"]:checked + label .coche,
-.menu .entrees [id="coche-infos3-entrees"]:checked + label .coche {
+.menu .entrees [id="coche-infos3-entrees"]:checked + label .coche,
+.menu .entrees [id="coche-infos4-entrees"]:checked + label .coche {
   display: inherit;
   -webkit-transform-origin: right;
           transform-origin: right;
@@ -292,14 +294,16 @@ header i {
 
 .menu .entrees [id="coche-infos1-entrees"]:checked + label .coche i,
 .menu .entrees [id="coche-infos2-entrees"]:checked + label .coche i,
-.menu .entrees [id="coche-infos3-entrees"]:checked + label .coche i {
+.menu .entrees [id="coche-infos3-entrees"]:checked + label .coche i,
+.menu .entrees [id="coche-infos4-entrees"]:checked + label .coche i {
   -webkit-animation: coche-rotation 500ms forwards;
           animation: coche-rotation 500ms forwards;
 }
 
 .menu .entrees [id="coche-infos1-entrees"]:checked + label .entrees__compo-prix,
 .menu .entrees [id="coche-infos2-entrees"]:checked + label .entrees__compo-prix,
-.menu .entrees [id="coche-infos3-entrees"]:checked + label .entrees__compo-prix {
+.menu .entrees [id="coche-infos3-entrees"]:checked + label .entrees__compo-prix,
+.menu .entrees [id="coche-infos4-entrees"]:checked + label .entrees__compo-prix {
   -webkit-animation: reduc-div 500ms forwards;
           animation: reduc-div 500ms forwards;
 }
@@ -332,7 +336,12 @@ header i {
           animation: apparaitre 500ms 900ms both;
 }
 
-.menu .entrees-infos-coche .infos1, .menu .entrees-infos-coche .infos2, .menu .entrees-infos-coche .infos3 {
+.menu .entrees-infos-coche .infos4 {
+  -webkit-animation: apparaitre 500ms 1100ms both;
+          animation: apparaitre 500ms 1100ms both;
+}
+
+.menu .entrees-infos-coche .infos1, .menu .entrees-infos-coche .infos2, .menu .entrees-infos-coche .infos3, .menu .entrees-infos-coche .infos4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -348,12 +357,12 @@ header i {
           box-shadow: 5px 5px 5px #f2f2f2;
 }
 
-.menu .entrees-infos-coche .infos1 h4, .menu .entrees-infos-coche .infos2 h4, .menu .entrees-infos-coche .infos3 h4 {
+.menu .entrees-infos-coche .infos1 h4, .menu .entrees-infos-coche .infos2 h4, .menu .entrees-infos-coche .infos3 h4, .menu .entrees-infos-coche .infos4 h4 {
   margin: 0;
   padding: 0.7em;
 }
 
-.menu .entrees-infos-coche .infos1 .entrees__compo-prix, .menu .entrees-infos-coche .infos2 .entrees__compo-prix, .menu .entrees-infos-coche .infos3 .entrees__compo-prix {
+.menu .entrees-infos-coche .infos1 .entrees__compo-prix, .menu .entrees-infos-coche .infos2 .entrees__compo-prix, .menu .entrees-infos-coche .infos3 .entrees__compo-prix, .menu .entrees-infos-coche .infos4 .entrees__compo-prix {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -362,7 +371,7 @@ header i {
           justify-content: space-between;
 }
 
-.menu .entrees-infos-coche .infos1 .entrees__compo-prix p:first-child, .menu .entrees-infos-coche .infos2 .entrees__compo-prix p:first-child, .menu .entrees-infos-coche .infos3 .entrees__compo-prix p:first-child {
+.menu .entrees-infos-coche .infos1 .entrees__compo-prix p:first-child, .menu .entrees-infos-coche .infos2 .entrees__compo-prix p:first-child, .menu .entrees-infos-coche .infos3 .entrees__compo-prix p:first-child, .menu .entrees-infos-coche .infos4 .entrees__compo-prix p:first-child {
   font-size: 0.87em;
   white-space: nowrap;
   overflow: hidden;
@@ -370,14 +379,14 @@ header i {
   color: #4B4B4B;
 }
 
-.menu .entrees-infos-coche .infos1 .entrees__compo-prix p, .menu .entrees-infos-coche .infos2 .entrees__compo-prix p, .menu .entrees-infos-coche .infos3 .entrees__compo-prix p {
+.menu .entrees-infos-coche .infos1 .entrees__compo-prix p, .menu .entrees-infos-coche .infos2 .entrees__compo-prix p, .menu .entrees-infos-coche .infos3 .entrees__compo-prix p, .menu .entrees-infos-coche .infos4 .entrees__compo-prix p {
   margin: 0;
   padding-left: 0.7em;
   padding-right: 1em;
   padding-bottom: 0.7em;
 }
 
-.menu .entrees-infos-coche .infos1 .entrees__compo-prix p:last-child, .menu .entrees-infos-coche .infos2 .entrees__compo-prix p:last-child, .menu .entrees-infos-coche .infos3 .entrees__compo-prix p:last-child {
+.menu .entrees-infos-coche .infos1 .entrees__compo-prix p:last-child, .menu .entrees-infos-coche .infos2 .entrees__compo-prix p:last-child, .menu .entrees-infos-coche .infos3 .entrees__compo-prix p:last-child, .menu .entrees-infos-coche .infos4 .entrees__compo-prix p:last-child {
   font-weight: bold;
 }
 
@@ -437,18 +446,18 @@ header i {
 }
 
 .menu .plats-infos-coche .infos1 {
-  -webkit-animation: apparaitre 500ms 1100ms both;
-          animation: apparaitre 500ms 1100ms both;
-}
-
-.menu .plats-infos-coche .infos2 {
   -webkit-animation: apparaitre 500ms 1300ms both;
           animation: apparaitre 500ms 1300ms both;
 }
 
-.menu .plats-infos-coche .infos3 {
+.menu .plats-infos-coche .infos2 {
   -webkit-animation: apparaitre 500ms 1500ms both;
           animation: apparaitre 500ms 1500ms both;
+}
+
+.menu .plats-infos-coche .infos3 {
+  -webkit-animation: apparaitre 500ms 1700ms both;
+          animation: apparaitre 500ms 1700ms both;
 }
 
 .menu .plats-infos-coche .infos1, .menu .plats-infos-coche .infos2, .menu .plats-infos-coche .infos3 {
@@ -556,18 +565,18 @@ header i {
 }
 
 .menu .desserts-infos-coche .infos1 {
-  -webkit-animation: apparaitre 500ms 1700ms both;
-          animation: apparaitre 500ms 1700ms both;
-}
-
-.menu .desserts-infos-coche .infos2 {
   -webkit-animation: apparaitre 500ms 1900ms both;
           animation: apparaitre 500ms 1900ms both;
 }
 
-.menu .desserts-infos-coche .infos3 {
+.menu .desserts-infos-coche .infos2 {
   -webkit-animation: apparaitre 500ms 2100ms both;
           animation: apparaitre 500ms 2100ms both;
+}
+
+.menu .desserts-infos-coche .infos3 {
+  -webkit-animation: apparaitre 500ms 2300ms both;
+          animation: apparaitre 500ms 2300ms both;
 }
 
 .menu .desserts-infos-coche .infos1, .menu .desserts-infos-coche .infos2, .menu .desserts-infos-coche .infos3 {
@@ -698,4 +707,4 @@ footer .propo-restau i {
 footer .partenaire i {
   padding-right: 1em;
 }
-/*# sourceMappingURL=styles1.css.map */
+/*# sourceMappingURL=styles2.css.map */
