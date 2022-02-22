@@ -110,6 +110,11 @@ body {
 
 body h1 {
   font-family: "Shrikhand";
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
+  margin-left: -1.5em;
 }
 
 header {
@@ -124,7 +129,6 @@ header i {
   font-size: 1.5em;
   padding-top: 1.5em;
   padding-left: 1em;
-  margin-right: 2.5em;
 }
 
 .photo {
@@ -717,5 +721,408 @@ footer .propo-restau i {
 
 footer .partenaire i {
   padding-right: 1em;
+}
+
+/*---------------Responsive design - I-Pad (min-width 768px)---------------*/
+/*-------------------------------------------------------------------------*/
+@media all and (min-width: 768px) {
+  @-webkit-keyframes reduc-div {
+    0% {
+      width: 29em;
+    }
+    100% {
+      width: 24.5em;
+    }
+  }
+  @keyframes reduc-div {
+    0% {
+      width: 29em;
+    }
+    100% {
+      width: 24.5em;
+    }
+  }
+  header h1 {
+    font-size: 3em;
+  }
+  header i {
+    font-size: 2em;
+  }
+  .menu .restaurant h2 {
+    font-size: 2.3em;
+  }
+  .menu .restaurant .checkbox-coeur {
+    font-size: 1.5em;
+    margin-top: 1.5em;
+  }
+  .menu .carte h3 {
+    font-size: 1.4em;
+  }
+  .menu .carte .coche {
+    margin-left: -4.5em;
+    width: 4.5em;
+    height: 5.4em;
+  }
+  .menu .carte label .infos1, .menu .carte label .infos2, .menu .carte label .infos3 {
+    width: 29em;
+  }
+  .menu .carte .entrees-infos-coche .infos1 h4, .menu .carte .entrees-infos-coche .infos2 h4, .menu .carte .entrees-infos-coche .infos3 h4, .menu .carte .plats-infos-coche .infos1 h4, .menu .carte .plats-infos-coche .infos2 h4, .menu .carte .plats-infos-coche .infos3 h4, .menu .carte .desserts-infos-coche .infos1 h4, .menu .carte .desserts-infos-coche .infos2 h4, .menu .carte .desserts-infos-coche .infos3 h4 {
+    font-size: 1.2em;
+  }
+  .menu .carte .entrees-infos-coche .infos1 .compo-prix p, .menu .carte .entrees-infos-coche .infos2 .compo-prix p, .menu .carte .entrees-infos-coche .infos3 .compo-prix p, .menu .carte .plats-infos-coche .infos1 .compo-prix p, .menu .carte .plats-infos-coche .infos2 .compo-prix p, .menu .carte .plats-infos-coche .infos3 .compo-prix p, .menu .carte .desserts-infos-coche .infos1 .compo-prix p, .menu .carte .desserts-infos-coche .infos2 .compo-prix p, .menu .carte .desserts-infos-coche .infos3 .compo-prix p {
+    font-size: 1.2em;
+  }
+  a .btn {
+    font-size: 1.2em;
+  }
+  footer h3 {
+    font-size: 2em;
+  }
+  footer a {
+    font-size: 1.5em;
+  }
+}
+
+/*---------------Responsive design - Desktop mini + (min-width 1366px)---------------*/
+/*-----------------------------------------------------------------------------------*/
+@media all and (min-width: 1366px) {
+  @-webkit-keyframes reduc-div {
+    0% {
+      width: 40em;
+    }
+    100% {
+      width: 34.5em;
+    }
+  }
+  @keyframes reduc-div {
+    0% {
+      width: 40em;
+    }
+    100% {
+      width: 34.5em;
+    }
+  }
+  header h1 {
+    font-size: 3.5em;
+  }
+  header i {
+    font-size: 2.5em;
+  }
+  .menu .restaurant h2 {
+    font-size: 2.8em;
+  }
+  .menu .restaurant .checkbox-coeur {
+    font-size: 1.7em;
+    margin-top: 1.7em;
+  }
+  .menu .carte h3 {
+    font-size: 1.6em;
+  }
+  .menu .carte .coche {
+    margin-left: -5.5em;
+    width: 5.5em;
+    height: 6.8em;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  .menu .carte label .infos1, .menu .carte label .infos2, .menu .carte label .infos3 {
+    width: 40em;
+  }
+  .menu .carte .entrees-infos-coche .infos1 h4, .menu .carte .entrees-infos-coche .infos2 h4, .menu .carte .entrees-infos-coche .infos3 h4, .menu .carte .plats-infos-coche .infos1 h4, .menu .carte .plats-infos-coche .infos2 h4, .menu .carte .plats-infos-coche .infos3 h4, .menu .carte .desserts-infos-coche .infos1 h4, .menu .carte .desserts-infos-coche .infos2 h4, .menu .carte .desserts-infos-coche .infos3 h4 {
+    font-size: 1.5em;
+  }
+  .menu .carte .entrees-infos-coche .infos1 .compo-prix p, .menu .carte .entrees-infos-coche .infos2 .compo-prix p, .menu .carte .entrees-infos-coche .infos3 .compo-prix p, .menu .carte .plats-infos-coche .infos1 .compo-prix p, .menu .carte .plats-infos-coche .infos2 .compo-prix p, .menu .carte .plats-infos-coche .infos3 .compo-prix p, .menu .carte .desserts-infos-coche .infos1 .compo-prix p, .menu .carte .desserts-infos-coche .infos2 .compo-prix p, .menu .carte .desserts-infos-coche .infos3 .compo-prix p {
+    font-size: 1.5em;
+  }
+  .menu .carte .infos1, .menu .carte .infos2, .menu .carte .infos3 {
+    border-radius: 30px;
+  }
+  a .btn {
+    font-size: 1.4em;
+  }
+  footer h3 {
+    font-size: 2em;
+  }
+  footer a {
+    font-size: 1.5em;
+  }
+}
+
+/*------------------Responsive design - Desktop (min-width 1440px)-------------------*/
+/*-----------------------------------------------------------------------------------*/
+@media all and (min-width: 1440px) {
+  @-webkit-keyframes reduc-div {
+    0% {
+      width: 29em;
+    }
+    100% {
+      width: 24.5em;
+    }
+  }
+  @keyframes reduc-div {
+    0% {
+      width: 29em;
+    }
+    100% {
+      width: 24.5em;
+    }
+  }
+  .menu .carte {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .menu .carte h3 {
+    font-size: 1.3em;
+  }
+  .menu .carte .coche {
+    margin-left: -4.5em;
+    width: 4.5em;
+    height: 5.4em;
+  }
+  .menu .carte label .infos1, .menu .carte label .infos2, .menu .carte label .infos3 {
+    width: 29em;
+  }
+  .menu .carte .entrees-infos-coche .infos1 h4, .menu .carte .entrees-infos-coche .infos2 h4, .menu .carte .entrees-infos-coche .infos3 h4, .menu .carte .plats-infos-coche .infos1 h4, .menu .carte .plats-infos-coche .infos2 h4, .menu .carte .plats-infos-coche .infos3 h4, .menu .carte .desserts-infos-coche .infos1 h4, .menu .carte .desserts-infos-coche .infos2 h4, .menu .carte .desserts-infos-coche .infos3 h4 {
+    font-size: 1.2em;
+  }
+  .menu .carte .entrees-infos-coche .infos1 .compo-prix p, .menu .carte .entrees-infos-coche .infos2 .compo-prix p, .menu .carte .entrees-infos-coche .infos3 .compo-prix p, .menu .carte .plats-infos-coche .infos1 .compo-prix p, .menu .carte .plats-infos-coche .infos2 .compo-prix p, .menu .carte .plats-infos-coche .infos3 .compo-prix p, .menu .carte .desserts-infos-coche .infos1 .compo-prix p, .menu .carte .desserts-infos-coche .infos2 .compo-prix p, .menu .carte .desserts-infos-coche .infos3 .compo-prix p {
+    font-size: 1.2em;
+  }
+}
+
+/*------------------Responsive design - Desktop big (min-width 1920px)-------------------*/
+/*---------------------------------------------------------------------------------------*/
+@media all and (min-width: 1920px) {
+  @-webkit-keyframes reduc-div {
+    0% {
+      width: 35em;
+    }
+    100% {
+      width: 30em;
+    }
+  }
+  @keyframes reduc-div {
+    0% {
+      width: 35em;
+    }
+    100% {
+      width: 30em;
+    }
+  }
+  header h1 {
+    font-size: 4em;
+  }
+  header i {
+    font-size: 3em;
+  }
+  .menu .restaurant h2 {
+    font-size: 3.2em;
+  }
+  .menu .restaurant .checkbox-coeur {
+    font-size: 2em;
+    margin-top: 1.7em;
+  }
+  .menu .carte h3 {
+    font-size: 1.6em;
+  }
+  .menu .carte .coche {
+    margin-left: -5em;
+    width: 5em;
+    height: 6.2em;
+  }
+  .menu .carte label .infos1, .menu .carte label .infos2, .menu .carte label .infos3 {
+    width: 35em;
+  }
+  .menu .carte .entrees-infos-coche .infos1 h4, .menu .carte .entrees-infos-coche .infos2 h4, .menu .carte .entrees-infos-coche .infos3 h4, .menu .carte .plats-infos-coche .infos1 h4, .menu .carte .plats-infos-coche .infos2 h4, .menu .carte .plats-infos-coche .infos3 h4, .menu .carte .desserts-infos-coche .infos1 h4, .menu .carte .desserts-infos-coche .infos2 h4, .menu .carte .desserts-infos-coche .infos3 h4 {
+    font-size: 1.4em;
+  }
+  .menu .carte .entrees-infos-coche .infos1 .compo-prix p, .menu .carte .entrees-infos-coche .infos2 .compo-prix p, .menu .carte .entrees-infos-coche .infos3 .compo-prix p, .menu .carte .plats-infos-coche .infos1 .compo-prix p, .menu .carte .plats-infos-coche .infos2 .compo-prix p, .menu .carte .plats-infos-coche .infos3 .compo-prix p, .menu .carte .desserts-infos-coche .infos1 .compo-prix p, .menu .carte .desserts-infos-coche .infos2 .compo-prix p, .menu .carte .desserts-infos-coche .infos3 .compo-prix p {
+    font-size: 1.4em;
+  }
+  a .btn {
+    font-size: 1.4em;
+  }
+}
+
+/*------------------Responsive design - Desktop big + (min-width 2560px)-----------------*/
+/*---------------------------------------------------------------------------------------*/
+@media all and (min-width: 2560px) {
+  @-webkit-keyframes reduc-div {
+    0% {
+      width: 48em;
+    }
+    100% {
+      width: 41em;
+    }
+  }
+  @keyframes reduc-div {
+    0% {
+      width: 48em;
+    }
+    100% {
+      width: 41em;
+    }
+  }
+  .menu .carte h3 {
+    font-size: 1.9em;
+  }
+  .menu .carte .coche {
+    margin-left: -7em;
+    width: 7em;
+    height: 9em;
+  }
+  .menu .carte label .infos1, .menu .carte label .infos2, .menu .carte label .infos3 {
+    width: 48em;
+  }
+  .menu .carte .entrees-infos-coche .infos1 h4, .menu .carte .entrees-infos-coche .infos2 h4, .menu .carte .entrees-infos-coche .infos3 h4, .menu .carte .plats-infos-coche .infos1 h4, .menu .carte .plats-infos-coche .infos2 h4, .menu .carte .plats-infos-coche .infos3 h4, .menu .carte .desserts-infos-coche .infos1 h4, .menu .carte .desserts-infos-coche .infos2 h4, .menu .carte .desserts-infos-coche .infos3 h4 {
+    font-size: 2em;
+  }
+  .menu .carte .entrees-infos-coche .infos1 .compo-prix p, .menu .carte .entrees-infos-coche .infos2 .compo-prix p, .menu .carte .entrees-infos-coche .infos3 .compo-prix p, .menu .carte .plats-infos-coche .infos1 .compo-prix p, .menu .carte .plats-infos-coche .infos2 .compo-prix p, .menu .carte .plats-infos-coche .infos3 .compo-prix p, .menu .carte .desserts-infos-coche .infos1 .compo-prix p, .menu .carte .desserts-infos-coche .infos2 .compo-prix p, .menu .carte .desserts-infos-coche .infos3 .compo-prix p {
+    font-size: 2em;
+  }
+  a .btn {
+    font-size: 1.9em;
+  }
+  footer h3 {
+    font-size: 3em;
+  }
+  footer a {
+    font-size: 2em;
+  }
+}
+
+/*-----------------------Responsive design - TV (min-width 2900px)-----------------------*/
+/*---------------------------------------------------------------------------------------*/
+@media all and (min-width: 2900px) {
+  @-webkit-keyframes reduc-div {
+    0% {
+      width: 55em;
+    }
+    100% {
+      width: 47em;
+    }
+  }
+  @keyframes reduc-div {
+    0% {
+      width: 55em;
+    }
+    100% {
+      width: 47em;
+    }
+  }
+  header h1 {
+    font-size: 6em;
+  }
+  header i {
+    font-size: 4em;
+  }
+  .menu .restaurant h2 {
+    font-size: 4.5em;
+  }
+  .menu .restaurant .checkbox-coeur {
+    font-size: 3em;
+    margin-top: 1.4em;
+  }
+  .menu .carte h3 {
+    font-size: 2.9em;
+  }
+  .menu .carte .coche {
+    margin-left: -8em;
+    width: 8em;
+    height: 9.9em;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+  .menu .carte label .infos1, .menu .carte label .infos2, .menu .carte label .infos3 {
+    width: 55em;
+  }
+  .menu .carte .entrees-infos-coche .infos1 h4, .menu .carte .entrees-infos-coche .infos2 h4, .menu .carte .entrees-infos-coche .infos3 h4, .menu .carte .plats-infos-coche .infos1 h4, .menu .carte .plats-infos-coche .infos2 h4, .menu .carte .plats-infos-coche .infos3 h4, .menu .carte .desserts-infos-coche .infos1 h4, .menu .carte .desserts-infos-coche .infos2 h4, .menu .carte .desserts-infos-coche .infos3 h4 {
+    font-size: 2.2em;
+  }
+  .menu .carte .entrees-infos-coche .infos1 .compo-prix p, .menu .carte .entrees-infos-coche .infos2 .compo-prix p, .menu .carte .entrees-infos-coche .infos3 .compo-prix p, .menu .carte .plats-infos-coche .infos1 .compo-prix p, .menu .carte .plats-infos-coche .infos2 .compo-prix p, .menu .carte .plats-infos-coche .infos3 .compo-prix p, .menu .carte .desserts-infos-coche .infos1 .compo-prix p, .menu .carte .desserts-infos-coche .infos2 .compo-prix p, .menu .carte .desserts-infos-coche .infos3 .compo-prix p {
+    font-size: 2.2em;
+  }
+  .menu .carte .infos1, .menu .carte .infos2, .menu .carte .infos3 {
+    border-radius: 50px;
+  }
+  a .btn {
+    font-size: 2.6em;
+    border-radius: 50px;
+  }
+  footer h3 {
+    font-size: 4em;
+  }
+  footer a {
+    font-size: 3em;
+  }
+}
+
+/*---------------------Responsive design - TV 4K (min-width 3550px)----------------------*/
+/*---------------------------------------------------------------------------------------*/
+@media all and (min-width: 3550px) {
+  @-webkit-keyframes reduc-div {
+    0% {
+      width: 65em;
+    }
+    100% {
+      width: 55em;
+    }
+  }
+  @keyframes reduc-div {
+    0% {
+      width: 65em;
+    }
+    100% {
+      width: 55em;
+    }
+  }
+  header h1 {
+    font-size: 9em;
+  }
+  header i {
+    font-size: 6.5em;
+  }
+  .menu .restaurant h2 {
+    font-size: 6.5em;
+  }
+  .menu .restaurant .checkbox-coeur {
+    font-size: 3.5em;
+    margin-top: 2em;
+  }
+  .menu .carte h3 {
+    font-size: 4em;
+  }
+  .menu .carte .coche {
+    margin-left: -10em;
+    width: 10em;
+    height: 12.1em;
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+  .menu .carte label .infos1, .menu .carte label .infos2, .menu .carte label .infos3 {
+    width: 65em;
+  }
+  .menu .carte .entrees-infos-coche .infos1 h4, .menu .carte .entrees-infos-coche .infos2 h4, .menu .carte .entrees-infos-coche .infos3 h4, .menu .carte .plats-infos-coche .infos1 h4, .menu .carte .plats-infos-coche .infos2 h4, .menu .carte .plats-infos-coche .infos3 h4, .menu .carte .desserts-infos-coche .infos1 h4, .menu .carte .desserts-infos-coche .infos2 h4, .menu .carte .desserts-infos-coche .infos3 h4 {
+    font-size: 2.7em;
+  }
+  .menu .carte .entrees-infos-coche .infos1 .compo-prix p, .menu .carte .entrees-infos-coche .infos2 .compo-prix p, .menu .carte .entrees-infos-coche .infos3 .compo-prix p, .menu .carte .plats-infos-coche .infos1 .compo-prix p, .menu .carte .plats-infos-coche .infos2 .compo-prix p, .menu .carte .plats-infos-coche .infos3 .compo-prix p, .menu .carte .desserts-infos-coche .infos1 .compo-prix p, .menu .carte .desserts-infos-coche .infos2 .compo-prix p, .menu .carte .desserts-infos-coche .infos3 .compo-prix p {
+    font-size: 2.7em;
+  }
+  .menu .carte .infos1, .menu .carte .infos2, .menu .carte .infos3 {
+    border-radius: 60px;
+  }
+  a .btn {
+    font-size: 3.6em;
+    border-radius: 60px;
+  }
+  footer h3 {
+    font-size: 5.5em;
+  }
+  footer a {
+    font-size: 4em;
+  }
 }
 /*# sourceMappingURL=styles1.css.map */

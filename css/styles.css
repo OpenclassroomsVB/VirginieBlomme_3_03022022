@@ -92,10 +92,9 @@ body h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: -1.5em;
-  margin-bottom: 1em;
+  margin-top: -2em;
   width: 100%;
-  height: 100vh;
+  height: 105vh;
   background-color: #bbcbc7;
   -webkit-animation: loading-spinner 3000ms;
           animation: loading-spinner 3000ms;
@@ -214,6 +213,8 @@ header {
 .explor-restau h2 {
   margin-top: 2em;
   margin-bottom: 0.5em;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 .explor-restau p {
@@ -247,11 +248,26 @@ header {
           box-shadow: 0px 7px 5px 2px #bdbdc8;
 }
 
-.fonctionnement h2 {
+.fonctionnement {
   /*Section principale de la page (Main)*/
   /*1ère section : fonctionnement du site*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fonctionnement h2 {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   margin-top: 1.6em;
-  padding-left: 0.65em;
+  padding-left: 0.8em;
   margin-bottom: 0em;
 }
 
@@ -260,18 +276,17 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 20.7em;
-  border-radius: 15px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 17em;
+  border-radius: 20px;
   -webkit-box-shadow: 5px 5px 5px #f2f2f2;
           box-shadow: 5px 5px 5px #f2f2f2;
+  background-color: #f9f9f9;
   margin-top: 1.5em;
-  margin-left: 1.5em;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
-  background-color: #f9f9f9;
 }
 
 .num1 :first-child {
@@ -281,15 +296,18 @@ header {
   background-color: #9356DC;
   width: 1.2em;
   margin-right: 1.4em;
+  margin-left: -0.8em;
+  padding: 0.2em;
 }
 
 .num1 i {
+  font-size: 1.2em;
+  color: grey;
   padding-top: 1em;
   margin-right: 1.4em;
 }
 
 .num1 :last-child {
-  margin-right: 4.4em;
   font-weight: bold;
 }
 
@@ -299,12 +317,8 @@ header {
           box-shadow: 0px 7px 5px 2px #f2f2f2;
 }
 
-.num1 :first-child {
-  margin-left: -1.7em;
-}
-
 .num1 i {
-  color: grey;
+  margin-left: 0.14em;
 }
 
 .num2 {
@@ -312,18 +326,17 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 20.7em;
-  border-radius: 15px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 17em;
+  border-radius: 20px;
   -webkit-box-shadow: 5px 5px 5px #f2f2f2;
           box-shadow: 5px 5px 5px #f2f2f2;
+  background-color: #f9f9f9;
   margin-top: 1.5em;
-  margin-left: 1.5em;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
-  background-color: #f9f9f9;
 }
 
 .num2 :first-child {
@@ -333,15 +346,18 @@ header {
   background-color: #9356DC;
   width: 1.2em;
   margin-right: 1.4em;
+  margin-left: -0.8em;
+  padding: 0.2em;
 }
 
 .num2 i {
+  font-size: 1.2em;
+  color: grey;
   padding-top: 1em;
   margin-right: 1.4em;
 }
 
 .num2 :last-child {
-  margin-right: 4.4em;
   font-weight: bold;
 }
 
@@ -352,11 +368,7 @@ header {
 }
 
 .num2 :first-child {
-  margin-left: -2.5em;
-}
-
-.num2 i {
-  color: grey;
+  margin-left: -0.9em;
 }
 
 .num3 {
@@ -364,15 +376,15 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 20.7em;
-  border-radius: 15px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 17em;
+  border-radius: 20px;
   -webkit-box-shadow: 5px 5px 5px #f2f2f2;
           box-shadow: 5px 5px 5px #f2f2f2;
+  background-color: #f9f9f9;
   margin-top: 1.5em;
-  margin-left: 1.5em;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   background-color: #ece1f9;
@@ -386,15 +398,18 @@ header {
   background-color: #9356DC;
   width: 1.2em;
   margin-right: 1.4em;
+  margin-left: -0.8em;
+  padding: 0.2em;
 }
 
 .num3 i {
+  font-size: 1.2em;
+  color: grey;
   padding-top: 1em;
   margin-right: 1.4em;
 }
 
 .num3 :last-child {
-  margin-right: 4.4em;
   font-weight: bold;
 }
 
@@ -404,12 +419,9 @@ header {
           box-shadow: 0px 7px 5px 2px #f2f2f2;
 }
 
-.num3 :first-child {
-  margin-left: -1.7em;
-}
-
 .num3 i {
   color: #9356DC;
+  margin-left: -0.2em;
 }
 
 .restaurants {
@@ -421,9 +433,6 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -438,7 +447,7 @@ header {
 .restaurants h2 {
   -ms-flex-item-align: start;
       align-self: flex-start;
-  padding-left: 0.65em;
+  padding-left: 0.8em;
   padding-top: 1.6em;
   padding-bottom: 0.3em;
 }
@@ -634,10 +643,430 @@ footer a p {
 }
 
 footer .propo-restau i {
-  padding-right: 1.5em;
+  padding-right: 1em;
 }
 
 footer .partenaire i {
-  padding-right: 1em;
+  padding-right: 0.6em;
+}
+
+/*---------------Responsive design - I-Pad (min-width 768px)---------------*/
+/*-------------------------------------------------------------------------*/
+@media all and (min-width: 768px) {
+  h1 {
+    font-size: 3em;
+  }
+  .localisation i {
+    font-size: 2em;
+  }
+  .localisation p {
+    font-size: 2em;
+  }
+  .explor-restau h2 {
+    font-size: 2em;
+  }
+  .explor-restau p {
+    font-size: 2em;
+  }
+  .explor-restau .btn {
+    font-size: 1.35em;
+  }
+  .fonctionnement h2 {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    font-size: 2em;
+  }
+  .fonctionnement .num1, .fonctionnement .num2, .fonctionnement .num3 {
+    width: 40em;
+  }
+  .fonctionnement .num1 i, .fonctionnement .num2 i, .fonctionnement .num3 i {
+    font-size: 1.7em;
+    margin-right: 2.6em;
+  }
+  .fonctionnement .num1 p, .fonctionnement .num2 p, .fonctionnement .num3 p {
+    font-size: 1.7em;
+    padding: 0em;
+  }
+  .fonctionnement .num1 p:first-child, .fonctionnement .num2 p:first-child, .fonctionnement .num3 p:first-child {
+    padding: 0.2em;
+  }
+  .restaurants h2 {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    font-size: 2em;
+    margin-bottom: 0em;
+  }
+  .restaurants .cartes-cliquables {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .restaurants .cartes-cliquables .palette-gout, .restaurants .cartes-cliquables .note-enchantee, .restaurants .cartes-cliquables .francaise, .restaurants .cartes-cliquables .delice-sens {
+    margin-top: 2em;
+    margin-right: 0.8em;
+    margin-bottom: 2em;
+    margin-left: 0.8em;
+  }
+  footer h3 {
+    font-size: 2em;
+  }
+  footer p {
+    font-size: 1.5em;
+  }
+  footer .propo-restau i, footer .partenaire i {
+    font-size: 1.5em;
+  }
+}
+
+/*---------------Responsive design - I-Pad paysage (min-width 1024px)---------------*/
+/*----------------------------------------------------------------------------------*/
+@media all and (min-width: 1024px) {
+  .restaurants .cartes-cliquables .palette-gout, .restaurants .cartes-cliquables .note-enchantee, .restaurants .cartes-cliquables .francaise, .restaurants .cartes-cliquables .delice-sens {
+    margin-top: 4em;
+    margin-right: 2em;
+    margin-left: 2em;
+    margin-bottom: 4em;
+  }
+}
+
+/*---------------Responsive design - Desktop mini (min-width 1280px)---------------*/
+/*---------------------------------------------------------------------------------*/
+@media all and (min-width: 1280px) {
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .fonctionnement {
+    margin-left: 2.5em;
+  }
+  .fonctionnement h2 {
+    font-size: 1.7em;
+    margin-top: 2em;
+    margin-bottom: 4em;
+  }
+  .fonctionnement .num1, .fonctionnement .num2, .fonctionnement .num3 {
+    width: 22em;
+    margin-bottom: 3em;
+  }
+  .fonctionnement .num1 i, .fonctionnement .num2 i, .fonctionnement .num3 i {
+    font-size: 1.7em;
+    margin-right: 1em;
+    padding-top: 0.8em;
+  }
+  .fonctionnement .num1 p, .fonctionnement .num2 p, .fonctionnement .num3 p {
+    font-size: 1.3em;
+    padding: 0em;
+  }
+  .fonctionnement .num1 p:first-child, .fonctionnement .num2 p:first-child, .fonctionnement .num3 p:first-child {
+    padding: 0.2em;
+  }
+  .restaurants h2 {
+    font-size: 1.8em;
+    margin-top: 0em;
+  }
+}
+
+/*----------------Responsive design - Desktop mini + (min-width 1366px)--------------*/
+/*-----------------------------------------------------------------------------------*/
+@media all and (min-width: 1366px) {
+  .fonctionnement {
+    margin-left: 4.5em;
+  }
+}
+
+/*-----------------Responsive design - Desktop (min-width 1440px)--------------------*/
+/*-----------------------------------------------------------------------------------*/
+@media all and (min-width: 1440px) {
+  .fonctionnement {
+    margin-left: 6.5em;
+  }
+}
+
+/*-----------------Responsive design - Desktop (min-width 1680px)--------------------*/
+/*-----------------------------------------------------------------------------------*/
+@media all and (min-width: 1680px) {
+  h1 {
+    font-size: 4em;
+  }
+  .localisation i {
+    font-size: 2.5em;
+  }
+  .localisation p {
+    font-size: 2.5em;
+  }
+  .explor-restau h2 {
+    font-size: 2.5em;
+  }
+  .explor-restau p {
+    font-size: 2.5em;
+  }
+  .explor-restau a {
+    border-radius: 30px;
+  }
+  .explor-restau a .btn {
+    font-size: 1.7em;
+    border-radius: 30px;
+  }
+  .fonctionnement {
+    margin-left: 8.5em;
+  }
+  .fonctionnement h2 {
+    font-size: 2.2em;
+  }
+  .fonctionnement .num1, .fonctionnement .num2, .fonctionnement .num3 {
+    width: 30em;
+  }
+  .fonctionnement .num1 p, .fonctionnement .num2 p, .fonctionnement .num3 p {
+    font-size: 1.7em;
+  }
+  .fonctionnement .num1 i, .fonctionnement .num2 i, .fonctionnement .num3 i {
+    padding-top: 1.1em;
+  }
+  .restaurants h2 {
+    font-size: 2.25em;
+  }
+  .restaurants h3 {
+    font-size: 1.5em;
+  }
+  .restaurants p {
+    font-size: 1.5em;
+  }
+  .restaurants .checkbox-coeur {
+    font-size: 1.5em;
+    margin-top: 1.5em;
+    margin-right: 1.5em;
+  }
+  .restaurants .photo {
+    width: 23.5em;
+  }
+  footer h3 {
+    font-size: 3em;
+  }
+  footer p {
+    font-size: 2em;
+  }
+  footer .propo-restau i, footer .partenaire i {
+    font-size: 2em;
+  }
+}
+
+/*-----------------Responsive design - Desktop big (min-width 1920px)-----------------*/
+/*------------------------------------------------------------------------------------*/
+@media all and (min-width: 1920px) {
+  .fonctionnement {
+    margin-left: 10.5em;
+  }
+  .restaurants {
+    width: 70em;
+  }
+  .restaurants .cartes-cliquables .palette-gout, .restaurants .cartes-cliquables .note-enchantee, .restaurants .cartes-cliquables .francaise, .restaurants .cartes-cliquables .delice-sens {
+    margin-top: 5em;
+    margin-right: 3em;
+    margin-left: 3em;
+    margin-bottom: 5em;
+  }
+}
+
+/*-----------------Responsive design - Desktop big (min-width 2280px)-----------------*/
+/*------------------------------------------------------------------------------------*/
+@media all and (min-width: 2280px) {
+  body h1 {
+    font-size: 6em;
+    margin-bottom: 0.06em;
+  }
+  .restaurants {
+    width: 78em;
+  }
+}
+
+/*-----------------Responsive design - Desktop big (min-width 2400px)-----------------*/
+/*------------------------------------------------------------------------------------*/
+@media all and (min-width: 2400px) {
+  .fonctionnement .num1, .fonctionnement .num2, .fonctionnement .num3 {
+    width: 35em;
+  }
+}
+
+/*---------------Responsive design - Desktop big + (min-width 2560px)-----------------*/
+/*------------------------------------------------------------------------------------*/
+@media all and (min-width: 2560px) {
+  body h1 {
+    font-size: 6em;
+    margin-bottom: 0.09em;
+  }
+  .localisation i {
+    font-size: 3em;
+  }
+  .localisation p {
+    font-size: 3em;
+  }
+  .explor-restau h2 {
+    font-size: 3em;
+  }
+  .explor-restau p {
+    font-size: 3em;
+  }
+  .explor-restau a {
+    border-radius: 35px;
+  }
+  .explor-restau a .btn {
+    font-size: 2.1em;
+    border-radius: 35px;
+  }
+  .fonctionnement {
+    margin-left: 10.5em;
+  }
+  .fonctionnement h2 {
+    font-size: 2.6em;
+  }
+  .fonctionnement .num1 p, .fonctionnement .num2 p, .fonctionnement .num3 p {
+    font-size: 2em;
+  }
+  .fonctionnement .num1 i, .fonctionnement .num2 i, .fonctionnement .num3 i {
+    padding-top: 1.1em;
+    font-size: 2em;
+  }
+  .restaurants {
+    width: 95em;
+  }
+  .restaurants h2 {
+    font-size: 2.65em;
+  }
+  .restaurants h3 {
+    font-size: 1.7em;
+  }
+  .restaurants p {
+    font-size: 1.7em;
+  }
+  .restaurants .checkbox-coeur {
+    font-size: 1.7em;
+    margin-top: 1.7em;
+    margin-right: 1em;
+  }
+  .restaurants .photo {
+    width: 26.5em;
+  }
+}
+
+/*--------------------Responsive design - TV (min-width 2900px)-----------------------*/
+/*------------------------------------------------------------------------------------*/
+@media all and (min-width: 2900px) {
+  .fonctionnement {
+    margin-left: 13.5em;
+  }
+  .fonctionnement .num1, .fonctionnement .num2, .fonctionnement .num3 {
+    width: 45em;
+  }
+}
+
+/*--------------------Responsive design - TV + (min-width 3200px)---------------------*/
+/*------------------------------------------------------------------------------------*/
+@media all and (min-width: 3200px) {
+  body h1 {
+    margin-bottom: 0.07em;
+  }
+  .fonctionnement .num1, .fonctionnement .num2, .fonctionnement .num3 {
+    margin-bottom: 5em;
+  }
+  .restaurants {
+    width: 105em;
+  }
+  .restaurants .photo {
+    width: 33.5em;
+  }
+}
+
+/*-------------------Responsive design - TV 4K (min-width 3400px)---------------------*/
+/*------------------------------------------------------------------------------------*/
+@media all and (min-width: 3400px) {
+  body h1 {
+    margin-bottom: 0.05em;
+  }
+  .restaurants {
+    width: 115em;
+  }
+}
+
+/*-------------------Responsive design - TV 4K (min-width 3550px)---------------------*/
+/*------------------------------------------------------------------------------------*/
+@media all and (min-width: 3550px) {
+  body h1 {
+    font-size: 9em;
+    margin-bottom: 0.03em;
+  }
+  .localisation i {
+    font-size: 4.5em;
+  }
+  .localisation p {
+    font-size: 4.5em;
+  }
+  .explor-restau h2 {
+    font-size: 4.5em;
+  }
+  .explor-restau p {
+    font-size: 4.5em;
+  }
+  .explor-restau a {
+    border-radius: 40px;
+  }
+  .explor-restau a .btn {
+    font-size: 3.6em;
+    border-radius: 40px;
+    margin-bottom: 1em;
+  }
+  .fonctionnement {
+    margin-left: 16.5em;
+  }
+  .fonctionnement h2 {
+    font-size: 3.6em;
+  }
+  .fonctionnement .num1, .fonctionnement .num2, .fonctionnement .num3 {
+    width: 60em;
+    border-radius: 40px;
+    margin-bottom: 7em;
+  }
+  .fonctionnement .num1 p, .fonctionnement .num2 p, .fonctionnement .num3 p {
+    font-size: 3em;
+  }
+  .fonctionnement .num1 i, .fonctionnement .num2 i, .fonctionnement .num3 i {
+    padding-top: 1.1em;
+    font-size: 3em;
+  }
+  .restaurants h2 {
+    font-size: 3.65em;
+  }
+  .restaurants h3 {
+    font-size: 2.5em;
+  }
+  .restaurants p {
+    font-size: 2.5em;
+  }
+  .restaurants .checkbox-coeur {
+    font-size: 2.5em;
+    margin-top: 1.7em;
+    margin-right: 1.5em;
+  }
+  .restaurants .photo {
+    width: 42.5em;
+  }
+  footer h3 {
+    font-size: 5em;
+  }
+  footer p {
+    font-size: 3em;
+  }
+  footer .propo-restau i, footer .partenaire i {
+    font-size: 3em;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
