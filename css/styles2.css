@@ -22,19 +22,19 @@
 
 @-webkit-keyframes reduc-div {
   0% {
-    width: 21.5em;
+    width: 19.5em;
   }
   100% {
-    width: 17.5em;
+    width: 15.5em;
   }
 }
 
 @keyframes reduc-div {
   0% {
-    width: 21.5em;
+    width: 19.5em;
   }
   100% {
-    width: 17.5em;
+    width: 15.5em;
   }
 }
 
@@ -110,6 +110,11 @@ body {
 
 body h1 {
   font-family: "Shrikhand";
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
+  margin-left: -1.5em;
 }
 
 header {
@@ -119,12 +124,12 @@ header {
   display: flex;
 }
 
-header i {
+header a {
   color: black;
   font-size: 1.5em;
   padding-top: 1.5em;
   padding-left: 1em;
-  margin-right: 2.5em;
+  z-index: 1;
 }
 
 .photo {
@@ -167,13 +172,12 @@ header i {
 
 .menu .restaurant h2 {
   font-family: "Shrikhand";
-  font-size: 1.8em;
-  margin-left: -0.7em;
+  font-size: 1.55em;
 }
 
 .menu .restaurant .checkbox-coeur {
   display: block;
-  margin-top: 2em;
+  margin-top: 1.5em;
   margin-left: 2em;
   width: 1.5em;
   height: 1.5em;
@@ -362,7 +366,7 @@ header i {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 21.5em;
+  width: 19.5em;
   margin-bottom: 1em;
   background-color: white;
   border-radius: 20px;
@@ -370,9 +374,10 @@ header i {
           box-shadow: 5px 5px 5px #f2f2f2;
 }
 
-.menu .entrees-infos-coche .infos1 h4, .menu .entrees-infos-coche .infos2 h4, .menu .entrees-infos-coche .infos3 h4, .menu .entrees-infos-coche .infos4 h4 {
+.menu .entrees-infos-coche .infos1 .nom, .menu .entrees-infos-coche .infos2 .nom, .menu .entrees-infos-coche .infos3 .nom, .menu .entrees-infos-coche .infos4 .nom {
   margin: 0;
   padding: 0.7em;
+  font-weight: bold;
 }
 
 .menu .entrees-infos-coche .infos1 .compo-prix, .menu .entrees-infos-coche .infos2 .compo-prix, .menu .entrees-infos-coche .infos3 .compo-prix, .menu .entrees-infos-coche .infos4 .compo-prix {
@@ -384,22 +389,23 @@ header i {
           justify-content: space-between;
 }
 
-.menu .entrees-infos-coche .infos1 .compo-prix p:first-child, .menu .entrees-infos-coche .infos2 .compo-prix p:first-child, .menu .entrees-infos-coche .infos3 .compo-prix p:first-child, .menu .entrees-infos-coche .infos4 .compo-prix p:first-child {
-  font-size: 0.87em;
+.menu .entrees-infos-coche .infos1 .compo-prix .compo, .menu .entrees-infos-coche .infos2 .compo-prix .compo, .menu .entrees-infos-coche .infos3 .compo-prix .compo, .menu .entrees-infos-coche .infos4 .compo-prix .compo {
+  font-size: 0.78em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   color: #4B4B4B;
-}
-
-.menu .entrees-infos-coche .infos1 .compo-prix p, .menu .entrees-infos-coche .infos2 .compo-prix p, .menu .entrees-infos-coche .infos3 .compo-prix p, .menu .entrees-infos-coche .infos4 .compo-prix p {
   margin: 0;
   padding-left: 0.7em;
   padding-right: 1em;
   padding-bottom: 0.7em;
 }
 
-.menu .entrees-infos-coche .infos1 .compo-prix p:last-child, .menu .entrees-infos-coche .infos2 .compo-prix p:last-child, .menu .entrees-infos-coche .infos3 .compo-prix p:last-child, .menu .entrees-infos-coche .infos4 .compo-prix p:last-child {
+.menu .entrees-infos-coche .infos1 .compo-prix .prix, .menu .entrees-infos-coche .infos2 .compo-prix .prix, .menu .entrees-infos-coche .infos3 .compo-prix .prix, .menu .entrees-infos-coche .infos4 .compo-prix .prix {
+  margin: 0;
+  padding-left: 0.7em;
+  padding-right: 1em;
+  padding-bottom: 0.7em;
   font-weight: bold;
 }
 
@@ -483,7 +489,7 @@ header i {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 21.5em;
+  width: 19.5em;
   margin-bottom: 1em;
   background-color: white;
   border-radius: 20px;
@@ -491,9 +497,10 @@ header i {
           box-shadow: 5px 5px 5px #f2f2f2;
 }
 
-.menu .plats-infos-coche .infos1 h4, .menu .plats-infos-coche .infos2 h4, .menu .plats-infos-coche .infos3 h4 {
+.menu .plats-infos-coche .infos1 .nom, .menu .plats-infos-coche .infos2 .nom, .menu .plats-infos-coche .infos3 .nom {
   margin: 0;
   padding: 0.7em;
+  font-weight: bold;
 }
 
 .menu .plats-infos-coche .infos1 .compo-prix, .menu .plats-infos-coche .infos2 .compo-prix, .menu .plats-infos-coche .infos3 .compo-prix {
@@ -505,22 +512,23 @@ header i {
           justify-content: space-between;
 }
 
-.menu .plats-infos-coche .infos1 .compo-prix p:first-child, .menu .plats-infos-coche .infos2 .compo-prix p:first-child, .menu .plats-infos-coche .infos3 .compo-prix p:first-child {
-  font-size: 0.87em;
+.menu .plats-infos-coche .infos1 .compo-prix .compo, .menu .plats-infos-coche .infos2 .compo-prix .compo, .menu .plats-infos-coche .infos3 .compo-prix .compo {
+  font-size: 0.78em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   color: #4B4B4B;
-}
-
-.menu .plats-infos-coche .infos1 .compo-prix p, .menu .plats-infos-coche .infos2 .compo-prix p, .menu .plats-infos-coche .infos3 .compo-prix p {
   margin: 0;
   padding-left: 0.7em;
   padding-right: 1em;
   padding-bottom: 0.7em;
 }
 
-.menu .plats-infos-coche .infos1 .compo-prix p:last-child, .menu .plats-infos-coche .infos2 .compo-prix p:last-child, .menu .plats-infos-coche .infos3 .compo-prix p:last-child {
+.menu .plats-infos-coche .infos1 .compo-prix .prix, .menu .plats-infos-coche .infos2 .compo-prix .prix, .menu .plats-infos-coche .infos3 .compo-prix .prix {
+  margin: 0;
+  padding-left: 0.7em;
+  padding-right: 1em;
+  padding-bottom: 0.7em;
   font-weight: bold;
 }
 
@@ -604,7 +612,7 @@ header i {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 21.5em;
+  width: 19.5em;
   margin-bottom: 1em;
   background-color: white;
   border-radius: 20px;
@@ -612,9 +620,10 @@ header i {
           box-shadow: 5px 5px 5px #f2f2f2;
 }
 
-.menu .desserts-infos-coche .infos1 h4, .menu .desserts-infos-coche .infos2 h4, .menu .desserts-infos-coche .infos3 h4 {
+.menu .desserts-infos-coche .infos1 .nom, .menu .desserts-infos-coche .infos2 .nom, .menu .desserts-infos-coche .infos3 .nom {
   margin: 0;
   padding: 0.7em;
+  font-weight: bold;
 }
 
 .menu .desserts-infos-coche .infos1 .compo-prix, .menu .desserts-infos-coche .infos2 .compo-prix, .menu .desserts-infos-coche .infos3 .compo-prix {
@@ -626,22 +635,23 @@ header i {
           justify-content: space-between;
 }
 
-.menu .desserts-infos-coche .infos1 .compo-prix p:first-child, .menu .desserts-infos-coche .infos2 .compo-prix p:first-child, .menu .desserts-infos-coche .infos3 .compo-prix p:first-child {
-  font-size: 0.87em;
+.menu .desserts-infos-coche .infos1 .compo-prix .compo, .menu .desserts-infos-coche .infos2 .compo-prix .compo, .menu .desserts-infos-coche .infos3 .compo-prix .compo {
+  font-size: 0.78em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   color: #4B4B4B;
-}
-
-.menu .desserts-infos-coche .infos1 .compo-prix p, .menu .desserts-infos-coche .infos2 .compo-prix p, .menu .desserts-infos-coche .infos3 .compo-prix p {
   margin: 0;
   padding-left: 0.7em;
   padding-right: 1em;
   padding-bottom: 0.7em;
 }
 
-.menu .desserts-infos-coche .infos1 .compo-prix p:last-child, .menu .desserts-infos-coche .infos2 .compo-prix p:last-child, .menu .desserts-infos-coche .infos3 .compo-prix p:last-child {
+.menu .desserts-infos-coche .infos1 .compo-prix .prix, .menu .desserts-infos-coche .infos2 .compo-prix .prix, .menu .desserts-infos-coche .infos3 .compo-prix .prix {
+  margin: 0;
+  padding-left: 0.7em;
+  padding-right: 1em;
+  padding-bottom: 0.7em;
   font-weight: bold;
 }
 
@@ -687,7 +697,7 @@ footer {
           flex-direction: column;
   background-color: #414141;
   color: white;
-  padding-left: 1.7em;
+  padding-left: 1em;
 }
 
 footer h3 {
@@ -705,13 +715,15 @@ footer a {
           flex-direction: row;
   text-decoration: none;
   color: white;
-  margin-bottom: 0.3em;
+  margin-bottom: 0.4em;
+}
+
+footer a:last-child {
+  margin-bottom: 1.2em;
 }
 
 footer a i {
   font-size: 0.8em;
-  margin-top: 0em;
-  margin-bottom: 0em;
   padding-top: 0.3em;
 }
 
@@ -720,11 +732,554 @@ footer a p {
   margin-bottom: 0em;
 }
 
-footer .propo-restau i {
-  padding-right: 1.5em;
+footer .propo-restau a {
+  margin-bottom: 0.4em;
 }
 
-footer .partenaire i {
+footer .propo-restau a i {
   padding-right: 1em;
+}
+
+footer .partenaire a {
+  margin-bottom: 0.4em;
+}
+
+footer .partenaire a i {
+  padding-right: 0.6em;
+}
+
+/*--------------Responsive design - I-Phone 8 (min-width 375px)-------------*/
+/*--------------------------------------------------------------------------*/
+@media all and (min-width: 375px) {
+  @-webkit-keyframes reduc-div {
+    0% {
+      width: 21.5em;
+    }
+    100% {
+      width: 17.5em;
+    }
+  }
+  @keyframes reduc-div {
+    0% {
+      width: 21.5em;
+    }
+    100% {
+      width: 17.5em;
+    }
+  }
+  .menu .restaurant h2 {
+    font-size: 1.8em;
+    margin-left: -0.7em;
+  }
+  .menu .restaurant .checkbox-coeur {
+    margin-top: 2em;
+  }
+  .menu .entrees .infos1, .menu .entrees .infos2, .menu .entrees .infos3, .menu .entrees .infos4, .menu .plats .infos1, .menu .plats .infos2, .menu .plats .infos3, .menu .plats .infos4, .menu .desserts .infos1, .menu .desserts .infos2, .menu .desserts .infos3, .menu .desserts .infos4 {
+    width: 21.5em;
+  }
+  .menu .entrees .infos1 .compo-prix .compo, .menu .entrees .infos2 .compo-prix .compo, .menu .entrees .infos3 .compo-prix .compo, .menu .entrees .infos4 .compo-prix .compo, .menu .plats .infos1 .compo-prix .compo, .menu .plats .infos2 .compo-prix .compo, .menu .plats .infos3 .compo-prix .compo, .menu .plats .infos4 .compo-prix .compo, .menu .desserts .infos1 .compo-prix .compo, .menu .desserts .infos2 .compo-prix .compo, .menu .desserts .infos3 .compo-prix .compo, .menu .desserts .infos4 .compo-prix .compo {
+    font-size: 0.87em;
+  }
+}
+
+/*---------------Responsive design - I-Pad (min-width 768px)---------------*/
+/*-------------------------------------------------------------------------*/
+@media all and (min-width: 768px) {
+  @-webkit-keyframes reduc-div {
+    0% {
+      width: 29em;
+    }
+    100% {
+      width: 24.5em;
+    }
+  }
+  @keyframes reduc-div {
+    0% {
+      width: 29em;
+    }
+    100% {
+      width: 24.5em;
+    }
+  }
+  header h1 {
+    font-size: 3em;
+  }
+  header i {
+    font-size: 2em;
+  }
+  .menu .restaurant h2 {
+    font-size: 2.3em;
+  }
+  .menu .restaurant .checkbox-coeur {
+    font-size: 1.5em;
+    margin-top: 1.5em;
+  }
+  .menu .carte h3 {
+    font-size: 1.4em;
+  }
+  .menu .carte .coche {
+    margin-left: -4.5em;
+    width: 4.5em;
+    height: 5.3em;
+  }
+  .menu .carte .entrees .infos1, .menu .carte .entrees .infos2, .menu .carte .entrees .infos3, .menu .carte .entrees .infos4, .menu .carte .plats .infos1, .menu .carte .plats .infos2, .menu .carte .plats .infos3, .menu .carte .plats .infos4, .menu .carte .desserts .infos1, .menu .carte .desserts .infos2, .menu .carte .desserts .infos3, .menu .carte .desserts .infos4 {
+    width: 29em;
+  }
+  .menu .carte .entrees .infos1 .nom, .menu .carte .entrees .infos2 .nom, .menu .carte .entrees .infos3 .nom, .menu .carte .entrees .infos4 .nom, .menu .carte .plats .infos1 .nom, .menu .carte .plats .infos2 .nom, .menu .carte .plats .infos3 .nom, .menu .carte .plats .infos4 .nom, .menu .carte .desserts .infos1 .nom, .menu .carte .desserts .infos2 .nom, .menu .carte .desserts .infos3 .nom, .menu .carte .desserts .infos4 .nom {
+    font-size: 1.2em;
+  }
+  .menu .carte .entrees .infos1 .compo-prix .compo, .menu .carte .entrees .infos1 .compo-prix .prix, .menu .carte .entrees .infos2 .compo-prix .compo, .menu .carte .entrees .infos2 .compo-prix .prix, .menu .carte .entrees .infos3 .compo-prix .compo, .menu .carte .entrees .infos3 .compo-prix .prix, .menu .carte .entrees .infos4 .compo-prix .compo, .menu .carte .entrees .infos4 .compo-prix .prix, .menu .carte .plats .infos1 .compo-prix .compo, .menu .carte .plats .infos1 .compo-prix .prix, .menu .carte .plats .infos2 .compo-prix .compo, .menu .carte .plats .infos2 .compo-prix .prix, .menu .carte .plats .infos3 .compo-prix .compo, .menu .carte .plats .infos3 .compo-prix .prix, .menu .carte .plats .infos4 .compo-prix .compo, .menu .carte .plats .infos4 .compo-prix .prix, .menu .carte .desserts .infos1 .compo-prix .compo, .menu .carte .desserts .infos1 .compo-prix .prix, .menu .carte .desserts .infos2 .compo-prix .compo, .menu .carte .desserts .infos2 .compo-prix .prix, .menu .carte .desserts .infos3 .compo-prix .compo, .menu .carte .desserts .infos3 .compo-prix .prix, .menu .carte .desserts .infos4 .compo-prix .compo, .menu .carte .desserts .infos4 .compo-prix .prix {
+    font-size: 1.2em;
+  }
+  a .btn {
+    font-size: 1.2em;
+  }
+  footer {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 0em;
+  }
+  footer h3 {
+    font-size: 2em;
+  }
+  footer .liens {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .liens .propo-restau i, footer .liens .partenaire i {
+    font-size: 1.5em;
+  }
+  footer .liens a p {
+    font-size: 1.5em;
+  }
+}
+
+/*---------------Responsive design - Desktop mini (min-width 1280px)---------------*/
+/*-----------------------------------------------------------------------------------*/
+@media all and (min-width: 1280px) {
+  footer h3 {
+    font-size: 2.5em;
+  }
+}
+
+/*---------------Responsive design - Desktop mini + (min-width 1366px)---------------*/
+/*-----------------------------------------------------------------------------------*/
+@media all and (min-width: 1366px) {
+  @-webkit-keyframes reduc-div {
+    0% {
+      width: 40em;
+    }
+    100% {
+      width: 34.5em;
+    }
+  }
+  @keyframes reduc-div {
+    0% {
+      width: 40em;
+    }
+    100% {
+      width: 34.5em;
+    }
+  }
+  header h1 {
+    font-size: 3.5em;
+  }
+  header i {
+    font-size: 2.5em;
+  }
+  .menu .restaurant h2 {
+    font-size: 2.8em;
+  }
+  .menu .restaurant .checkbox-coeur {
+    font-size: 1.7em;
+    margin-top: 1.7em;
+  }
+  .menu .carte h3 {
+    font-size: 1.6em;
+  }
+  .menu .carte .coche {
+    margin-left: -5.5em;
+    width: 5.5em;
+    height: 6.7em;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  .menu .carte .coche i {
+    font-size: 2.5em;
+  }
+  .menu .carte .entrees .infos1, .menu .carte .entrees .infos2, .menu .carte .entrees .infos3, .menu .carte .entrees .infos4, .menu .carte .plats .infos1, .menu .carte .plats .infos2, .menu .carte .plats .infos3, .menu .carte .plats .infos4, .menu .carte .desserts .infos1, .menu .carte .desserts .infos2, .menu .carte .desserts .infos3, .menu .carte .desserts .infos4 {
+    border-radius: 30px;
+    width: 40em;
+  }
+  .menu .carte .entrees .infos1 .nom, .menu .carte .entrees .infos2 .nom, .menu .carte .entrees .infos3 .nom, .menu .carte .entrees .infos4 .nom, .menu .carte .plats .infos1 .nom, .menu .carte .plats .infos2 .nom, .menu .carte .plats .infos3 .nom, .menu .carte .plats .infos4 .nom, .menu .carte .desserts .infos1 .nom, .menu .carte .desserts .infos2 .nom, .menu .carte .desserts .infos3 .nom, .menu .carte .desserts .infos4 .nom {
+    font-size: 1.5em;
+  }
+  .menu .carte .entrees .infos1 .compo-prix .compo, .menu .carte .entrees .infos1 .compo-prix .prix, .menu .carte .entrees .infos2 .compo-prix .compo, .menu .carte .entrees .infos2 .compo-prix .prix, .menu .carte .entrees .infos3 .compo-prix .compo, .menu .carte .entrees .infos3 .compo-prix .prix, .menu .carte .entrees .infos4 .compo-prix .compo, .menu .carte .entrees .infos4 .compo-prix .prix, .menu .carte .plats .infos1 .compo-prix .compo, .menu .carte .plats .infos1 .compo-prix .prix, .menu .carte .plats .infos2 .compo-prix .compo, .menu .carte .plats .infos2 .compo-prix .prix, .menu .carte .plats .infos3 .compo-prix .compo, .menu .carte .plats .infos3 .compo-prix .prix, .menu .carte .plats .infos4 .compo-prix .compo, .menu .carte .plats .infos4 .compo-prix .prix, .menu .carte .desserts .infos1 .compo-prix .compo, .menu .carte .desserts .infos1 .compo-prix .prix, .menu .carte .desserts .infos2 .compo-prix .compo, .menu .carte .desserts .infos2 .compo-prix .prix, .menu .carte .desserts .infos3 .compo-prix .compo, .menu .carte .desserts .infos3 .compo-prix .prix, .menu .carte .desserts .infos4 .compo-prix .compo, .menu .carte .desserts .infos4 .compo-prix .prix {
+    font-size: 1.5em;
+  }
+  a .btn {
+    font-size: 1.7em;
+  }
+  footer h3 {
+    font-size: 3em;
+  }
+  footer a {
+    font-size: 1.5em;
+  }
+}
+
+/*------------------Responsive design - Desktop (min-width 1440px)-------------------*/
+/*-----------------------------------------------------------------------------------*/
+@media all and (min-width: 1440px) {
+  @-webkit-keyframes reduc-div {
+    0% {
+      width: 29em;
+    }
+    100% {
+      width: 24.5em;
+    }
+  }
+  @keyframes reduc-div {
+    0% {
+      width: 29em;
+    }
+    100% {
+      width: 24.5em;
+    }
+  }
+  .menu .carte {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .menu .carte h3 {
+    font-size: 1.3em;
+  }
+  .menu .carte .coche {
+    margin-left: -4.5em;
+    width: 4.5em;
+    height: 5.3em;
+  }
+  .menu .carte .coche i {
+    font-size: 2em;
+  }
+  .menu .carte .entrees .infos1, .menu .carte .entrees .infos2, .menu .carte .entrees .infos3, .menu .carte .entrees .infos4, .menu .carte .plats .infos1, .menu .carte .plats .infos2, .menu .carte .plats .infos3, .menu .carte .plats .infos4, .menu .carte .desserts .infos1, .menu .carte .desserts .infos2, .menu .carte .desserts .infos3, .menu .carte .desserts .infos4 {
+    width: 29em;
+  }
+  .menu .carte .entrees .infos1 .nom, .menu .carte .entrees .infos2 .nom, .menu .carte .entrees .infos3 .nom, .menu .carte .entrees .infos4 .nom, .menu .carte .plats .infos1 .nom, .menu .carte .plats .infos2 .nom, .menu .carte .plats .infos3 .nom, .menu .carte .plats .infos4 .nom, .menu .carte .desserts .infos1 .nom, .menu .carte .desserts .infos2 .nom, .menu .carte .desserts .infos3 .nom, .menu .carte .desserts .infos4 .nom {
+    font-size: 1.2em;
+  }
+  .menu .carte .entrees .infos1 .compo-prix .compo, .menu .carte .entrees .infos1 .compo-prix .prix, .menu .carte .entrees .infos2 .compo-prix .compo, .menu .carte .entrees .infos2 .compo-prix .prix, .menu .carte .entrees .infos3 .compo-prix .compo, .menu .carte .entrees .infos3 .compo-prix .prix, .menu .carte .entrees .infos4 .compo-prix .compo, .menu .carte .entrees .infos4 .compo-prix .prix, .menu .carte .plats .infos1 .compo-prix .compo, .menu .carte .plats .infos1 .compo-prix .prix, .menu .carte .plats .infos2 .compo-prix .compo, .menu .carte .plats .infos2 .compo-prix .prix, .menu .carte .plats .infos3 .compo-prix .compo, .menu .carte .plats .infos3 .compo-prix .prix, .menu .carte .plats .infos4 .compo-prix .compo, .menu .carte .plats .infos4 .compo-prix .prix, .menu .carte .desserts .infos1 .compo-prix .compo, .menu .carte .desserts .infos1 .compo-prix .prix, .menu .carte .desserts .infos2 .compo-prix .compo, .menu .carte .desserts .infos2 .compo-prix .prix, .menu .carte .desserts .infos3 .compo-prix .compo, .menu .carte .desserts .infos3 .compo-prix .prix, .menu .carte .desserts .infos4 .compo-prix .compo, .menu .carte .desserts .infos4 .compo-prix .prix {
+    font-size: 1.2em;
+  }
+  a .btn {
+    font-size: 1.4em;
+  }
+  footer {
+    padding-left: 0em;
+  }
+  footer h3 {
+    text-align: center;
+    font-size: 2.5em;
+  }
+  footer .liens {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 1.5em;
+  }
+  footer .liens .propo-restau i, footer .liens .partenaire i {
+    font-size: 1em;
+  }
+  footer .liens a {
+    margin-right: 5em;
+    margin-bottom: 0em;
+  }
+  footer .liens a p {
+    font-size: 1em;
+  }
+  footer .liens a i {
+    padding-top: 0em;
+  }
+}
+
+/*------------------Responsive design - Desktop big (min-width 1920px)-------------------*/
+/*---------------------------------------------------------------------------------------*/
+@media all and (min-width: 1920px) {
+  @-webkit-keyframes reduc-div {
+    0% {
+      width: 35em;
+    }
+    100% {
+      width: 30em;
+    }
+  }
+  @keyframes reduc-div {
+    0% {
+      width: 35em;
+    }
+    100% {
+      width: 30em;
+    }
+  }
+  header h1 {
+    font-size: 4em;
+  }
+  header i {
+    font-size: 3em;
+  }
+  .menu .restaurant h2 {
+    font-size: 3.2em;
+  }
+  .menu .restaurant .checkbox-coeur {
+    font-size: 2em;
+    margin-top: 1.7em;
+  }
+  .menu .carte h3 {
+    font-size: 1.6em;
+  }
+  .menu .carte .coche {
+    margin-left: -5em;
+    width: 5em;
+    height: 6.2em;
+  }
+  .menu .carte .coche i {
+    font-size: 2.3em;
+  }
+  .menu .carte .entrees .infos1, .menu .carte .entrees .infos2, .menu .carte .entrees .infos3, .menu .carte .entrees .infos4, .menu .carte .plats .infos1, .menu .carte .plats .infos2, .menu .carte .plats .infos3, .menu .carte .plats .infos4, .menu .carte .desserts .infos1, .menu .carte .desserts .infos2, .menu .carte .desserts .infos3, .menu .carte .desserts .infos4 {
+    width: 35em;
+  }
+  .menu .carte .entrees .infos1 .nom, .menu .carte .entrees .infos2 .nom, .menu .carte .entrees .infos3 .nom, .menu .carte .entrees .infos4 .nom, .menu .carte .plats .infos1 .nom, .menu .carte .plats .infos2 .nom, .menu .carte .plats .infos3 .nom, .menu .carte .plats .infos4 .nom, .menu .carte .desserts .infos1 .nom, .menu .carte .desserts .infos2 .nom, .menu .carte .desserts .infos3 .nom, .menu .carte .desserts .infos4 .nom {
+    font-size: 1.4em;
+  }
+  .menu .carte .entrees .infos1 .compo-prix .compo, .menu .carte .entrees .infos1 .compo-prix .prix, .menu .carte .entrees .infos2 .compo-prix .compo, .menu .carte .entrees .infos2 .compo-prix .prix, .menu .carte .entrees .infos3 .compo-prix .compo, .menu .carte .entrees .infos3 .compo-prix .prix, .menu .carte .entrees .infos4 .compo-prix .compo, .menu .carte .entrees .infos4 .compo-prix .prix, .menu .carte .plats .infos1 .compo-prix .compo, .menu .carte .plats .infos1 .compo-prix .prix, .menu .carte .plats .infos2 .compo-prix .compo, .menu .carte .plats .infos2 .compo-prix .prix, .menu .carte .plats .infos3 .compo-prix .compo, .menu .carte .plats .infos3 .compo-prix .prix, .menu .carte .plats .infos4 .compo-prix .compo, .menu .carte .plats .infos4 .compo-prix .prix, .menu .carte .desserts .infos1 .compo-prix .compo, .menu .carte .desserts .infos1 .compo-prix .prix, .menu .carte .desserts .infos2 .compo-prix .compo, .menu .carte .desserts .infos2 .compo-prix .prix, .menu .carte .desserts .infos3 .compo-prix .compo, .menu .carte .desserts .infos3 .compo-prix .prix, .menu .carte .desserts .infos4 .compo-prix .compo, .menu .carte .desserts .infos4 .compo-prix .prix {
+    font-size: 1.4em;
+  }
+  a .btn {
+    font-size: 1.7em;
+  }
+}
+
+/*------------------Responsive design - Desktop big + (min-width 2560px)-----------------*/
+/*---------------------------------------------------------------------------------------*/
+@media all and (min-width: 2560px) {
+  @-webkit-keyframes reduc-div {
+    0% {
+      width: 48em;
+    }
+    100% {
+      width: 41em;
+    }
+  }
+  @keyframes reduc-div {
+    0% {
+      width: 48em;
+    }
+    100% {
+      width: 41em;
+    }
+  }
+  header h1 {
+    font-size: 5em;
+  }
+  header a {
+    padding-top: 3em;
+  }
+  header i {
+    font-size: 3em;
+  }
+  .menu .restaurant h2 {
+    font-size: 4em;
+  }
+  .menu .restaurant .checkbox-coeur {
+    font-size: 2.5em;
+  }
+  .menu .carte h3 {
+    font-size: 1.9em;
+  }
+  .menu .carte .coche {
+    margin-left: -7em;
+    width: 7em;
+    height: 9em;
+  }
+  .menu .carte .coche i {
+    font-size: 3.3em;
+  }
+  .menu .carte .entrees .infos1, .menu .carte .entrees .infos2, .menu .carte .entrees .infos3, .menu .carte .entrees .infos4, .menu .carte .plats .infos1, .menu .carte .plats .infos2, .menu .carte .plats .infos3, .menu .carte .plats .infos4, .menu .carte .desserts .infos1, .menu .carte .desserts .infos2, .menu .carte .desserts .infos3, .menu .carte .desserts .infos4 {
+    width: 48em;
+  }
+  .menu .carte .entrees .infos1 .nom, .menu .carte .entrees .infos2 .nom, .menu .carte .entrees .infos3 .nom, .menu .carte .entrees .infos4 .nom, .menu .carte .plats .infos1 .nom, .menu .carte .plats .infos2 .nom, .menu .carte .plats .infos3 .nom, .menu .carte .plats .infos4 .nom, .menu .carte .desserts .infos1 .nom, .menu .carte .desserts .infos2 .nom, .menu .carte .desserts .infos3 .nom, .menu .carte .desserts .infos4 .nom {
+    font-size: 2em;
+  }
+  .menu .carte .entrees .infos1 .compo-prix .compo, .menu .carte .entrees .infos1 .compo-prix .prix, .menu .carte .entrees .infos2 .compo-prix .compo, .menu .carte .entrees .infos2 .compo-prix .prix, .menu .carte .entrees .infos3 .compo-prix .compo, .menu .carte .entrees .infos3 .compo-prix .prix, .menu .carte .entrees .infos4 .compo-prix .compo, .menu .carte .entrees .infos4 .compo-prix .prix, .menu .carte .plats .infos1 .compo-prix .compo, .menu .carte .plats .infos1 .compo-prix .prix, .menu .carte .plats .infos2 .compo-prix .compo, .menu .carte .plats .infos2 .compo-prix .prix, .menu .carte .plats .infos3 .compo-prix .compo, .menu .carte .plats .infos3 .compo-prix .prix, .menu .carte .plats .infos4 .compo-prix .compo, .menu .carte .plats .infos4 .compo-prix .prix, .menu .carte .desserts .infos1 .compo-prix .compo, .menu .carte .desserts .infos1 .compo-prix .prix, .menu .carte .desserts .infos2 .compo-prix .compo, .menu .carte .desserts .infos2 .compo-prix .prix, .menu .carte .desserts .infos3 .compo-prix .compo, .menu .carte .desserts .infos3 .compo-prix .prix, .menu .carte .desserts .infos4 .compo-prix .compo, .menu .carte .desserts .infos4 .compo-prix .prix {
+    font-size: 2em;
+  }
+  a .btn {
+    font-size: 2.2em;
+  }
+  footer h3 {
+    font-size: 4em;
+  }
+  footer a {
+    font-size: 2.5em;
+  }
+}
+
+/*-----------------------Responsive design - TV (min-width 2900px)-----------------------*/
+/*---------------------------------------------------------------------------------------*/
+@media all and (min-width: 2900px) {
+  @-webkit-keyframes reduc-div {
+    0% {
+      width: 55em;
+    }
+    100% {
+      width: 47em;
+    }
+  }
+  @keyframes reduc-div {
+    0% {
+      width: 55em;
+    }
+    100% {
+      width: 47em;
+    }
+  }
+  header h1 {
+    font-size: 6em;
+  }
+  header a {
+    padding-top: 3.5em;
+  }
+  header i {
+    font-size: 4em;
+  }
+  .menu .restaurant h2 {
+    font-size: 4.5em;
+  }
+  .menu .restaurant .checkbox-coeur {
+    font-size: 3em;
+    margin-top: 1.4em;
+  }
+  .menu .carte h3 {
+    font-size: 2.9em;
+  }
+  .menu .carte .coche {
+    margin-left: -8em;
+    width: 8em;
+    height: 9.9em;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+  .menu .carte .coche i {
+    font-size: 3.7em;
+  }
+  .menu .carte .entrees .infos1, .menu .carte .entrees .infos2, .menu .carte .entrees .infos3, .menu .carte .entrees .infos4, .menu .carte .plats .infos1, .menu .carte .plats .infos2, .menu .carte .plats .infos3, .menu .carte .plats .infos4, .menu .carte .desserts .infos1, .menu .carte .desserts .infos2, .menu .carte .desserts .infos3, .menu .carte .desserts .infos4 {
+    width: 55em;
+    border-radius: 50px;
+  }
+  .menu .carte .entrees .infos1 .nom, .menu .carte .entrees .infos2 .nom, .menu .carte .entrees .infos3 .nom, .menu .carte .entrees .infos4 .nom, .menu .carte .plats .infos1 .nom, .menu .carte .plats .infos2 .nom, .menu .carte .plats .infos3 .nom, .menu .carte .plats .infos4 .nom, .menu .carte .desserts .infos1 .nom, .menu .carte .desserts .infos2 .nom, .menu .carte .desserts .infos3 .nom, .menu .carte .desserts .infos4 .nom {
+    font-size: 2.2em;
+  }
+  .menu .carte .entrees .infos1 .compo-prix .compo, .menu .carte .entrees .infos1 .compo-prix .prix, .menu .carte .entrees .infos2 .compo-prix .compo, .menu .carte .entrees .infos2 .compo-prix .prix, .menu .carte .entrees .infos3 .compo-prix .compo, .menu .carte .entrees .infos3 .compo-prix .prix, .menu .carte .entrees .infos4 .compo-prix .compo, .menu .carte .entrees .infos4 .compo-prix .prix, .menu .carte .plats .infos1 .compo-prix .compo, .menu .carte .plats .infos1 .compo-prix .prix, .menu .carte .plats .infos2 .compo-prix .compo, .menu .carte .plats .infos2 .compo-prix .prix, .menu .carte .plats .infos3 .compo-prix .compo, .menu .carte .plats .infos3 .compo-prix .prix, .menu .carte .plats .infos4 .compo-prix .compo, .menu .carte .plats .infos4 .compo-prix .prix, .menu .carte .desserts .infos1 .compo-prix .compo, .menu .carte .desserts .infos1 .compo-prix .prix, .menu .carte .desserts .infos2 .compo-prix .compo, .menu .carte .desserts .infos2 .compo-prix .prix, .menu .carte .desserts .infos3 .compo-prix .compo, .menu .carte .desserts .infos3 .compo-prix .prix, .menu .carte .desserts .infos4 .compo-prix .compo, .menu .carte .desserts .infos4 .compo-prix .prix {
+    font-size: 2.2em;
+  }
+  a .btn {
+    font-size: 2.6em;
+    border-radius: 50px;
+  }
+  footer h3 {
+    font-size: 4em;
+  }
+  footer a {
+    font-size: 3em;
+  }
+}
+
+/*---------------------Responsive design - TV 4K (min-width 3550px)----------------------*/
+/*---------------------------------------------------------------------------------------*/
+@media all and (min-width: 3550px) {
+  @-webkit-keyframes reduc-div {
+    0% {
+      width: 65em;
+    }
+    100% {
+      width: 55em;
+    }
+  }
+  @keyframes reduc-div {
+    0% {
+      width: 65em;
+    }
+    100% {
+      width: 55em;
+    }
+  }
+  header h1 {
+    font-size: 9em;
+  }
+  header a {
+    padding-top: 5.5em;
+  }
+  header i {
+    font-size: 5.5em;
+  }
+  .menu .restaurant h2 {
+    font-size: 6.5em;
+  }
+  .menu .restaurant .checkbox-coeur {
+    font-size: 3.5em;
+    margin-top: 2em;
+  }
+  .menu .carte h3 {
+    font-size: 4em;
+  }
+  .menu .carte .coche {
+    margin-left: -10em;
+    width: 10em;
+    height: 12.1em;
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+  .menu .carte .coche i {
+    font-size: 5em;
+  }
+  .menu .carte .entrees .infos1, .menu .carte .entrees .infos2, .menu .carte .entrees .infos3, .menu .carte .entrees .infos4, .menu .carte .plats .infos1, .menu .carte .plats .infos2, .menu .carte .plats .infos3, .menu .carte .plats .infos4, .menu .carte .desserts .infos1, .menu .carte .desserts .infos2, .menu .carte .desserts .infos3, .menu .carte .desserts .infos4 {
+    width: 65em;
+    border-radius: 60px;
+  }
+  .menu .carte .entrees .infos1 .nom, .menu .carte .entrees .infos2 .nom, .menu .carte .entrees .infos3 .nom, .menu .carte .entrees .infos4 .nom, .menu .carte .plats .infos1 .nom, .menu .carte .plats .infos2 .nom, .menu .carte .plats .infos3 .nom, .menu .carte .plats .infos4 .nom, .menu .carte .desserts .infos1 .nom, .menu .carte .desserts .infos2 .nom, .menu .carte .desserts .infos3 .nom, .menu .carte .desserts .infos4 .nom {
+    font-size: 2.7em;
+  }
+  .menu .carte .entrees .infos1 .compo-prix .compo, .menu .carte .entrees .infos1 .compo-prix .prix, .menu .carte .entrees .infos2 .compo-prix .compo, .menu .carte .entrees .infos2 .compo-prix .prix, .menu .carte .entrees .infos3 .compo-prix .compo, .menu .carte .entrees .infos3 .compo-prix .prix, .menu .carte .entrees .infos4 .compo-prix .compo, .menu .carte .entrees .infos4 .compo-prix .prix, .menu .carte .plats .infos1 .compo-prix .compo, .menu .carte .plats .infos1 .compo-prix .prix, .menu .carte .plats .infos2 .compo-prix .compo, .menu .carte .plats .infos2 .compo-prix .prix, .menu .carte .plats .infos3 .compo-prix .compo, .menu .carte .plats .infos3 .compo-prix .prix, .menu .carte .plats .infos4 .compo-prix .compo, .menu .carte .plats .infos4 .compo-prix .prix, .menu .carte .desserts .infos1 .compo-prix .compo, .menu .carte .desserts .infos1 .compo-prix .prix, .menu .carte .desserts .infos2 .compo-prix .compo, .menu .carte .desserts .infos2 .compo-prix .prix, .menu .carte .desserts .infos3 .compo-prix .compo, .menu .carte .desserts .infos3 .compo-prix .prix, .menu .carte .desserts .infos4 .compo-prix .compo, .menu .carte .desserts .infos4 .compo-prix .prix {
+    font-size: 2.7em;
+  }
+  a .btn {
+    font-size: 3.2em;
+    border-radius: 60px;
+  }
+  footer h3 {
+    font-size: 5.5em;
+  }
+  footer a {
+    font-size: 4em;
+  }
 }
 /*# sourceMappingURL=styles2.css.map */

@@ -33,10 +33,10 @@ $box-shadow-infos: 5px 5px 5px #f2f2f2;
 }
 @keyframes reduc-div{
     0%{
-        width: 21.5em;
+        width: 19.5em;
     }
     100%{
-        width: 17.5em;
+        width: 15.5em;
     }
 }
 @keyframes coche{
@@ -79,11 +79,12 @@ body{
 }
 header{   /*-----Header-----*/
     display: flex;
-    i{
+    a{
         color: black;
         font-size: 1.5em;
         padding-top: 1.5em;
         padding-left: 1em;
+        z-index: 1;
     }
 }
 .photo{  /*-----Section principale de la page (Main)-----*/
@@ -113,12 +114,11 @@ header{   /*-----Header-----*/
         justify-content: center;
         h2{
             font-family: "Shrikhand";
-            font-size: 1.8em;
-            margin-left: -0.7em;
+            font-size: 1.55em;
         }
         .checkbox-coeur{
             display: block;
-            margin-top: 2em;
+            margin-top: 1.5em;
             margin-left: 2em;
             width: 1.5em;
             height: 1.5em;
@@ -229,33 +229,36 @@ header{   /*-----Header-----*/
         .infos1, .infos2, .infos3{
             display: flex;
             flex-direction: column;
-            width: 21.5em;
+            width: 19.5em;
             margin-bottom: 1em;
             background-color: white;
             border-radius: 20px;
             box-shadow: $box-shadow-infos;
-            h4{
+            .nom{
                 margin: 0;
                 padding: 0.7em;
+                font-weight: bold;
             }
             .compo-prix{
                 display: flex;
                 justify-content: space-between;
-                p:first-child{
-                    font-size: 0.87em;
+                .compo{
+                    font-size: 0.78em;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     color: $c-grey;
-                }
-                p{
                     margin: 0;
                     padding-left: 0.7em;
                     padding-right: 1em;
                     padding-bottom: 0.7em;
-                    &:last-child{
-                        font-weight: bold;
-                    }
+                }
+                .prix{
+                    margin: 0;
+                    padding-left: 0.7em;
+                    padding-right: 1em;
+                    padding-bottom: 0.7em;
+                    font-weight: bold;
                 }
             }
         }
@@ -288,33 +291,36 @@ header{   /*-----Header-----*/
         .infos1, .infos2, .infos3{
             display: flex;
             flex-direction: column;
-            width: 21.5em;
+            width: 19.5em;
             margin-bottom: 1em;
             background-color: white;
             border-radius: 20px;
             box-shadow: $box-shadow-infos;
-            h4{
+            .nom{
                 margin: 0;
                 padding: 0.7em;
+                font-weight: bold;
             }
             .compo-prix{
                 display: flex;
                 justify-content: space-between;
-                p:first-child{
-                    font-size: 0.87em;
+                .compo{
+                    font-size: 0.78em;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     color: $c-grey;
-                }
-                p{
                     margin: 0;
                     padding-left: 0.7em;
                     padding-right: 1em;
                     padding-bottom: 0.7em;
-                    &:last-child{
-                        font-weight: bold;
-                    }
+                }
+                .prix{
+                    margin: 0;
+                    padding-left: 0.7em;
+                    padding-right: 1em;
+                    padding-bottom: 0.7em;
+                    font-weight: bold;
                 }
             }
         }
@@ -347,33 +353,36 @@ header{   /*-----Header-----*/
         .infos1, .infos2, .infos3{
             display: flex;
             flex-direction: column;
-            width: 21.5em;
+            width: 19.5em;
             margin-bottom: 1em;
             background-color: white;
             border-radius: 20px;
             box-shadow: $box-shadow-infos;
-            h4{
+            .nom{
                 margin: 0;
                 padding: 0.7em;
+                font-weight: bold;
             }
             .compo-prix{
                 display: flex;
                 justify-content: space-between;
-                p:first-child{
-                    font-size: 0.87em;
+                .compo{
+                    font-size: 0.78em;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     color: $c-grey;
-                }
-                p{
                     margin: 0;
                     padding-left: 0.7em;
                     padding-right: 1em;
                     padding-bottom: 0.7em;
-                    &:last-child{
-                        font-weight: bold;
-                    }
+                }
+                .prix{
+                    margin: 0;
+                    padding-left: 0.7em;
+                    padding-right: 1em;
+                    padding-bottom: 0.7em;
+                    font-weight: bold;
                 }
             }
         }
@@ -400,12 +409,12 @@ a{
         }
     }
 }
-footer{   /*-----Footer-----*/
+footer{  /*-----Footer-----*/
     display: flex;
     flex-direction: column;
     background-color: #414141;
     color: white;
-    padding-left: 1.7em;
+    padding-left: 1em;
     h3{
         font-family: "shrikhand";
         font-weight: normal;
@@ -415,11 +424,12 @@ footer{   /*-----Footer-----*/
         flex-direction: row;
         text-decoration: none;
         color: white;
-        margin-bottom: 0.3em;
+        margin-bottom: 0.4em;
+        &:last-child{
+            margin-bottom: 1.2em;
+        }
         i{
             font-size: 0.8em;
-            margin-top: 0em;
-            margin-bottom: 0em;
             padding-top: 0.3em;
         }
         p{
@@ -427,13 +437,53 @@ footer{   /*-----Footer-----*/
             margin-bottom: 0em;
         }
     }
-    .propo-restau i{
-        padding-right: 1.5em;
+    .propo-restau a{
+        margin-bottom: 0.4em;
+        i{
+            padding-right: 1em;
+        }
     }
-    .partenaire i{
-        padding-right: 1em;
+    .partenaire a{
+            margin-bottom: 0.4em;
+        i{
+            padding-right: 0.6em;
+        }
     }
 }
+/*--------------Responsive design - I-Phone 8 (min-width 375px)-------------*/
+/*--------------------------------------------------------------------------*/
+@media all and (min-width: 375px){
+    @keyframes reduc-div{
+        0%{
+            width: 21.5em;
+        }
+        100%{
+            width: 17.5em;
+        }
+    }
+    .menu{
+        .restaurant{
+            h2{
+                font-size: 1.8em;
+                margin-left: -0.7em;
+            }
+            .checkbox-coeur{
+                margin-top: 2em;
+            }
+        }
+        .entrees, .plats, .desserts{
+            .infos1, .infos2, .infos3{
+                width: 21.5em;
+                .compo-prix{
+                    .compo{
+                        font-size: 0.87em;
+                    }
+                }
+            }
+        }
+    }
+}
+
 /*---------------Responsive design - I-Pad (min-width 768px)---------------*/
 /*-------------------------------------------------------------------------*/
 @media all and (min-width: 768px){
@@ -470,20 +520,16 @@ footer{   /*-----Footer-----*/
             .coche{
                 margin-left: -4.5em;
                 width: 4.5em;
-                height: 5.4em;
+                height: 5.3em;
             }
-            label{
+            .entrees, .plats, .desserts{
                 .infos1, .infos2, .infos3{
                     width: 29em;
-                }
-            }
-            .entrees-infos-coche, .plats-infos-coche, .desserts-infos-coche{
-                .infos1, .infos2, .infos3{
-                    h4{
+                    .nom{
                         font-size: 1.2em;
                     }
                     .compo-prix{
-                        p{
+                        .compo, .prix{
                             font-size: 1.2em;
                         }
                     }
@@ -497,14 +543,36 @@ footer{   /*-----Footer-----*/
         }
     }
     footer{
+        align-items: center;
+        padding-left: 0em;
         h3{
             font-size: 2em;
         }
-        a{
-            font-size: 1.5em;
+        .liens{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .propo-restau i, .partenaire i{
+                font-size: 1.5em;
+            }
+            a{
+                p{
+                    font-size: 1.5em;
+                }
+            }
         }
     }
 }
+/*---------------Responsive design - Desktop mini (min-width 1280px)---------------*/
+/*-----------------------------------------------------------------------------------*/
+@media all and (min-width: 1280px){
+    footer{
+        h3{
+            font-size: 2.5em;
+        }
+    }
+}
+
 /*---------------Responsive design - Desktop mini + (min-width 1366px)---------------*/
 /*-----------------------------------------------------------------------------------*/
 @media all and (min-width: 1366px){
@@ -541,40 +609,37 @@ footer{   /*-----Footer-----*/
             .coche{
                 margin-left: -5.5em;
                 width: 5.5em;
-                height: 6.8em;
+                height: 6.7em;
                 border-top-right-radius: 30px;
                 border-bottom-right-radius: 30px;
-            }
-            label{
-                .infos1, .infos2, .infos3{
-                    width: 40em;
+                i{
+                    font-size: 2.5em;
                 }
             }
-            .entrees-infos-coche, .plats-infos-coche, .desserts-infos-coche{
+            .entrees, .plats, .desserts{
                 .infos1, .infos2, .infos3{
-                    h4{
+                    width: 40em;
+                    border-radius: 30px;
+                    .nom{
                         font-size: 1.5em;
                     }
                     .compo-prix{
-                        p{
+                        .compo, .prix{
                             font-size: 1.5em;
                         }
                     }
                 }
             }
-            .infos1, .infos2, .infos3{
-                border-radius: 30px;
-            }
         }
     }
     a{
         .btn{
-            font-size: 1.4em;
+            font-size: 1.7em;
         }
     }
     footer{
         h3{
-            font-size: 2em;
+            font-size: 3em;
         }
         a{
             font-size: 1.5em;
@@ -594,31 +659,61 @@ footer{   /*-----Footer-----*/
     }
     .menu{
         .carte{
+            display: flex;
+            justify-content: space-around;
             h3{
                 font-size: 1.3em;
             }
             .coche{
                 margin-left: -4.5em;
                 width: 4.5em;
-                height: 5.4em;
-            }
-            label{
-                .infos1, .infos2, .infos3{
-                    width: 29em;
+                height: 5.3em;
+                i{
+                    font-size: 2em;
                 }
             }
-            display: flex;
-            justify-content: space-around;
-            .entrees-infos-coche, .plats-infos-coche, .desserts-infos-coche{
+            .entrees, .plats, .desserts{
                 .infos1, .infos2, .infos3{
-                    h4{
+                    width: 29em;
+                    .nom{
                         font-size: 1.2em;
                     }
                     .compo-prix{
-                        p{
+                        .compo, .prix{
                             font-size: 1.2em;
                         }
                     }
+                }
+            }
+        }
+    }
+    a{
+        .btn{
+            font-size: 1.4em;
+        }
+    }
+    footer{
+        padding-left: 0em;
+        h3{
+            text-align: center;
+            font-size: 2.5em;
+        }
+        .liens{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-bottom: 1.5em;
+            .propo-restau i, .partenaire i{
+                font-size: 1em;
+            }
+            a{
+                margin-right: 5em;
+                margin-bottom: 0em;
+                p{
+                    font-size: 1em;
+                }
+                i{
+                    padding-top: 0em;
                 }
             }
         }
@@ -661,19 +756,18 @@ footer{   /*-----Footer-----*/
                 margin-left: -5em;
                 width: 5em;
                 height: 6.2em;
-            }
-            label{
-                .infos1, .infos2, .infos3{
-                    width: 35em;
+                i{
+                    font-size: 2.3em;
                 }
             }
-            .entrees-infos-coche, .plats-infos-coche, .desserts-infos-coche{
+            .entrees, .plats, .desserts{
                 .infos1, .infos2, .infos3{
-                    h4{
+                    width: 35em;
+                    .nom{
                         font-size: 1.4em;
                     }
                     .compo-prix{
-                        p{
+                        .compo, .prix{
                             font-size: 1.4em;
                         }
                     }
@@ -683,7 +777,7 @@ footer{   /*-----Footer-----*/
     }
     a{
         .btn{
-            font-size: 1.4em;
+            font-size: 1.7em;
         }
     }
 }
@@ -698,7 +792,26 @@ footer{   /*-----Footer-----*/
             width: 41em;
         }
     }
+    header{
+        h1{
+            font-size: 5em;
+        }
+        a{
+            padding-top: 3em;
+        }
+        i{
+            font-size: 3em;
+        }
+    }
     .menu{
+        .restaurant{
+            h2{
+                font-size: 4em;
+            }
+            .checkbox-coeur{
+                font-size: 2.5em;
+            }
+        }
         .carte{
             h3{
                 font-size: 1.9em;
@@ -707,19 +820,18 @@ footer{   /*-----Footer-----*/
                 margin-left: -7em;
                 width: 7em;
                 height: 9em;
-            }
-            label{
-                .infos1, .infos2, .infos3{
-                    width: 48em;
+                i{
+                    font-size: 3.3em;
                 }
             }
-            .entrees-infos-coche, .plats-infos-coche, .desserts-infos-coche{
+            .entrees, .plats, .desserts{
                 .infos1, .infos2, .infos3{
-                    h4{
+                    width: 48em;
+                    .nom{
                         font-size: 2em;
                     }
                     .compo-prix{
-                        p{
+                        .compo, .prix{
                             font-size: 2em;
                         }
                     }
@@ -729,15 +841,15 @@ footer{   /*-----Footer-----*/
     }
     a{
         .btn{
-            font-size: 1.9em;
+            font-size: 2.2em;
         }
     }
     footer{
         h3{
-            font-size: 3em;
+            font-size: 4em;
         }
         a{
-            font-size: 2em;
+            font-size: 2.5em;
         }
     }
 }
@@ -755,6 +867,9 @@ footer{   /*-----Footer-----*/
     header{
         h1{
             font-size: 6em;
+        }
+        a{
+            padding-top: 3.5em;
         }
         i{
             font-size: 4em;
@@ -780,26 +895,23 @@ footer{   /*-----Footer-----*/
                 height: 9.9em;
                 border-top-right-radius: 50px;
                 border-bottom-right-radius: 50px;
-            }
-            label{
-                .infos1, .infos2, .infos3{
-                    width: 55em;
+                i{
+                    font-size: 3.7em;
                 }
             }
-            .entrees-infos-coche, .plats-infos-coche, .desserts-infos-coche{
+            .entrees, .plats, .desserts{
                 .infos1, .infos2, .infos3{
-                    h4{
+                    width: 55em;
+                    border-radius: 50px;
+                    .nom{
                         font-size: 2.2em;
                     }
                     .compo-prix{
-                        p{
+                        .compo, .prix{
                             font-size: 2.2em;
                         }
                     }
                 }
-            }
-            .infos1, .infos2, .infos3{
-                border-radius: 50px;
             }
         }
     }
@@ -833,8 +945,11 @@ footer{   /*-----Footer-----*/
         h1{
             font-size: 9em;
         }
+        a{
+            padding-top: 5.5em;
+        }
         i{
-            font-size: 6.5em;
+            font-size: 5.5em;
         }
     }
     .menu{
@@ -857,32 +972,29 @@ footer{   /*-----Footer-----*/
                 height: 12.1em;
                 border-top-right-radius: 60px;
                 border-bottom-right-radius: 60px;
-            }
-            label{
-                .infos1, .infos2, .infos3{
-                    width: 65em;
+                i{
+                    font-size: 5em;
                 }
             }
-            .entrees-infos-coche, .plats-infos-coche, .desserts-infos-coche{
+            .entrees, .plats, .desserts{
                 .infos1, .infos2, .infos3{
-                    h4{
+                    width: 65em;
+                    border-radius: 60px;
+                    .nom{
                         font-size: 2.7em;
                     }
                     .compo-prix{
-                        p{
+                        .compo, .prix{
                             font-size: 2.7em;
                         }
                     }
                 }
             }
-            .infos1, .infos2, .infos3{
-                border-radius: 60px;
-            }
         }
     }
     a{
         .btn{
-            font-size: 3.6em;
+            font-size: 3.2em;
             border-radius: 60px;
         }
     }

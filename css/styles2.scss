@@ -7,7 +7,7 @@ $bgc-grey: #f9f9f9;
 $c-grey:#4B4B4B;
 $box-shadow-infos: 5px 5px 5px #f2f2f2;
 
-@mixin checkbox-coche {   /*-----Mixins-----*/
+@mixin checkbox-coche {    /*-----Mixins-----*/
     &:checked + label {
         .coche{
             display: inherit;
@@ -23,7 +23,7 @@ $box-shadow-infos: 5px 5px 5px #f2f2f2;
     }
 }
 
-@keyframes apparaitre{   /*-----Keyframes-----*/
+@keyframes apparaitre{    /*-----Keyframes-----*/
     0%{
         opacity: 0;
     }
@@ -33,10 +33,10 @@ $box-shadow-infos: 5px 5px 5px #f2f2f2;
 }
 @keyframes reduc-div{
     0%{
-        width: 21.5em;
+        width: 19.5em;
     }
     100%{
-        width: 17.5em;
+        width: 15.5em;
     }
 }
 @keyframes coche{
@@ -72,16 +72,19 @@ body{
     color: black;
     h1{
         font-family: "Shrikhand";
+        flex-grow: 1;
+        text-align: center;
+        margin-left: -1.5em;
     }
 }
-header{  /*-----Header-----*/
+header{   /*-----Header-----*/
     display: flex;
-    i{
+    a{
         color: black;
         font-size: 1.5em;
         padding-top: 1.5em;
         padding-left: 1em;
-        margin-right: 2.5em;
+        z-index: 1;
     }
 }
 .photo{  /*-----Section principale de la page (Main)-----*/
@@ -97,7 +100,7 @@ header{  /*-----Header-----*/
         height: 185%;
     }
 }
-.menu{  /*-----partie principale (section) : menu-----*/
+.menu{   /*-----partie principale (section) : menu-----*/
     position: relative;
     z-index: 1;
     background-color: $bgc-grey;
@@ -111,12 +114,11 @@ header{  /*-----Header-----*/
         justify-content: center;
         h2{
             font-family: "Shrikhand";
-            font-size: 1.8em;
-            margin-left: -0.7em;
+            font-size: 1.55em;
         }
         .checkbox-coeur{
             display: block;
-            margin-top: 2em;
+            margin-top: 1.5em;
             margin-left: 2em;
             width: 1.5em;
             height: 1.5em;
@@ -125,7 +127,7 @@ header{  /*-----Header-----*/
             i{
                 font-size: 1.5em;
             }
-            .remplissage1{  /*----Div de remplissage (sans l'état ":checked")-----*/
+            .remplissage1{   /*----Div de remplissage (sans l'état ":checked")-----*/
                 transition: all 1000ms linear 0ms;
                 position: absolute;
                 background-color: #FF79DA;
@@ -138,7 +140,7 @@ header{  /*-----Header-----*/
                 border-top-left-radius: 55%;
                 border-top-right-radius: 30%;
             }
-            .remplissage2{  /*----Div de remplissage (sans l'état ":checked")-----*/
+            .remplissage2{   /*----Div de remplissage (sans l'état ":checked")-----*/
                 transition: all 1000ms linear 0ms;
                 position: absolute;
                 background-color: #FF79DA;
@@ -151,7 +153,7 @@ header{  /*-----Header-----*/
                 border-top-right-radius: 40%;
                 border-top-left-radius: 40%;
             }
-            [id="coeur-checkbox"]{  /*-----Animation icone coeur-----*/
+            [id="coeur-checkbox"]{   /*-----Animation icone coeur-----*/
                 display: none;
                 &:checked +label{
                     .remplissage1{
@@ -184,7 +186,7 @@ header{  /*-----Header-----*/
             padding-bottom: 0.2em;
         }
     }
-    .coche{  /*-----Coche (pour animation)-----*/
+    .coche{   /*-----Coche (pour animation)-----*/
         display: none;
         margin-left: -4em;
         background-color: $couleur-tertiaire;
@@ -204,7 +206,7 @@ header{  /*-----Header-----*/
         label{
             display: flex;
         }
-        [id="coche-infos1-entrees"],  /*-----Animation coche-----*/
+        [id="coche-infos1-entrees"],   /*-----Animation coche-----*/
         [id="coche-infos2-entrees"],
         [id="coche-infos3-entrees"],
         [id="coche-infos4-entrees"]{
@@ -216,7 +218,7 @@ header{  /*-----Header-----*/
         display: flex;
         flex-direction: column;
         align-items: center;
-        .infos1{    /*-----Apparition des différantes entrées décalée dans le temps-----*/
+        .infos1{   /*-----Apparition des différantes entrées décalée dans le temps-----*/
             animation: apparaitre 500ms 500ms both;
         }
         .infos2{
@@ -231,33 +233,36 @@ header{  /*-----Header-----*/
         .infos1, .infos2, .infos3, .infos4{
             display: flex;
             flex-direction: column;
-            width: 21.5em;
+            width: 19.5em;
             margin-bottom: 1em;
             background-color: white;
             border-radius: 20px;
             box-shadow: $box-shadow-infos;
-            h4{
+            .nom{
                 margin: 0;
                 padding: 0.7em;
+                font-weight: bold;
             }
             .compo-prix{
                 display: flex;
                 justify-content: space-between;
-                p:first-child{
-                    font-size: 0.87em;
+                .compo{
+                    font-size: 0.78em;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     color: $c-grey;
-                }
-                p{
                     margin: 0;
                     padding-left: 0.7em;
                     padding-right: 1em;
                     padding-bottom: 0.7em;
-                    &:last-child{
-                        font-weight: bold;
-                    }
+                }
+                .prix{
+                    margin: 0;
+                    padding-left: 0.7em;
+                    padding-right: 1em;
+                    padding-bottom: 0.7em;
+                    font-weight: bold;
                 }
             }
         }
@@ -267,7 +272,7 @@ header{  /*-----Header-----*/
         label{
             display: flex;
         }
-        [id="coche-infos1-plats"],  /*-----Animation coche-----*/
+        [id="coche-infos1-plats"],   /*-----Animation coche-----*/
         [id="coche-infos2-plats"],
         [id="coche-infos3-plats"]{
             display: none;
@@ -278,7 +283,7 @@ header{  /*-----Header-----*/
         display: flex;
         flex-direction: column;
         align-items: center;
-        .infos1{    /*-----Apparition des différants plats décalée dans le temps-----*/
+        .infos1{   /*-----Apparition des différants plats décalée dans le temps-----*/
             animation: apparaitre 500ms 1300ms both;
         }
         .infos2{
@@ -290,33 +295,36 @@ header{  /*-----Header-----*/
         .infos1, .infos2, .infos3{
             display: flex;
             flex-direction: column;
-            width: 21.5em;
+            width: 19.5em;
             margin-bottom: 1em;
             background-color: white;
             border-radius: 20px;
             box-shadow: $box-shadow-infos;
-            h4{
+            .nom{
                 margin: 0;
                 padding: 0.7em;
+                font-weight: bold;
             }
             .compo-prix{
                 display: flex;
                 justify-content: space-between;
-                p:first-child{
-                    font-size: 0.87em;
+                .compo{
+                    font-size: 0.78em;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     color: $c-grey;
-                }
-                p{
                     margin: 0;
                     padding-left: 0.7em;
                     padding-right: 1em;
                     padding-bottom: 0.7em;
-                    &:last-child{
-                        font-weight: bold;
-                    }
+                }
+                .prix{
+                    margin: 0;
+                    padding-left: 0.7em;
+                    padding-right: 1em;
+                    padding-bottom: 0.7em;
+                    font-weight: bold;
                 }
             }
         }
@@ -337,7 +345,7 @@ header{  /*-----Header-----*/
         display: flex;
         flex-direction: column;
         align-items: center;
-        .infos1{     /*-----Apparition des différants desserts décalée dans le temps-----*/
+        .infos1{   /*-----Apparition des différants desserts décalée dans le temps-----*/
             animation: apparaitre 500ms 1900ms both;
         }
         .infos2{
@@ -349,33 +357,36 @@ header{  /*-----Header-----*/
         .infos1, .infos2, .infos3{
             display: flex;
             flex-direction: column;
-            width: 21.5em;
+            width: 19.5em;
             margin-bottom: 1em;
             background-color: white;
             border-radius: 20px;
             box-shadow: $box-shadow-infos;
-            h4{
+            .nom{
                 margin: 0;
                 padding: 0.7em;
+                font-weight: bold;
             }
             .compo-prix{
                 display: flex;
                 justify-content: space-between;
-                p:first-child{
-                    font-size: 0.87em;
+                .compo{
+                    font-size: 0.78em;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     color: $c-grey;
-                }
-                p{
                     margin: 0;
                     padding-left: 0.7em;
                     padding-right: 1em;
                     padding-bottom: 0.7em;
-                    &:last-child{
-                        font-weight: bold;
-                    }
+                }
+                .prix{
+                    margin: 0;
+                    padding-left: 0.7em;
+                    padding-right: 1em;
+                    padding-bottom: 0.7em;
+                    font-weight: bold;
                 }
             }
         }
@@ -384,7 +395,7 @@ header{  /*-----Header-----*/
 a{
     text-decoration: none;
     color: white;
-    .btn{    /*-----Bouton-----*/
+    .btn{     /*-----Bouton-----*/
         border-radius: 25px;
         background: linear-gradient(to top left, $couleur-primaire, $couleur-secondaire);
         box-shadow: 0px 5px 5px #bdbdc8;
@@ -396,7 +407,7 @@ a{
         margin: auto;
         margin-top: 1.5em;
         margin-bottom: 2em;
-        &:hover{  /*-----Effets au survol de la sourie-----*/
+        &:hover{   /*-----Effets au survol de la sourie-----*/
             opacity: 0.8;
             box-shadow: 0px 7px 5px 2px #bdbdc8;
         }
@@ -407,7 +418,7 @@ footer{  /*-----Footer-----*/
     flex-direction: column;
     background-color: #414141;
     color: white;
-    padding-left: 1.7em;
+    padding-left: 1em;
     h3{
         font-family: "shrikhand";
         font-weight: normal;
@@ -417,11 +428,12 @@ footer{  /*-----Footer-----*/
         flex-direction: row;
         text-decoration: none;
         color: white;
-        margin-bottom: 0.3em;
+        margin-bottom: 0.4em;
+        &:last-child{
+            margin-bottom: 1.2em;
+        }
         i{
             font-size: 0.8em;
-            margin-top: 0em;
-            margin-bottom: 0em;
             padding-top: 0.3em;
         }
         p{
@@ -429,10 +441,573 @@ footer{  /*-----Footer-----*/
             margin-bottom: 0em;
         }
     }
-    .propo-restau i{
-        padding-right: 1.5em;
+    .propo-restau a{
+        margin-bottom: 0.4em;
+        i{
+            padding-right: 1em;
+        }
     }
-    .partenaire i{
-        padding-right: 1em;
+    .partenaire a{
+            margin-bottom: 0.4em;
+        i{
+            padding-right: 0.6em;
+        }
+    }
+}
+/*--------------Responsive design - I-Phone 8 (min-width 375px)-------------*/
+/*--------------------------------------------------------------------------*/
+@media all and (min-width: 375px){
+    @keyframes reduc-div{
+        0%{
+            width: 21.5em;
+        }
+        100%{
+            width: 17.5em;
+        }
+    }
+    .menu{
+        .restaurant{
+            h2{
+                font-size: 1.8em;
+                margin-left: -0.7em;
+            }
+            .checkbox-coeur{
+                margin-top: 2em;
+            }
+        }
+        .entrees, .plats, .desserts{
+            .infos1, .infos2, .infos3, .infos4{
+                width: 21.5em;
+                .compo-prix{
+                    .compo{
+                        font-size: 0.87em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*---------------Responsive design - I-Pad (min-width 768px)---------------*/
+/*-------------------------------------------------------------------------*/
+@media all and (min-width: 768px){
+    @keyframes reduc-div{
+        0%{
+            width: 29em;
+        }
+        100%{
+            width: 24.5em;
+        }
+    }
+    header{
+        h1{
+            font-size: 3em;
+        }
+        i{
+            font-size: 2em;
+        }
+    }
+    .menu{
+        .restaurant{
+            h2{
+                font-size: 2.3em;
+            }
+            .checkbox-coeur{
+                font-size: 1.5em;
+                margin-top: 1.5em;
+            }
+        }
+        .carte{
+            h3{
+                font-size: 1.4em;
+            }
+            .coche{
+                margin-left: -4.5em;
+                width: 4.5em;
+                height: 5.3em;
+            }
+            .entrees, .plats, .desserts{
+                .infos1, .infos2, .infos3, .infos4{
+                    width: 29em;
+                    .nom{
+                        font-size: 1.2em;
+                    }
+                    .compo-prix{
+                        .compo, .prix{
+                            font-size: 1.2em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    a{
+        .btn{
+            font-size: 1.2em;
+        }
+    }
+    footer{
+        align-items: center;
+        padding-left: 0em;
+        h3{
+            font-size: 2em;
+        }
+        .liens{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .propo-restau i, .partenaire i{
+                font-size: 1.5em;
+            }
+            a{
+                p{
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+}
+/*---------------Responsive design - Desktop mini (min-width 1280px)---------------*/
+/*-----------------------------------------------------------------------------------*/
+@media all and (min-width: 1280px){
+    footer{
+        h3{
+            font-size: 2.5em;
+        }
+    }
+}
+
+/*---------------Responsive design - Desktop mini + (min-width 1366px)---------------*/
+/*-----------------------------------------------------------------------------------*/
+@media all and (min-width: 1366px){
+    @keyframes reduc-div{
+        0%{
+            width: 40em;
+        }
+        100%{
+            width: 34.5em;
+        }
+    }
+    header{
+        h1{
+            font-size: 3.5em;
+        }
+        i{
+            font-size: 2.5em;
+        }
+    }
+    .menu{
+        .restaurant{
+            h2{
+                font-size: 2.8em;
+            }
+            .checkbox-coeur{
+                font-size: 1.7em;
+                margin-top: 1.7em;
+            }
+        }
+        .carte{
+            h3{
+                font-size: 1.6em;
+            }
+            .coche{
+                margin-left: -5.5em;
+                width: 5.5em;
+                height: 6.7em;
+                border-top-right-radius: 30px;
+                border-bottom-right-radius: 30px;
+                i{
+                    font-size: 2.5em;
+                }
+            }
+            .entrees, .plats, .desserts{
+                .infos1, .infos2, .infos3, .infos4{
+                    border-radius: 30px;
+                    width: 40em;
+                    .nom{
+                        font-size: 1.5em;
+                    }
+                    .compo-prix{
+                        .compo, .prix{
+                            font-size: 1.5em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    a{
+        .btn{
+            font-size: 1.7em;
+        }
+    }
+    footer{
+        h3{
+            font-size: 3em;
+        }
+        a{
+            font-size: 1.5em;
+        }
+    }
+}
+/*------------------Responsive design - Desktop (min-width 1440px)-------------------*/
+/*-----------------------------------------------------------------------------------*/
+@media all and (min-width: 1440px){
+    @keyframes reduc-div{
+        0%{
+            width: 29em;
+        }
+        100%{
+            width: 24.5em;
+        }
+    }
+    .menu{
+        .carte{
+            display: flex;
+            justify-content: space-around;
+            h3{
+                font-size: 1.3em;
+            }
+            .coche{
+                margin-left: -4.5em;
+                width: 4.5em;
+                height: 5.3em;
+                i{
+                    font-size: 2em;
+                }
+            }
+            .entrees, .plats, .desserts{
+                .infos1, .infos2, .infos3, .infos4{
+                    width: 29em;
+                    .nom{
+                        font-size: 1.2em;
+                    }
+                    .compo-prix{
+                        .compo, .prix{
+                            font-size: 1.2em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    a{
+        .btn{
+            font-size: 1.4em;
+        }
+    }
+    footer{
+        padding-left: 0em;
+        h3{
+            text-align: center;
+            font-size: 2.5em;
+        }
+        .liens{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-bottom: 1.5em;
+            .propo-restau i, .partenaire i{
+                font-size: 1em;
+            }
+            a{
+                margin-right: 5em;
+                margin-bottom: 0em;
+                p{
+                    font-size: 1em;
+                }
+                i{
+                    padding-top: 0em;
+                }
+            }
+        }
+    }
+}
+/*------------------Responsive design - Desktop big (min-width 1920px)-------------------*/
+/*---------------------------------------------------------------------------------------*/
+@media all and (min-width: 1920px){
+    @keyframes reduc-div{
+        0%{
+            width: 35em;
+        }
+        100%{
+            width: 30em;
+        }
+    }
+    header{
+        h1{
+            font-size: 4em;
+        }
+        i{
+            font-size: 3em;
+        }
+    }
+    .menu{
+        .restaurant{
+            h2{
+                font-size: 3.2em;
+            }
+            .checkbox-coeur{
+                font-size: 2em;
+                margin-top: 1.7em;
+            }
+        }
+        .carte{
+            h3{
+                font-size: 1.6em;
+            }
+            .coche{
+                margin-left: -5em;
+                width: 5em;
+                height: 6.2em;
+                i{
+                    font-size: 2.3em;
+                }
+            }
+            .entrees, .plats, .desserts{
+                .infos1, .infos2, .infos3, .infos4{
+                    width: 35em;
+                    .nom{
+                        font-size: 1.4em;
+                    }
+                    .compo-prix{
+                        .compo, .prix{
+                            font-size: 1.4em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    a{
+        .btn{
+            font-size: 1.7em;
+        }
+    }
+}
+/*------------------Responsive design - Desktop big + (min-width 2560px)-----------------*/
+/*---------------------------------------------------------------------------------------*/
+@media all and (min-width: 2560px){
+    @keyframes reduc-div{
+        0%{
+            width: 48em;
+        }
+        100%{
+            width: 41em;
+        }
+    }
+    header{
+        h1{
+            font-size: 5em;
+        }
+        a{
+            padding-top: 3em;
+        }
+        i{
+            font-size: 3em;
+        }
+    }
+    .menu{
+        .restaurant{
+            h2{
+                font-size: 4em;
+            }
+            .checkbox-coeur{
+                font-size: 2.5em;
+            }
+        }
+        .carte{
+            h3{
+                font-size: 1.9em;
+            }
+            .coche{
+                margin-left: -7em;
+                width: 7em;
+                height: 9em;
+                i{
+                    font-size: 3.3em;
+                }
+            }
+            .entrees, .plats, .desserts{
+                .infos1, .infos2, .infos3, .infos4{
+                    width: 48em;
+                    .nom{
+                        font-size: 2em;
+                    }
+                    .compo-prix{
+                        .compo, .prix{
+                            font-size: 2em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    a{
+        .btn{
+            font-size: 2.2em;
+        }
+    }
+    footer{
+        h3{
+            font-size: 4em;
+        }
+        a{
+            font-size: 2.5em;
+        }
+    }
+}
+/*-----------------------Responsive design - TV (min-width 2900px)-----------------------*/
+/*---------------------------------------------------------------------------------------*/
+@media all and (min-width: 2900px){
+    @keyframes reduc-div{
+        0%{
+            width: 55em;
+        }
+        100%{
+            width: 47em;
+        }
+    }
+    header{
+        h1{
+            font-size: 6em;
+        }
+        a{
+            padding-top: 3.5em;
+        }
+        i{
+            font-size: 4em;
+        }
+    }
+    .menu{
+        .restaurant{
+            h2{
+                font-size: 4.5em;
+            }
+            .checkbox-coeur{
+                font-size: 3em;
+                margin-top: 1.4em;
+            }
+        }
+        .carte{
+            h3{
+                font-size: 2.9em;
+            }
+            .coche{
+                margin-left: -8em;
+                width: 8em;
+                height: 9.9em;
+                border-top-right-radius: 50px;
+                border-bottom-right-radius: 50px;
+                i{
+                    font-size: 3.7em;
+                }
+            }
+            .entrees, .plats, .desserts{
+                .infos1, .infos2, .infos3, .infos4{
+                    width: 55em;
+                    border-radius: 50px;
+                    .nom{
+                        font-size: 2.2em;
+                    }
+                    .compo-prix{
+                        .compo, .prix{
+                            font-size: 2.2em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    a{
+        .btn{
+            font-size: 2.6em;
+            border-radius: 50px;
+        }
+    }
+    footer{
+        h3{
+            font-size: 4em;
+        }
+        a{
+            font-size: 3em;
+        }
+    }
+}
+/*---------------------Responsive design - TV 4K (min-width 3550px)----------------------*/
+/*---------------------------------------------------------------------------------------*/
+@media all and (min-width: 3550px){
+    @keyframes reduc-div{
+        0%{
+            width: 65em;
+        }
+        100%{
+            width: 55em;
+        }
+    }
+    header{
+        h1{
+            font-size: 9em;
+        }
+        a{
+            padding-top: 5.5em;
+        }
+        i{
+            font-size: 5.5em;
+        }
+    }
+    .menu{
+        .restaurant{
+            h2{
+                font-size: 6.5em;
+            }
+            .checkbox-coeur{
+                font-size: 3.5em;
+                margin-top: 2em;
+            }
+        }
+        .carte{
+            h3{
+                font-size: 4em;
+            }
+            .coche{
+                margin-left: -10em;
+                width: 10em;
+                height: 12.1em;
+                border-top-right-radius: 60px;
+                border-bottom-right-radius: 60px;
+                i{
+                    font-size: 5em;
+                }
+            }
+            .entrees, .plats, .desserts{
+                .infos1, .infos2, .infos3, .infos4{
+                    width: 65em;
+                    border-radius: 60px;
+                    .nom{
+                        font-size: 2.7em;
+                    }
+                    .compo-prix{
+                        .compo, .prix{
+                            font-size: 2.7em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    a{
+        .btn{
+            font-size: 3.2em;
+            border-radius: 60px;
+        }
+    }
+    footer{
+        h3{
+            font-size: 5.5em;
+        }
+        a{
+            font-size: 4em;
+        }
     }
 }

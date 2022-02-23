@@ -7,12 +7,12 @@ $bgc-grey: #f9f9f9;
 
 @mixin num {  /*-----Mixins-----*/
     display: flex;
-    justify-content: center;
-    width: 20.7em;
-    border-radius: 15px;
+    justify-content: flex-start;
+    width: 18em;
+    border-radius: 20px;
     box-shadow: 5px 5px 5px #f2f2f2;
+    background-color: $bgc-grey;
     margin-top: 1.5em;
-    margin-left: 1.5em;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     :first-child{
@@ -22,13 +22,16 @@ $bgc-grey: #f9f9f9;
         background-color: $couleur-primaire;
         width: 1.2em;
         margin-right: 1.4em;
+        margin-left: -0.8em;
+        padding: 0.2em;
     }
     i{
+        font-size: 1.2em;
+        color: grey;
         padding-top: 1em;
         margin-right: 1.4em;
     }
     :last-child{
-        margin-right: 4.4em;
         font-weight: bold;
     }
     &:hover{
@@ -38,21 +41,31 @@ $bgc-grey: #f9f9f9;
 }
 
 @keyframes loading-spinner {  /*-----Keyframes-----*/
-    0%{ transform: scaleX(1);
+    0%{
         opacity: 0.95;
-        z-index: 1;}
+        z-index: 1;
+    }
     99%{
-        transform: scaleX(1);
         opacity: 0.95;
-        z-index: 1;}
-    100%{ transform: scaleY(0);
+        z-index: 1;
+    }
+    100%{
         opacity: 0;
         z-index: -1;}
 }
 @keyframes spin {
     0%{ transform: rotate(0deg); }
-    100%{ transform: rotate(360deg); }
+    100%{ transform: rotate(360deg);
+    }
   }
+  @keyframes couverts{
+    0%{
+        transform: translateY(0em);
+    }
+    100%{
+        transform: translateY(-0.5em);
+    }
+}
 
 /* ---------- Principaux styles de la page ---------- */
 body{
@@ -70,8 +83,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -1.5em;
-    margin-bottom: 1em;
+    margin-top: -6em;
+    padding-bottom: 6em;
     width: 100%;
     height: 100vh;
     background-color: #bbcbc7;
@@ -85,7 +98,8 @@ body{
         align-items: center;
         width: 7.5em;
         height:7.5em;
-        margin-top: 0em;
+        margin-top: 6em;
+        margin-left: -3.4em;
         position: relative;
         border-radius: 50%;
         animation: spin 2s linear infinite;
@@ -98,7 +112,7 @@ body{
             left: 0;
             z-index: -1;
             margin: -5px;  /*-----Méthode pour simuler un border avec dégradé de couleurs-----*/
-            background: linear-gradient(#FF79DA -2.98%, #9356DC 68.14%); /*suite méthode*/
+            background: linear-gradient(#FF79DA -2.98%, #9356DC 68.14%);
             border-radius: inherit;
         }
     }
@@ -124,9 +138,10 @@ body{
     i{
         font-size: 3em;
         color: silver;
-        position: absolute;
-        top: 0.5em;
-        left: 0.5em;
+        position: static;
+        margin-top: 2.2em;
+        margin-left: -1.7em;
+        animation: couverts 800ms ease-in-out infinite;
     }
 }
 header{  /*-----Header-----*/
@@ -152,6 +167,8 @@ header{  /*-----Header-----*/
     h2{
         margin-top: 2em;
         margin-bottom: 0.5em;
+        padding-left: 2em;
+        padding-right: 2em;
     }
     p{
         margin-top: 0em;
@@ -169,53 +186,49 @@ header{  /*-----Header-----*/
         border-radius: 25px;
         box-shadow: 0px 5px 5px #bdbdc8;
         padding: 1em;
-        }
-        &:hover{ /*-----Effets au survol de la sourie-----*/
-            opacity: 0.8;
-            box-shadow: 0px 7px 5px 2px #bdbdc8;
-        }
+    }
+    &:hover{ /*-----Effets au survol de la sourie-----*/
+        opacity: 0.8;
+        box-shadow: 0px 7px 5px 2px #bdbdc8;
     }
 }
-.fonctionnement h2{  /*Section principale de la page (Main)*//*1ère section : fonctionnement du site*/
-    margin-top: 1.6em;
-    padding-left: 0.65em;
-    margin-bottom: 0em;
+}
+
+.fonctionnement{  /*Section principale de la page (Main)*//*1ère section : fonctionnement du site*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2{
+        align-self: flex-start;
+        margin-top: 1.6em;
+        padding-left: 0.8em;
+        margin-bottom: 0em;
+    }
 }
 .num1{
     @include num;
-    background-color: $bgc-grey;
-    :first-child{
-        margin-left: -1.7em;
-    }
     i{
-        color: grey;
+        margin-left: 0.14em;
     }
 }
 .num2{
     @include num;
-    background-color: $bgc-grey;
     :first-child{
-        margin-left: -2.5em;
-    }
-    i{
-        color: grey;
+        margin-left: -0.9em;
     }
 }
 .num3{
     @include num;
     background-color: lighten($couleur-primaire, 33%);
     margin-bottom: 4em;
-    :first-child{
-        margin-left: -1.7em;
-    }
     i{
         color: $couleur-primaire;
+        margin-left: -0.2em;
     }
 }
 .restaurants{  /*-----2ème section : restaurants proposés sur le site-----*/
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     background-color: $bgc-grey;
     a{
@@ -224,7 +237,7 @@ header{  /*-----Header-----*/
     }
     h2{
         align-self: flex-start;
-        padding-left: 0.65em;
+        padding-left: 0.8em;
         padding-top: 1.6em;
         padding-bottom: 0.3em;
     }
@@ -237,10 +250,73 @@ header{  /*-----Header-----*/
         padding-left: 0.75em;
         margin-top: 0.3em;
     }
+    .palette-gout, .note-enchantee, .francaise, .delice-sens{
+        position: relative;
+        .checkbox-coeur{
+            display: block;
+            width: 1.5em;
+            height: 1.5em;
+            position: absolute;
+            bottom: 1.5em;
+            right: 2em;
+            z-index: 1;
+            i{
+                font-size: 1.5em;
+            }
+            .remplissage1{  /*----Div de remplissage (sans l'état ":checked")-----*/
+                transition: all 1000ms linear 0ms;
+                position: absolute;
+                background-color: #FF79DA;
+                height: 0em;
+                width: 0em;
+                z-index: -1;
+                transform: rotate(-45deg);
+                bottom: 0.5em;
+                right: 0.5em;
+                border-top-left-radius: 55%;
+                border-top-right-radius: 30%;
+            }
+            .remplissage2{   /*----Div de remplissage (sans l'état ":checked")-----*/
+                transition: all 1000ms linear 0ms;
+                position: absolute;
+                background-color: #FF79DA;
+                height: 0em;
+                width: 0em;
+                z-index: -1;
+                transform: rotate(45deg);
+                bottom: 0.5em;
+                left: 0.5em;
+                border-top-right-radius: 40%;
+                border-top-left-radius: 40%;
+            }
+            [id="coeur-palette-gout"],  /*-----Animation icone coeur-----*/
+            [id="coeur-note-enchantee"],
+            [id="coeur-francaise"],
+            [id="coeur-delice-sens"]{
+                display: none;
+                &:checked +label{
+                    .remplissage1{
+                        height: 0.7em;
+                        width: 0.5em;
+                        z-index: -1;
+                        bottom: 0.15em;
+                        right: 0.39em;
+                    }
+                    .remplissage2{
+                        height: 0.72em;
+                        width: 0.5em;
+                        z-index: -1;
+                        bottom: 0.2em;
+                        left: 0.4em;
+                    }
+                }
+            }
+        }
+    }
     .photo{
-    position: relative;
-    overflow: hidden;
-    width: 21.5em;
+        position: relative;
+        overflow: hidden;
+        width: 18em;
     padding-top: 50%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -261,74 +337,14 @@ header{  /*-----Header-----*/
         width: 100%;
         height: 100%;
     }
-    }
-    .infos{
-        display: flex;
-        justify-content: space-between;
-        background-color: white;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-    }
 }
-.checkbox-coeur{
-    display: block;
-    margin-top: 1.5em;
-    margin-right: 2.5em;
-    width: 1.5em;
-    height: 1.5em;
-    position: relative;
-    z-index: 1;
-    i{
-        font-size: 1.5em;
-    }
-    .remplissage1{  /*----Div de remplissage (sans l'état ":checked")-----*/
-        transition: all 1000ms linear 0ms;
-        position: absolute;
-        background-color: #FF79DA;
-        height: 0em;
-        width: 0em;
-        z-index: -1;
-        transform: rotate(-45deg);
-        bottom: 0.5em;
-        right: 0.5em;
-        border-top-left-radius: 55%;
-        border-top-right-radius: 30%;
-    }
-    .remplissage2{   /*----Div de remplissage (sans l'état ":checked")-----*/
-        transition: all 1000ms linear 0ms;
-        position: absolute;
-        background-color: #FF79DA;
-        height: 0em;
-        width: 0em;
-        z-index: -1;
-        transform: rotate(45deg);
-        bottom: 0.5em;
-        left: 0.5em;
-        border-top-right-radius: 40%;
-        border-top-left-radius: 40%;
-    }
-    [id="coeur-palette-gout"],  /*-----Animation icone coeur-----*/
-    [id="coeur-note-enchantee"],
-    [id="coeur-francaise"],
-    [id="coeur-delice-sens"]{
-        display: none;
-        &:checked +label{
-            .remplissage1{
-                height: 0.7em;
-                width: 0.5em;
-                z-index: -1;
-                bottom: 0.15em;
-                right: 0.39em;
-            }
-            .remplissage2{
-                height: 0.72em;
-                width: 0.5em;
-                z-index: -1;
-                bottom: 0.2em;
-                left: 0.4em;
-            }
-        }
-    }
+.infos{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
 }
 .palette-gout, .note-enchantee, .francaise, .delice-sens{
     margin-bottom: 1em;
@@ -356,11 +372,12 @@ footer{  /*-----Footer-----*/
         flex-direction: row;
         text-decoration: none;
         color: white;
-        margin-bottom: 0.3em;
+        margin-bottom: 0.4em;
+        &:last-child{
+            margin-bottom: 1.2em;
+        }
         i{
             font-size: 0.8em;
-            margin-top: 0em;
-            margin-bottom: 0em;
             padding-top: 0.3em;
         }
         p{
@@ -368,11 +385,573 @@ footer{  /*-----Footer-----*/
             margin-bottom: 0em;
         }
     }
-    .propo-restau i{
-        padding-right: 1.5em;
+    .propo-restau a{
+        margin-bottom: 0.4em;
+        i{
+            padding-right: 1em;
+        }
     }
-    .partenaire i{
-        padding-right: 1em;
+    .partenaire a{
+            margin-bottom: 0.4em;
+        i{
+            padding-right: 0.6em;
+        }
     }
 }
+/*------------Responsive design - I-Phone 8 (min-width 375px)--------------*/
+/*-------------------------------------------------------------------------*/
+@media all and (min-width: 375px){
+    .loading-spinner{
+        .loader{
+            width: 7.5em;
+            height:7.5em;
+            &::before{
+                margin: -7px;
+            }
+        }
+        .inside{
+            width: 6.3em;
+            height: 6.3em;
+            &::before{
+                margin: -12px;
+            }
+        }
+    }
+    .num1, .num2, .num3{
+        width: 20.5em;
+    }
+    .restaurants .photo{
+        width: 21.5em;
+    }
+}
+/*---------------Responsive design - I-Pad (min-width 768px)---------------*/
+/*-------------------------------------------------------------------------*/
 
+@media all and (min-width: 768px){
+    h1{
+        font-size: 3em;
+    }
+    .localisation{
+        i{
+            font-size: 2em;
+        }
+        p{
+            font-size: 2em;
+        }
+    }
+    .explor-restau{
+        h2{
+            font-size: 2em;
+        }
+        p{
+            font-size: 2em;
+        }
+        .btn{
+            font-size: 1.35em;
+        }
+    }
+    .fonctionnement{
+        h2{
+            align-self: center;
+            font-size: 2em;
+        }
+        .num1, .num2, .num3{
+            width: 40em;
+            i{
+                font-size: 1.7em;
+                margin-right: 2.6em;
+            }
+            p{
+                font-size: 1.7em;
+                padding: 0em;
+                &:first-child{
+                    padding: 0.2em;
+                }
+            }
+        }
+    }
+    .restaurants{
+        h2{
+            align-self: center;
+            font-size: 2em;
+            margin-bottom: 0em;
+        }
+        .cartes-cliquables{
+            display: flex;
+            flex-direction: row;
+            .palette-gout, .note-enchantee, .francaise, .delice-sens{
+                margin-top: 2em;
+                margin-right: 0.8em;
+                margin-bottom: 2em;
+                margin-left: 0.8em;
+            }
+        }
+    }
+    footer{
+        align-items: center;
+        padding-left: 0em;
+        h3{
+            font-size: 2em;
+        }
+        .liens{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        p{
+            font-size: 1.5em;
+        }
+        .propo-restau i, .partenaire i{
+            font-size: 1.5em;
+        }
+    }
+}
+/*---------------Responsive design - I-Pad paysage (min-width 1024px)---------------*/
+/*----------------------------------------------------------------------------------*/
+
+@media all and (min-width: 1024px){
+    .restaurants{
+        .cartes-cliquables{
+            .palette-gout, .note-enchantee, .francaise, .delice-sens{
+                margin-top: 4em;
+                margin-right: 2em;
+                margin-left: 2em;
+                margin-bottom: 4em;
+            }
+        }
+    }
+}
+/*---------------Responsive design - Desktop mini (min-width 1280px)---------------*/
+/*---------------------------------------------------------------------------------*/
+
+@media all and (min-width: 1280px){
+    main{
+        display: flex;
+        justify-content: space-between;
+    }
+    .fonctionnement{
+        margin-left: 2.5em;
+        h2{
+            font-size: 1.7em;
+            margin-top: 2em;
+            margin-bottom: 4em;
+        }
+        .num1, .num2, .num3{
+            width: 22em;
+            margin-bottom: 3em;
+            i{
+                font-size: 1.7em;
+                margin-right: 1em;
+                padding-top: 0.8em;
+            }
+            p{
+                font-size: 1.3em;
+                padding: 0em;
+                &:first-child{
+                    padding: 0.2em;
+                }
+            }
+        }
+    }
+    .restaurants{
+        h2{
+            font-size: 1.8em;
+            margin-top: 0em;
+        }
+    }
+    footer{
+        padding-left: 0em;
+        h3{
+            text-align: center;
+        }
+        .liens{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-bottom: 1.5em;
+            a{
+                margin-right: 5em;
+                margin-bottom: 0em;
+                i{
+                    padding-top: 0em;
+                }
+            }
+        }
+    }
+}
+/*----------------Responsive design - Desktop mini + (min-width 1366px)--------------*/
+/*-----------------------------------------------------------------------------------*/
+@media all and (min-width: 1366px){
+    .fonctionnement{
+        margin-left: 4.5em;
+    }
+}
+/*-----------------Responsive design - Desktop (min-width 1440px)--------------------*/
+/*-----------------------------------------------------------------------------------*/
+@media all and (min-width: 1440px){
+    .loading-spinner{
+        .loader{
+            width: 9.5em;
+            height:9.5em;
+            &::before{
+                margin: -7px;
+            }
+        }
+        .inside{
+            width: 8.3em;
+            height: 8.3em;
+            &::before{
+                margin: -12px;
+            }
+        }
+        i{
+            margin-left: -2em;
+        }
+    }
+    .fonctionnement{
+        margin-left: 6.5em;
+    }
+}
+/*-----------------Responsive design - Desktop (min-width 1680px)--------------------*/
+/*-----------------------------------------------------------------------------------*/
+@media all and (min-width: 1680px){
+    h1{
+        font-size: 4em;
+    }
+    .localisation{
+        i{
+            font-size: 2.5em;
+        }
+        p{
+            font-size: 2.5em;
+        }
+    }
+    .explor-restau{
+        h2{
+            font-size: 2.5em;
+        }
+        p{
+            font-size: 2.5em;
+        }
+        a{
+            border-radius: 30px;
+            .btn{
+                font-size: 1.7em;
+                border-radius: 30px;
+            }
+        }
+    }
+    .fonctionnement{
+        margin-left: 8.5em;
+        h2{
+            font-size: 2.2em;
+        }
+        .num1, .num2, .num3{
+            width: 30em;
+            p{
+                font-size: 1.7em;
+            }
+            i{
+                padding-top: 1.1em;
+            }
+        }
+    }
+    .restaurants{
+        h2{
+            font-size: 2.25em;
+        }
+        h3{
+            font-size: 1.5em;
+        }
+        p{
+            font-size: 1.5em;
+        }
+        .checkbox-coeur{
+            font-size: 1.5em;
+            right: 1.5em;
+        }
+        .photo{
+            width: 23.5em;
+        }
+    }
+    footer{
+        h3{
+            font-size: 3em;
+        }
+        p{
+            font-size: 2em;
+        }
+        .propo-restau i, .partenaire i{
+            font-size: 2em;
+        }
+    }
+}
+/*-----------------Responsive design - Desktop big (min-width 1920px)-----------------*/
+/*------------------------------------------------------------------------------------*/
+@media all and (min-width: 1920px){
+    .fonctionnement{
+        margin-left: 10.5em;
+    }
+    .restaurants{
+        width: 70em;
+        .cartes-cliquables{
+            .palette-gout, .note-enchantee, .francaise, .delice-sens{
+                margin-top: 5em;
+                margin-right: 3em;
+                margin-left: 3em;
+                margin-bottom: 5em;
+            }
+        }
+    }
+}
+/*-----------------Responsive design - Desktop big (min-width 2280px)-----------------*/
+/*------------------------------------------------------------------------------------*/
+@media all and (min-width: 2280px){
+    body{
+        h1{
+            font-size: 6em;
+            margin-bottom: 0.06em;
+        }
+    }
+    .restaurants{
+        width: 78em;
+    }
+}
+/*-----------------Responsive design - Desktop big (min-width 2400px)-----------------*/
+/*------------------------------------------------------------------------------------*/
+@media all and (min-width: 2400px){
+    .fonctionnement{
+        .num1, .num2, .num3{
+            width: 35em;
+        }
+    }
+}
+/*---------------Responsive design - Desktop big + (min-width 2560px)-----------------*/
+/*------------------------------------------------------------------------------------*/
+@media all and (min-width: 2560px){
+    .loading-spinner{
+        .loader{
+            width: 11.5em;
+            height:11.5em;
+            &::before{
+                margin: -11px;
+            }
+        }
+        .inside{
+            width: 10.3em;
+            height: 10.3em;
+            &::before{
+                margin: -14px;
+            }
+        }
+        i{
+            font-size: 4em;
+            margin-left: -1.9em;
+        }
+    }
+    body{
+        h1{
+            font-size: 6em;
+            margin-bottom: 0.09em;
+        }
+    }
+    .localisation{
+        i{
+            font-size: 3em;
+        }
+        p{
+            font-size: 3em;
+        }
+    }
+    .explor-restau{
+        h2{
+            font-size: 3em;
+        }
+        p{
+            font-size: 3em;
+        }
+        a{
+            border-radius: 35px;
+            .btn{
+                font-size: 2.1em;
+                border-radius: 35px;
+            }
+        }
+    }
+    .fonctionnement{
+        margin-left: 10.5em;
+        h2{
+            font-size: 2.6em;
+        }
+        .num1, .num2, .num3{
+            p{
+                font-size: 2em;
+            }
+            i{
+                padding-top: 1.1em;
+                font-size: 2em;
+            }
+        }
+    }
+    .restaurants{
+        width: 95em;
+        h2{
+            font-size: 2.65em;
+        }
+        h3{
+            font-size: 1.7em;
+        }
+        p{
+            font-size: 1.7em;
+        }
+        .checkbox-coeur{
+            font-size: 1.7em;
+        }
+        .photo{
+            width: 26.5em;
+        }
+    }
+}
+/*--------------------Responsive design - TV (min-width 2900px)-----------------------*/
+/*------------------------------------------------------------------------------------*/
+@media all and (min-width: 2900px){
+    .fonctionnement{
+        margin-left: 13.5em;
+        .num1, .num2, .num3{
+            width: 45em;
+        }
+    }
+}
+/*--------------------Responsive design - TV + (min-width 3200px)---------------------*/
+/*------------------------------------------------------------------------------------*/
+@media all and (min-width: 3200px){
+    body{
+        h1{
+            margin-bottom: 0.07em;
+        }
+    }
+    .fonctionnement{
+        .num1, .num2, .num3{
+            margin-bottom: 5em;
+        }
+    }
+    .restaurants{
+        width: 105em;
+        .photo{
+            width: 33.5em;
+        }
+    }
+}
+/*-------------------Responsive design - TV 4K (min-width 3400px)---------------------*/
+/*------------------------------------------------------------------------------------*/
+@media all and (min-width: 3400px){
+    body{
+        h1{
+            margin-bottom: 0.05em;
+        }
+    }
+    .restaurants{
+        width: 115em;
+    }
+}
+/*-------------------Responsive design - TV 4K (min-width 3550px)---------------------*/
+/*------------------------------------------------------------------------------------*/
+@media all and (min-width: 3550px){
+    .loading-spinner{
+        .loader{
+            width: 15.5em;
+            height:15.5em;
+            &::before{
+                margin: -22px;
+            }
+        }
+        .inside{
+            width: 14.3em;
+            height: 14.3em;
+            &::before{
+                margin: -22px;
+            }
+        }
+        i{
+            font-size: 6em;
+            margin-top: 1.5em;
+            margin-left: -1.7em;
+        }
+    }
+    body{
+        h1{
+            font-size: 9em;
+            margin-bottom: 0.03em;
+        }
+    }
+    .localisation{
+        i{
+            font-size: 4.5em;
+        }
+        p{
+            font-size: 4.5em;
+        }
+    }
+    .explor-restau{
+        h2{
+            font-size: 4.5em;
+        }
+        p{
+            font-size: 4.5em;
+        }
+        a{
+            border-radius: 40px;
+            .btn{
+                font-size: 3.6em;
+                border-radius: 40px;
+                margin-bottom: 1em;
+            }
+        }
+    }
+    .fonctionnement{
+        margin-left: 16.5em;
+        h2{
+            font-size: 3.6em;
+        }
+        .num1, .num2, .num3{
+            width: 60em;
+            border-radius: 40px;
+            margin-bottom: 7em;
+            p{
+                font-size: 3em;
+            }
+            i{
+                padding-top: 1.1em;
+                font-size: 3em;
+            }
+        }
+    }
+    .restaurants{
+        h2{
+            font-size: 3.65em;
+        }
+        h3{
+            font-size: 2.5em;
+        }
+        p{
+            font-size: 2.5em;
+        }
+        .checkbox-coeur{
+            font-size: 2.5em;
+        }
+        .photo{
+            width: 42.5em;
+        }
+    }
+    footer{
+        h3{
+            font-size: 5em;
+        }
+        p{
+            font-size: 3em;
+        }
+        .propo-restau i, .partenaire i{
+            font-size: 3em;
+        }
+    }
+}

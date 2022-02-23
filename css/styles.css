@@ -4,20 +4,14 @@
 @-webkit-keyframes loading-spinner {
   /*-----Keyframes-----*/
   0% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
     opacity: 0.95;
     z-index: 1;
   }
   99% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
     opacity: 0.95;
     z-index: 1;
   }
   100% {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
     opacity: 0;
     z-index: -1;
   }
@@ -25,20 +19,14 @@
 @keyframes loading-spinner {
   /*-----Keyframes-----*/
   0% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
     opacity: 0.95;
     z-index: 1;
   }
   99% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
     opacity: 0.95;
     z-index: 1;
   }
   100% {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
     opacity: 0;
     z-index: -1;
   }
@@ -63,6 +51,28 @@
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes couverts {
+  0% {
+    -webkit-transform: translateY(0em);
+            transform: translateY(0em);
+  }
+  100% {
+    -webkit-transform: translateY(-0.5em);
+            transform: translateY(-0.5em);
+  }
+}
+
+@keyframes couverts {
+  0% {
+    -webkit-transform: translateY(0em);
+            transform: translateY(0em);
+  }
+  100% {
+    -webkit-transform: translateY(-0.5em);
+            transform: translateY(-0.5em);
   }
 }
 
@@ -92,9 +102,10 @@ body h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: -2em;
+  margin-top: -6em;
+  padding-bottom: 6em;
   width: 100%;
-  height: 105vh;
+  height: 100vh;
   background-color: #bbcbc7;
   -webkit-animation: loading-spinner 3000ms;
           animation: loading-spinner 3000ms;
@@ -115,7 +126,8 @@ body h1 {
           align-items: center;
   width: 7.5em;
   height: 7.5em;
-  margin-top: 0em;
+  margin-top: 6em;
+  margin-left: -3.4em;
   position: relative;
   border-radius: 50%;
   -webkit-animation: spin 2s linear infinite;
@@ -134,7 +146,6 @@ body h1 {
   /*-----Méthode pour simuler un border avec dégradé de couleurs-----*/
   background: -webkit-gradient(linear, left top, left bottom, color-stop(-2.98%, #FF79DA), color-stop(68.14%, #9356DC));
   background: linear-gradient(#FF79DA -2.98%, #9356DC 68.14%);
-  /*suite méthode*/
   border-radius: inherit;
 }
 
@@ -165,9 +176,11 @@ body h1 {
 .loading-spinner i {
   font-size: 3em;
   color: silver;
-  position: absolute;
-  top: 0.5em;
-  left: 0.5em;
+  position: static;
+  margin-top: 2.2em;
+  margin-left: -1.7em;
+  -webkit-animation: couverts 800ms ease-in-out infinite;
+          animation: couverts 800ms ease-in-out infinite;
 }
 
 header {
@@ -279,7 +292,7 @@ header {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  width: 17em;
+  width: 18em;
   border-radius: 20px;
   -webkit-box-shadow: 5px 5px 5px #f2f2f2;
           box-shadow: 5px 5px 5px #f2f2f2;
@@ -329,7 +342,7 @@ header {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  width: 17em;
+  width: 18em;
   border-radius: 20px;
   -webkit-box-shadow: 5px 5px 5px #f2f2f2;
           box-shadow: 5px 5px 5px #f2f2f2;
@@ -379,7 +392,7 @@ header {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  width: 17em;
+  width: 18em;
   border-radius: 20px;
   -webkit-box-shadow: 5px 5px 5px #f2f2f2;
           box-shadow: 5px 5px 5px #f2f2f2;
@@ -463,10 +476,118 @@ header {
   margin-top: 0.3em;
 }
 
+.restaurants .palette-gout, .restaurants .note-enchantee, .restaurants .francaise, .restaurants .delice-sens {
+  position: relative;
+}
+
+.restaurants .palette-gout .checkbox-coeur, .restaurants .note-enchantee .checkbox-coeur, .restaurants .francaise .checkbox-coeur, .restaurants .delice-sens .checkbox-coeur {
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  position: absolute;
+  bottom: 1.5em;
+  right: 2em;
+  z-index: 1;
+}
+
+.restaurants .palette-gout .checkbox-coeur i, .restaurants .note-enchantee .checkbox-coeur i, .restaurants .francaise .checkbox-coeur i, .restaurants .delice-sens .checkbox-coeur i {
+  font-size: 1.5em;
+}
+
+.restaurants .palette-gout .checkbox-coeur .remplissage1, .restaurants .note-enchantee .checkbox-coeur .remplissage1, .restaurants .francaise .checkbox-coeur .remplissage1, .restaurants .delice-sens .checkbox-coeur .remplissage1 {
+  /*----Div de remplissage (sans l'état ":checked")-----*/
+  -webkit-transition: all 1000ms linear 0ms;
+  transition: all 1000ms linear 0ms;
+  position: absolute;
+  background-color: #FF79DA;
+  height: 0em;
+  width: 0em;
+  z-index: -1;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: 0.5em;
+  right: 0.5em;
+  border-top-left-radius: 55%;
+  border-top-right-radius: 30%;
+}
+
+.restaurants .palette-gout .checkbox-coeur .remplissage2, .restaurants .note-enchantee .checkbox-coeur .remplissage2, .restaurants .francaise .checkbox-coeur .remplissage2, .restaurants .delice-sens .checkbox-coeur .remplissage2 {
+  /*----Div de remplissage (sans l'état ":checked")-----*/
+  -webkit-transition: all 1000ms linear 0ms;
+  transition: all 1000ms linear 0ms;
+  position: absolute;
+  background-color: #FF79DA;
+  height: 0em;
+  width: 0em;
+  z-index: -1;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  bottom: 0.5em;
+  left: 0.5em;
+  border-top-right-radius: 40%;
+  border-top-left-radius: 40%;
+}
+
+.restaurants .palette-gout .checkbox-coeur [id="coeur-palette-gout"],
+.restaurants .palette-gout .checkbox-coeur [id="coeur-note-enchantee"],
+.restaurants .palette-gout .checkbox-coeur [id="coeur-francaise"],
+.restaurants .palette-gout .checkbox-coeur [id="coeur-delice-sens"], .restaurants .note-enchantee .checkbox-coeur [id="coeur-palette-gout"],
+.restaurants .note-enchantee .checkbox-coeur [id="coeur-note-enchantee"],
+.restaurants .note-enchantee .checkbox-coeur [id="coeur-francaise"],
+.restaurants .note-enchantee .checkbox-coeur [id="coeur-delice-sens"], .restaurants .francaise .checkbox-coeur [id="coeur-palette-gout"],
+.restaurants .francaise .checkbox-coeur [id="coeur-note-enchantee"],
+.restaurants .francaise .checkbox-coeur [id="coeur-francaise"],
+.restaurants .francaise .checkbox-coeur [id="coeur-delice-sens"], .restaurants .delice-sens .checkbox-coeur [id="coeur-palette-gout"],
+.restaurants .delice-sens .checkbox-coeur [id="coeur-note-enchantee"],
+.restaurants .delice-sens .checkbox-coeur [id="coeur-francaise"],
+.restaurants .delice-sens .checkbox-coeur [id="coeur-delice-sens"] {
+  display: none;
+}
+
+.restaurants .palette-gout .checkbox-coeur [id="coeur-palette-gout"]:checked + label .remplissage1,
+.restaurants .palette-gout .checkbox-coeur [id="coeur-note-enchantee"]:checked + label .remplissage1,
+.restaurants .palette-gout .checkbox-coeur [id="coeur-francaise"]:checked + label .remplissage1,
+.restaurants .palette-gout .checkbox-coeur [id="coeur-delice-sens"]:checked + label .remplissage1, .restaurants .note-enchantee .checkbox-coeur [id="coeur-palette-gout"]:checked + label .remplissage1,
+.restaurants .note-enchantee .checkbox-coeur [id="coeur-note-enchantee"]:checked + label .remplissage1,
+.restaurants .note-enchantee .checkbox-coeur [id="coeur-francaise"]:checked + label .remplissage1,
+.restaurants .note-enchantee .checkbox-coeur [id="coeur-delice-sens"]:checked + label .remplissage1, .restaurants .francaise .checkbox-coeur [id="coeur-palette-gout"]:checked + label .remplissage1,
+.restaurants .francaise .checkbox-coeur [id="coeur-note-enchantee"]:checked + label .remplissage1,
+.restaurants .francaise .checkbox-coeur [id="coeur-francaise"]:checked + label .remplissage1,
+.restaurants .francaise .checkbox-coeur [id="coeur-delice-sens"]:checked + label .remplissage1, .restaurants .delice-sens .checkbox-coeur [id="coeur-palette-gout"]:checked + label .remplissage1,
+.restaurants .delice-sens .checkbox-coeur [id="coeur-note-enchantee"]:checked + label .remplissage1,
+.restaurants .delice-sens .checkbox-coeur [id="coeur-francaise"]:checked + label .remplissage1,
+.restaurants .delice-sens .checkbox-coeur [id="coeur-delice-sens"]:checked + label .remplissage1 {
+  height: 0.7em;
+  width: 0.5em;
+  z-index: -1;
+  bottom: 0.15em;
+  right: 0.39em;
+}
+
+.restaurants .palette-gout .checkbox-coeur [id="coeur-palette-gout"]:checked + label .remplissage2,
+.restaurants .palette-gout .checkbox-coeur [id="coeur-note-enchantee"]:checked + label .remplissage2,
+.restaurants .palette-gout .checkbox-coeur [id="coeur-francaise"]:checked + label .remplissage2,
+.restaurants .palette-gout .checkbox-coeur [id="coeur-delice-sens"]:checked + label .remplissage2, .restaurants .note-enchantee .checkbox-coeur [id="coeur-palette-gout"]:checked + label .remplissage2,
+.restaurants .note-enchantee .checkbox-coeur [id="coeur-note-enchantee"]:checked + label .remplissage2,
+.restaurants .note-enchantee .checkbox-coeur [id="coeur-francaise"]:checked + label .remplissage2,
+.restaurants .note-enchantee .checkbox-coeur [id="coeur-delice-sens"]:checked + label .remplissage2, .restaurants .francaise .checkbox-coeur [id="coeur-palette-gout"]:checked + label .remplissage2,
+.restaurants .francaise .checkbox-coeur [id="coeur-note-enchantee"]:checked + label .remplissage2,
+.restaurants .francaise .checkbox-coeur [id="coeur-francaise"]:checked + label .remplissage2,
+.restaurants .francaise .checkbox-coeur [id="coeur-delice-sens"]:checked + label .remplissage2, .restaurants .delice-sens .checkbox-coeur [id="coeur-palette-gout"]:checked + label .remplissage2,
+.restaurants .delice-sens .checkbox-coeur [id="coeur-note-enchantee"]:checked + label .remplissage2,
+.restaurants .delice-sens .checkbox-coeur [id="coeur-francaise"]:checked + label .remplissage2,
+.restaurants .delice-sens .checkbox-coeur [id="coeur-delice-sens"]:checked + label .remplissage2 {
+  height: 0.72em;
+  width: 0.5em;
+  z-index: -1;
+  bottom: 0.2em;
+  left: 0.4em;
+}
+
 .restaurants .photo {
   position: relative;
   overflow: hidden;
-  width: 21.5em;
+  width: 18em;
   padding-top: 50%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -504,83 +625,6 @@ header {
   background-color: white;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-}
-
-.checkbox-coeur {
-  display: block;
-  margin-top: 1.5em;
-  margin-right: 2.5em;
-  width: 1.5em;
-  height: 1.5em;
-  position: relative;
-  z-index: 1;
-}
-
-.checkbox-coeur i {
-  font-size: 1.5em;
-}
-
-.checkbox-coeur .remplissage1 {
-  /*----Div de remplissage (sans l'état ":checked")-----*/
-  -webkit-transition: all 1000ms linear 0ms;
-  transition: all 1000ms linear 0ms;
-  position: absolute;
-  background-color: #FF79DA;
-  height: 0em;
-  width: 0em;
-  z-index: -1;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  bottom: 0.5em;
-  right: 0.5em;
-  border-top-left-radius: 55%;
-  border-top-right-radius: 30%;
-}
-
-.checkbox-coeur .remplissage2 {
-  /*----Div de remplissage (sans l'état ":checked")-----*/
-  -webkit-transition: all 1000ms linear 0ms;
-  transition: all 1000ms linear 0ms;
-  position: absolute;
-  background-color: #FF79DA;
-  height: 0em;
-  width: 0em;
-  z-index: -1;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  bottom: 0.5em;
-  left: 0.5em;
-  border-top-right-radius: 40%;
-  border-top-left-radius: 40%;
-}
-
-.checkbox-coeur [id="coeur-palette-gout"],
-.checkbox-coeur [id="coeur-note-enchantee"],
-.checkbox-coeur [id="coeur-francaise"],
-.checkbox-coeur [id="coeur-delice-sens"] {
-  display: none;
-}
-
-.checkbox-coeur [id="coeur-palette-gout"]:checked + label .remplissage1,
-.checkbox-coeur [id="coeur-note-enchantee"]:checked + label .remplissage1,
-.checkbox-coeur [id="coeur-francaise"]:checked + label .remplissage1,
-.checkbox-coeur [id="coeur-delice-sens"]:checked + label .remplissage1 {
-  height: 0.7em;
-  width: 0.5em;
-  z-index: -1;
-  bottom: 0.15em;
-  right: 0.39em;
-}
-
-.checkbox-coeur [id="coeur-palette-gout"]:checked + label .remplissage2,
-.checkbox-coeur [id="coeur-note-enchantee"]:checked + label .remplissage2,
-.checkbox-coeur [id="coeur-francaise"]:checked + label .remplissage2,
-.checkbox-coeur [id="coeur-delice-sens"]:checked + label .remplissage2 {
-  height: 0.72em;
-  width: 0.5em;
-  z-index: -1;
-  bottom: 0.2em;
-  left: 0.4em;
 }
 
 .palette-gout, .note-enchantee, .francaise, .delice-sens {
@@ -627,13 +671,15 @@ footer a {
           flex-direction: row;
   text-decoration: none;
   color: white;
-  margin-bottom: 0.3em;
+  margin-bottom: 0.4em;
+}
+
+footer a:last-child {
+  margin-bottom: 1.2em;
 }
 
 footer a i {
   font-size: 0.8em;
-  margin-top: 0em;
-  margin-bottom: 0em;
   padding-top: 0.3em;
 }
 
@@ -642,12 +688,45 @@ footer a p {
   margin-bottom: 0em;
 }
 
-footer .propo-restau i {
+footer .propo-restau a {
+  margin-bottom: 0.4em;
+}
+
+footer .propo-restau a i {
   padding-right: 1em;
 }
 
-footer .partenaire i {
+footer .partenaire a {
+  margin-bottom: 0.4em;
+}
+
+footer .partenaire a i {
   padding-right: 0.6em;
+}
+
+/*------------Responsive design - I-Phone 8 (min-width 375px)--------------*/
+/*-------------------------------------------------------------------------*/
+@media all and (min-width: 375px) {
+  .loading-spinner .loader {
+    width: 7.5em;
+    height: 7.5em;
+  }
+  .loading-spinner .loader::before {
+    margin: -7px;
+  }
+  .loading-spinner .inside {
+    width: 6.3em;
+    height: 6.3em;
+  }
+  .loading-spinner .inside::before {
+    margin: -12px;
+  }
+  .num1, .num2, .num3 {
+    width: 20.5em;
+  }
+  .restaurants .photo {
+    width: 21.5em;
+  }
 }
 
 /*---------------Responsive design - I-Pad (min-width 768px)---------------*/
@@ -713,8 +792,26 @@ footer .partenaire i {
     margin-bottom: 2em;
     margin-left: 0.8em;
   }
+  footer {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 0em;
+  }
   footer h3 {
     font-size: 2em;
+  }
+  footer .liens {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   footer p {
     font-size: 1.5em;
@@ -774,6 +871,32 @@ footer .partenaire i {
     font-size: 1.8em;
     margin-top: 0em;
   }
+  footer {
+    padding-left: 0em;
+  }
+  footer h3 {
+    text-align: center;
+  }
+  footer .liens {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 1.5em;
+  }
+  footer .liens a {
+    margin-right: 5em;
+    margin-bottom: 0em;
+  }
+  footer .liens a i {
+    padding-top: 0em;
+  }
 }
 
 /*----------------Responsive design - Desktop mini + (min-width 1366px)--------------*/
@@ -787,6 +910,23 @@ footer .partenaire i {
 /*-----------------Responsive design - Desktop (min-width 1440px)--------------------*/
 /*-----------------------------------------------------------------------------------*/
 @media all and (min-width: 1440px) {
+  .loading-spinner .loader {
+    width: 9.5em;
+    height: 9.5em;
+  }
+  .loading-spinner .loader::before {
+    margin: -7px;
+  }
+  .loading-spinner .inside {
+    width: 8.3em;
+    height: 8.3em;
+  }
+  .loading-spinner .inside::before {
+    margin: -12px;
+  }
+  .loading-spinner i {
+    margin-left: -2em;
+  }
   .fonctionnement {
     margin-left: 6.5em;
   }
@@ -843,8 +983,7 @@ footer .partenaire i {
   }
   .restaurants .checkbox-coeur {
     font-size: 1.5em;
-    margin-top: 1.5em;
-    margin-right: 1.5em;
+    right: 1.5em;
   }
   .restaurants .photo {
     width: 23.5em;
@@ -900,6 +1039,24 @@ footer .partenaire i {
 /*---------------Responsive design - Desktop big + (min-width 2560px)-----------------*/
 /*------------------------------------------------------------------------------------*/
 @media all and (min-width: 2560px) {
+  .loading-spinner .loader {
+    width: 11.5em;
+    height: 11.5em;
+  }
+  .loading-spinner .loader::before {
+    margin: -11px;
+  }
+  .loading-spinner .inside {
+    width: 10.3em;
+    height: 10.3em;
+  }
+  .loading-spinner .inside::before {
+    margin: -14px;
+  }
+  .loading-spinner i {
+    font-size: 4em;
+    margin-left: -1.9em;
+  }
   body h1 {
     font-size: 6em;
     margin-bottom: 0.09em;
@@ -950,8 +1107,6 @@ footer .partenaire i {
   }
   .restaurants .checkbox-coeur {
     font-size: 1.7em;
-    margin-top: 1.7em;
-    margin-right: 1em;
   }
   .restaurants .photo {
     width: 26.5em;
@@ -1000,6 +1155,25 @@ footer .partenaire i {
 /*-------------------Responsive design - TV 4K (min-width 3550px)---------------------*/
 /*------------------------------------------------------------------------------------*/
 @media all and (min-width: 3550px) {
+  .loading-spinner .loader {
+    width: 15.5em;
+    height: 15.5em;
+  }
+  .loading-spinner .loader::before {
+    margin: -22px;
+  }
+  .loading-spinner .inside {
+    width: 14.3em;
+    height: 14.3em;
+  }
+  .loading-spinner .inside::before {
+    margin: -22px;
+  }
+  .loading-spinner i {
+    font-size: 6em;
+    margin-top: 1.5em;
+    margin-left: -1.7em;
+  }
   body h1 {
     font-size: 9em;
     margin-bottom: 0.03em;
@@ -1053,8 +1227,6 @@ footer .partenaire i {
   }
   .restaurants .checkbox-coeur {
     font-size: 2.5em;
-    margin-top: 1.7em;
-    margin-right: 1.5em;
   }
   .restaurants .photo {
     width: 42.5em;
