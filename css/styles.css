@@ -560,7 +560,7 @@ header {
   height: 0.7em;
   width: 0.5em;
   z-index: -1;
-  bottom: 0.15em;
+  bottom: 0.16em;
   right: 0.39em;
 }
 
@@ -726,6 +726,29 @@ footer .partenaire a i {
   }
   .restaurants .photo {
     width: 21.5em;
+  }
+}
+
+/*----------Responsive design - Mobiles - paysage (min-width 568px)-----------*/
+/*----------------------------------------------------------------------------*/
+@media all and (min-width: 568px) {
+  footer {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 0em;
+  }
+  footer .liens {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 

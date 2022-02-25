@@ -17,7 +17,7 @@ $box-shadow-infos: 5px 5px 5px #f2f2f2;
                 animation: coche-rotation 500ms forwards;
             }
         }
-        .compo-prix{
+        .nom, .compo-prix{
             animation: reduc-div 500ms forwards;
         }
     }
@@ -235,9 +235,16 @@ header{   /*-----Header-----*/
             border-radius: 20px;
             box-shadow: $box-shadow-infos;
             .nom{
-                margin: 0;
-                padding: 0.7em;
-                font-weight: bold;
+                display: flex;
+                justify-content: space-between;
+                .nom-texte{
+                    margin: 0;
+                    padding: 0.7em;
+                    font-weight: bold;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
             }
             .compo-prix{
                 display: flex;
@@ -297,9 +304,16 @@ header{   /*-----Header-----*/
             border-radius: 20px;
             box-shadow: $box-shadow-infos;
             .nom{
-                margin: 0;
-                padding: 0.7em;
-                font-weight: bold;
+                display: flex;
+                justify-content: space-between;                
+                .nom-texte{
+                    margin: 0;
+                    padding: 0.7em;
+                    font-weight: bold;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
             }
             .compo-prix{
                 display: flex;
@@ -362,6 +376,9 @@ header{   /*-----Header-----*/
                 margin: 0;
                 padding: 0.7em;
                 font-weight: bold;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
             .compo-prix{
                 display: flex;
@@ -483,7 +500,19 @@ footer{  /*-----Footer-----*/
         }
     }
 }
-
+/*----------Responsive design - Mobiles - paysage (min-width 568px)-----------*/
+/*----------------------------------------------------------------------------*/
+@media all and (min-width: 568px){
+    footer{
+        align-items: center;
+        padding-left: 0em;
+        .liens{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
 /*---------------Responsive design - I-Pad (min-width 768px)---------------*/
 /*-------------------------------------------------------------------------*/
 @media all and (min-width: 768px){

@@ -316,9 +316,12 @@ header a {
           animation: coche-rotation 500ms forwards;
 }
 
-.menu .entrees [id="coche-infos1-entrees"]:checked + label .compo-prix,
+.menu .entrees [id="coche-infos1-entrees"]:checked + label .nom, .menu .entrees [id="coche-infos1-entrees"]:checked + label .compo-prix,
+.menu .entrees [id="coche-infos2-entrees"]:checked + label .nom,
 .menu .entrees [id="coche-infos2-entrees"]:checked + label .compo-prix,
+.menu .entrees [id="coche-infos3-entrees"]:checked + label .nom,
 .menu .entrees [id="coche-infos3-entrees"]:checked + label .compo-prix,
+.menu .entrees [id="coche-infos4-entrees"]:checked + label .nom,
 .menu .entrees [id="coche-infos4-entrees"]:checked + label .compo-prix {
   -webkit-animation: reduc-div 500ms forwards;
           animation: reduc-div 500ms forwards;
@@ -375,9 +378,21 @@ header a {
 }
 
 .menu .entrees-infos-coche .infos1 .nom, .menu .entrees-infos-coche .infos2 .nom, .menu .entrees-infos-coche .infos3 .nom, .menu .entrees-infos-coche .infos4 .nom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu .entrees-infos-coche .infos1 .nom .nom-texte, .menu .entrees-infos-coche .infos2 .nom .nom-texte, .menu .entrees-infos-coche .infos3 .nom .nom-texte, .menu .entrees-infos-coche .infos4 .nom .nom-texte {
   margin: 0;
   padding: 0.7em;
   font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .menu .entrees-infos-coche .infos1 .compo-prix, .menu .entrees-infos-coche .infos2 .compo-prix, .menu .entrees-infos-coche .infos3 .compo-prix, .menu .entrees-infos-coche .infos4 .compo-prix {
@@ -445,8 +460,10 @@ header a {
           animation: coche-rotation 500ms forwards;
 }
 
-.menu .plats [id="coche-infos1-plats"]:checked + label .compo-prix,
+.menu .plats [id="coche-infos1-plats"]:checked + label .nom, .menu .plats [id="coche-infos1-plats"]:checked + label .compo-prix,
+.menu .plats [id="coche-infos2-plats"]:checked + label .nom,
 .menu .plats [id="coche-infos2-plats"]:checked + label .compo-prix,
+.menu .plats [id="coche-infos3-plats"]:checked + label .nom,
 .menu .plats [id="coche-infos3-plats"]:checked + label .compo-prix {
   -webkit-animation: reduc-div 500ms forwards;
           animation: reduc-div 500ms forwards;
@@ -498,9 +515,21 @@ header a {
 }
 
 .menu .plats-infos-coche .infos1 .nom, .menu .plats-infos-coche .infos2 .nom, .menu .plats-infos-coche .infos3 .nom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu .plats-infos-coche .infos1 .nom .nom-texte, .menu .plats-infos-coche .infos2 .nom .nom-texte, .menu .plats-infos-coche .infos3 .nom .nom-texte {
   margin: 0;
   padding: 0.7em;
   font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .menu .plats-infos-coche .infos1 .compo-prix, .menu .plats-infos-coche .infos2 .compo-prix, .menu .plats-infos-coche .infos3 .compo-prix {
@@ -568,8 +597,10 @@ header a {
           animation: coche-rotation 500ms forwards;
 }
 
-.menu .desserts [id="coche-infos1-desserts"]:checked + label .compo-prix,
+.menu .desserts [id="coche-infos1-desserts"]:checked + label .nom, .menu .desserts [id="coche-infos1-desserts"]:checked + label .compo-prix,
+.menu .desserts [id="coche-infos2-desserts"]:checked + label .nom,
 .menu .desserts [id="coche-infos2-desserts"]:checked + label .compo-prix,
+.menu .desserts [id="coche-infos3-desserts"]:checked + label .nom,
 .menu .desserts [id="coche-infos3-desserts"]:checked + label .compo-prix {
   -webkit-animation: reduc-div 500ms forwards;
           animation: reduc-div 500ms forwards;
@@ -621,9 +652,21 @@ header a {
 }
 
 .menu .desserts-infos-coche .infos1 .nom, .menu .desserts-infos-coche .infos2 .nom, .menu .desserts-infos-coche .infos3 .nom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu .desserts-infos-coche .infos1 .nom .nom-texte, .menu .desserts-infos-coche .infos2 .nom .nom-texte, .menu .desserts-infos-coche .infos3 .nom .nom-texte {
   margin: 0;
   padding: 0.7em;
   font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .menu .desserts-infos-coche .infos1 .compo-prix, .menu .desserts-infos-coche .infos2 .compo-prix, .menu .desserts-infos-coche .infos3 .compo-prix {
@@ -779,6 +822,29 @@ footer .partenaire a i {
   }
   .menu .entrees .infos1 .compo-prix .compo, .menu .entrees .infos2 .compo-prix .compo, .menu .entrees .infos3 .compo-prix .compo, .menu .entrees .infos4 .compo-prix .compo, .menu .plats .infos1 .compo-prix .compo, .menu .plats .infos2 .compo-prix .compo, .menu .plats .infos3 .compo-prix .compo, .menu .plats .infos4 .compo-prix .compo, .menu .desserts .infos1 .compo-prix .compo, .menu .desserts .infos2 .compo-prix .compo, .menu .desserts .infos3 .compo-prix .compo, .menu .desserts .infos4 .compo-prix .compo {
     font-size: 0.87em;
+  }
+}
+
+/*----------Responsive design - Mobiles - paysage (min-width 568px)-----------*/
+/*----------------------------------------------------------------------------*/
+@media all and (min-width: 568px) {
+  footer {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 0em;
+  }
+  footer .liens {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 

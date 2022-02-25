@@ -299,7 +299,7 @@ header{  /*-----Header-----*/
                         height: 0.7em;
                         width: 0.5em;
                         z-index: -1;
-                        bottom: 0.15em;
+                        bottom: 0.16em;
                         right: 0.39em;
                     }
                     .remplissage2{
@@ -422,6 +422,19 @@ footer{  /*-----Footer-----*/
     }
     .restaurants .photo{
         width: 21.5em;
+    }
+}
+/*----------Responsive design - Mobiles - paysage (min-width 568px)-----------*/
+/*----------------------------------------------------------------------------*/
+@media all and (min-width: 568px){
+    footer{
+        align-items: center;
+        padding-left: 0em;
+        .liens{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 }
 /*---------------Responsive design - I-Pad (min-width 768px)---------------*/
