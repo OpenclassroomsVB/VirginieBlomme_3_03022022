@@ -336,7 +336,7 @@ header a {
 }
 
 .menu .entrees-infos-coche .infos1 {
-  /*-----Apparition des différantes entrées décalée dans le temps-----*/
+  /*-----Apparition des différentes entrées décalée dans le temps-----*/
   -webkit-animation: apparaitre 500ms 500ms both;
           animation: apparaitre 500ms 500ms both;
 }
@@ -473,7 +473,7 @@ header a {
 }
 
 .menu .plats-infos-coche .infos1 {
-  /*-----Apparition des différants plats décalée dans le temps-----*/
+  /*-----Apparition des différents plats décalée dans le temps-----*/
   -webkit-animation: apparaitre 500ms 1100ms both;
           animation: apparaitre 500ms 1100ms both;
 }
@@ -610,7 +610,7 @@ header a {
 }
 
 .menu .desserts-infos-coche .infos1 {
-  /*-----Apparition des différants desserts décalée dans le temps-----*/
+  /*-----Apparition des différents desserts décalée dans le temps-----*/
   -webkit-animation: apparaitre 500ms 1700ms both;
           animation: apparaitre 500ms 1700ms both;
 }

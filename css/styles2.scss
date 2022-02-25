@@ -218,7 +218,7 @@ header{   /*-----Header-----*/
         display: flex;
         flex-direction: column;
         align-items: center;
-        .infos1{   /*-----Apparition des différantes entrées décalée dans le temps-----*/
+        .infos1{   /*-----Apparition des différentes entrées décalée dans le temps-----*/
             animation: apparaitre 500ms 500ms both;
         }
         .infos2{
@@ -290,7 +290,7 @@ header{   /*-----Header-----*/
         display: flex;
         flex-direction: column;
         align-items: center;
-        .infos1{   /*-----Apparition des différants plats décalée dans le temps-----*/
+        .infos1{   /*-----Apparition des différents plats décalée dans le temps-----*/
             animation: apparaitre 500ms 1300ms both;
         }
         .infos2{
@@ -359,7 +359,7 @@ header{   /*-----Header-----*/
         display: flex;
         flex-direction: column;
         align-items: center;
-        .infos1{   /*-----Apparition des différants desserts décalée dans le temps-----*/
+        .infos1{   /*-----Apparition des différents desserts décalée dans le temps-----*/
             animation: apparaitre 500ms 1900ms both;
         }
         .infos2{
