@@ -219,16 +219,16 @@ header{   /*-----Header-----*/
         flex-direction: column;
         align-items: center;
         .infos1{   /*-----Apparition des différentes entrées décalée dans le temps-----*/
-            animation: apparaitre 500ms 500ms both;
+            animation: apparaitre 500ms 500ms forwards;
         }
         .infos2{
-            animation: apparaitre 500ms 700ms both;
+            animation: apparaitre 500ms 700ms forwards;
         }
         .infos3{
-            animation: apparaitre 500ms 900ms both;
+            animation: apparaitre 500ms 900ms forwards;
         }
         .infos4{
-            animation: apparaitre 500ms 1100ms both;
+            animation: apparaitre 500ms 1100ms forwards;
         }
         .infos1, .infos2, .infos3, .infos4{
             display: flex;
@@ -291,13 +291,13 @@ header{   /*-----Header-----*/
         flex-direction: column;
         align-items: center;
         .infos1{   /*-----Apparition des différents plats décalée dans le temps-----*/
-            animation: apparaitre 500ms 1300ms both;
+            animation: apparaitre 500ms 1300ms forwards;
         }
         .infos2{
-            animation: apparaitre 500ms 1500ms both;
+            animation: apparaitre 500ms 1500ms forwards;
         }
         .infos3{
-            animation: apparaitre 500ms 1700ms both;
+            animation: apparaitre 500ms 1700ms forwards;
         }
         .infos1, .infos2, .infos3{
             display: flex;
@@ -360,13 +360,13 @@ header{   /*-----Header-----*/
         flex-direction: column;
         align-items: center;
         .infos1{   /*-----Apparition des différents desserts décalée dans le temps-----*/
-            animation: apparaitre 500ms 1900ms both;
+            animation: apparaitre 500ms 1900ms forwards;
         }
         .infos2{
-            animation: apparaitre 500ms 2100ms both;
+            animation: apparaitre 500ms 2100ms forwards;
         }
         .infos3{
-            animation: apparaitre 500ms 2300ms both;
+            animation: apparaitre 500ms 2300ms forwards;
         }
         .infos1, .infos2, .infos3{
             display: flex;
