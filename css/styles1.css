@@ -22,19 +22,19 @@
 
 @-webkit-keyframes reduc-div {
   0% {
-    width: 19.5em;
+    width: 16.5em;
   }
   100% {
-    width: 15.5em;
+    width: 12.5em;
   }
 }
 
 @keyframes reduc-div {
   0% {
-    width: 19.5em;
+    width: 16.5em;
   }
   100% {
-    width: 15.5em;
+    width: 12.5em;
   }
 }
 
@@ -172,7 +172,7 @@ header a {
 
 .menu .restaurant h2 {
   font-family: "Shrikhand";
-  font-size: 1.55em;
+  font-size: 1.5em;
 }
 
 .menu .restaurant .checkbox-coeur {
@@ -337,18 +337,18 @@ header a {
 
 .menu .entrees-infos-coche .infos1 {
   /*-----Apparition des différentes entrées décalée dans le temps-----*/
-  -webkit-animation: apparaitre 500ms 500ms both;
-          animation: apparaitre 500ms 500ms both;
+  -webkit-animation: apparaitre 500ms 500ms forwards;
+          animation: apparaitre 500ms 500ms forwards;
 }
 
 .menu .entrees-infos-coche .infos2 {
-  -webkit-animation: apparaitre 500ms 700ms both;
-          animation: apparaitre 500ms 700ms both;
+  -webkit-animation: apparaitre 500ms 700ms forwards;
+          animation: apparaitre 500ms 700ms forwards;
 }
 
 .menu .entrees-infos-coche .infos3 {
-  -webkit-animation: apparaitre 500ms 900ms both;
-          animation: apparaitre 500ms 900ms both;
+  -webkit-animation: apparaitre 500ms 900ms forwards;
+          animation: apparaitre 500ms 900ms forwards;
 }
 
 .menu .entrees-infos-coche .infos1, .menu .entrees-infos-coche .infos2, .menu .entrees-infos-coche .infos3 {
@@ -359,7 +359,7 @@ header a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 19.5em;
+  width: 16.5em;
   margin-bottom: 1em;
   background-color: white;
   border-radius: 20px;
@@ -474,18 +474,18 @@ header a {
 
 .menu .plats-infos-coche .infos1 {
   /*-----Apparition des différents plats décalée dans le temps-----*/
-  -webkit-animation: apparaitre 500ms 1100ms both;
-          animation: apparaitre 500ms 1100ms both;
+  -webkit-animation: apparaitre 500ms 1100ms forwards;
+          animation: apparaitre 500ms 1100ms forwards;
 }
 
 .menu .plats-infos-coche .infos2 {
-  -webkit-animation: apparaitre 500ms 1300ms both;
-          animation: apparaitre 500ms 1300ms both;
+  -webkit-animation: apparaitre 500ms 1300ms forwards;
+          animation: apparaitre 500ms 1300ms forwards;
 }
 
 .menu .plats-infos-coche .infos3 {
-  -webkit-animation: apparaitre 500ms 1500ms both;
-          animation: apparaitre 500ms 1500ms both;
+  -webkit-animation: apparaitre 500ms 1500ms forwards;
+          animation: apparaitre 500ms 1500ms forwards;
 }
 
 .menu .plats-infos-coche .infos1, .menu .plats-infos-coche .infos2, .menu .plats-infos-coche .infos3 {
@@ -496,7 +496,7 @@ header a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 19.5em;
+  width: 16.5em;
   margin-bottom: 1em;
   background-color: white;
   border-radius: 20px;
@@ -611,18 +611,18 @@ header a {
 
 .menu .desserts-infos-coche .infos1 {
   /*-----Apparition des différents desserts décalée dans le temps-----*/
-  -webkit-animation: apparaitre 500ms 1700ms both;
-          animation: apparaitre 500ms 1700ms both;
+  -webkit-animation: apparaitre 500ms 1700ms forwards;
+          animation: apparaitre 500ms 1700ms forwards;
 }
 
 .menu .desserts-infos-coche .infos2 {
-  -webkit-animation: apparaitre 500ms 1900ms both;
-          animation: apparaitre 500ms 1900ms both;
+  -webkit-animation: apparaitre 500ms 1900ms forwards;
+          animation: apparaitre 500ms 1900ms forwards;
 }
 
 .menu .desserts-infos-coche .infos3 {
-  -webkit-animation: apparaitre 500ms 2100ms both;
-          animation: apparaitre 500ms 2100ms both;
+  -webkit-animation: apparaitre 500ms 2100ms forwards;
+          animation: apparaitre 500ms 2100ms forwards;
 }
 
 .menu .desserts-infos-coche .infos1, .menu .desserts-infos-coche .infos2, .menu .desserts-infos-coche .infos3 {
@@ -633,7 +633,7 @@ header a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 19.5em;
+  width: 16.5em;
   margin-bottom: 1em;
   background-color: white;
   border-radius: 20px;
@@ -770,6 +770,33 @@ footer .partenaire a {
 
 footer .partenaire a i {
   padding-right: 0.6em;
+}
+
+/*------------Responsive design - I-Phone 5/SE (min-width 320px)------------*/
+/*--------------------------------------------------------------------------*/
+@media all and (min-width: 320px) {
+  @-webkit-keyframes reduc-div {
+    0% {
+      width: 19.5em;
+    }
+    100% {
+      width: 15.5em;
+    }
+  }
+  @keyframes reduc-div {
+    0% {
+      width: 19.5em;
+    }
+    100% {
+      width: 15.5em;
+    }
+  }
+  .menu .restaurant h2 {
+    font-size: 1.55em;
+  }
+  .entrees-infos-coche .infos1, .entrees-infos-coche .infos2, .entrees-infos-coche .infos3, .plats-infos-coche .infos1, .plats-infos-coche .infos2, .plats-infos-coche .infos3, .desserts-infos-coche .infos1, .desserts-infos-coche .infos2, .desserts-infos-coche .infos3 {
+    width: 19.5em;
+  }
 }
 
 /*--------------Responsive design - I-Phone 8 (min-width 375px)-------------*/
